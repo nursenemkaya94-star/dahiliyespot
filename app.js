@@ -17,7 +17,7 @@ function flip(){if(!cards.length)return;flipped=!flipped;renderCard()}
 function move(delta){index=Math.max(0,Math.min(cards.length-1,index+delta));flipped=false;renderCard()}
 function mark(kind){const c=cards[index];if(!c)return;const other=kind==='known'?'again':'known';saved[other]=saved[other].filter(id=>id!==c.id);if(!saved[kind].includes(c.id))saved[kind].push(c.id);persist();stats();if(mode==='again'&&kind==='known'){filterCards();return}if(index<cards.length-1)move(1);else renderCard()}
 $('home').onclick=()=>{$('questionsView').hidden=true;document.querySelectorAll('.nav').forEach(b=>b.classList.remove('active'));$('home').classList.add('active');$('library').hidden=false;$('study').hidden=true;$('pdfView').hidden=true;$('distributionView').hidden=true;stats()};$('back').onclick=$('home').onclick;$('favorites').onclick=()=>collection('favorites');$('review').onclick=()=>collection('again');$('search').oninput=renderLessons;$('topics').onchange=filterCards;$('flashcard').onclick=flip;$('flip').onclick=flip;$('next').onclick=()=>move(1);$('prev').onclick=()=>move(-1);$('know').onclick=()=>mark('known');$('again').onclick=()=>mark('again');$('favorite').onclick=()=>{const c=cards[index];if(!c)return;saved.favorites=saved.favorites.includes(c.id)?saved.favorites.filter(x=>x!==c.id):[...saved.favorites,c.id];persist();if(mode==='favorites')filterCards();else renderCard()};document.addEventListener('keydown',e=>{if($('study').hidden||['INPUT','SELECT','BUTTON','TEXTAREA'].includes(document.activeElement.tagName))return;if(e.code==='Space'){e.preventDefault();flip()}if(e.key==='ArrowRight')move(1);if(e.key==='ArrowLeft')move(-1)});
-fetch('data/cards.json?v=full-first-750-v1', {cache:'no-store'}).then(r=>{if(!r.ok)throw Error();return r.json()}).then(d=>{data=d;configurePdfSources(d.sources);stats();renderLessons();renderDistribution()}).catch(()=>{$('error').hidden=false;$('error').textContent='Kartlar yüklenemedi. Uygulamayı sunucu üzerinden açıp yeniden dene.'});
+fetch('data/cards.json?v=clinical-1000-v1', {cache:'no-store'}).then(r=>{if(!r.ok)throw Error();return r.json()}).then(d=>{data=d;configurePdfSources(d.sources);stats();renderLessons();renderDistribution()}).catch(()=>{$('error').hidden=false;$('error').textContent='Kartlar yüklenemedi. Uygulamayı sunucu üzerinden açıp yeniden dene.'});
 
 const sourceBooks={second:{label:'İkinci kitap · 874 sayfa',path:'library/dahiliye.pdf',pages:874},'first-part-1':{label:'İlk kitap · 1. parça · 140 sayfa',path:'library/dahiliye-ilk-parca1.pdf',pages:140}};
 function configurePdfSources(sources){
@@ -49,12 +49,16 @@ function renderDistribution(){
   const item=document.createElement('div'),n=document.createElement('strong'),t=document.createElement('span');
   n.textContent=value;t.textContent=label;item.append(n,t);$('distributionStats').append(item);
  });
- $('distributionBasis').textContent='Geçici klinik çalışma planı. TUS/YDUS geçmiş soru analizleri internet erişimi engeli nedeniyle henüz doğrulanmadı. Aşağıdaki paylar sınav yüzdesini veya klinik görülme sıklığını değil, bu uygulamadaki '+total+' kartın dağılımını gösterir.';
+ $('distributionBooks').replaceChildren();
+ const first=allCards().filter(c=>c.source).length,second=total-first;
+ [[first,'ilk kitap'],[second,'ikinci kitap']].forEach(([value,label])=>{const el=document.createElement('div'),n=document.createElement('strong'),t=document.createElement('span');n.textContent=value;t.textContent=label;el.append(n,t);$('distributionBooks').append(el)});
+ $('distributionBasis').textContent='Servis ve poliklinikte önemli klinik sorunları önceleyen çalışma planı. Hasta başvuru veya yatış sıklığına ait ölçülmüş bir dağılım değildir. TUS/YDUS geçmiş soru analizleri internet erişimi engeli nedeniyle henüz doğrulanmadı. Aşağıdaki paylar sınav yüzdesini veya klinik görülme sıklığını değil, bu uygulamadaki '+total+' kartın dağılımını gösterir.';
  $('distributionTables').replaceChildren();
  data.lessons.forEach(l=>{
   const section=document.createElement('details');section.className='allocation-section';section.open=true;
   const heading=document.createElement('summary'),name=document.createElement('strong'),count=document.createElement('span');
   name.textContent=l.name;count.textContent=l.topics.reduce((n,t)=>n+t.cards.length,0)+' kart';heading.append(name,count);section.append(heading);
+  if(l.clinical_focus){const focus=document.createElement('p');focus.className='clinical-focus';focus.textContent=l.clinical_focus;section.append(focus)}
   const table=document.createElement('table'),caption=document.createElement('caption');caption.className='sr-only';caption.textContent=l.name+' konu dağılımı';table.append(caption);
   const head=document.createElement('thead'),header=document.createElement('tr');['Konu','Kart','Setteki payı',''].forEach(label=>{const th=document.createElement('th');th.textContent=label;th.scope='col';header.append(th)});head.append(header);table.append(head);
   const body=document.createElement('tbody');l.topics.forEach((t,i)=>{

@@ -1,0 +1,246 @@
+{
+  "basis": "clinical_editorial_draft",
+  "book_targets": {
+    "first": 500,
+    "second": 500
+  },
+  "note": "Servis yatışı ve poliklinik pratiğinde önemli sorunları önceleyen editoryal çalışma dağılımı. Doğrulanmış yatış/poliklinik sıklığı, prevalans veya TUS/YDUS yüzdesi değildir.",
+  "archived_cardio_ids": [
+    "fact-51036484de6f5794",
+    "fact-ca124c407d52c62b",
+    "fact-c68426a614fd1778",
+    "fact-f82b870acaea1bac",
+    "fact-d703e7691b8eb50f",
+    "fact-50a7944937f5c4cb",
+    "fact-670b598a601dc640",
+    "fact-2f2a92ad39a709f1",
+    "fact-756864d39c7b7240",
+    "fact-af3bac30fcea2fa2",
+    "fact-7310d1e7be900edd",
+    "fact-a4b5f6ed7c8638e0",
+    "fact-51a1cf8ba8bfad69",
+    "fact-bc4d3cabe19fa8be",
+    "fact-ae4e04b55c7c12ca",
+    "fact-f9b03da94e92980d",
+    "fact-a6b6f5c6987a006e",
+    "fact-8ce914a6fd85a7b0",
+    "fact-0907bb5cca477ba1",
+    "fact-601480c520b466bf",
+    "fact-6b9a3459eb58bb14",
+    "fact-71da7b1ae398dd00",
+    "fact-038384a4ae3eacea",
+    "fact-cbab59a4f6faf313",
+    "fact-dc93cb14d5303858",
+    "fact-b4587d9d38a477fc",
+    "fact-7518ed6bda9e9018",
+    "fact-c1e6f87a7b0245c5",
+    "fact-80d9a22ce4abaf9b",
+    "fact-25a0919718f49b77"
+  ],
+  "lessons": [
+    {
+      "name": "Nefroloji",
+      "clinical_focus": "Akut ve kronik böbrek hasarı, sıvı-elektrolit ve asit-baz bozuklukları, proteinüri ve diyaliz sorunları önceliklidir.",
+      "topics": [
+        {
+          "name": "Sıvı ve elektrolit bozuklukları",
+          "target": 38
+        },
+        {
+          "name": "Asit-baz bozuklukları",
+          "target": 10
+        },
+        {
+          "name": "Akut böbrek hasarı",
+          "target": 25
+        },
+        {
+          "name": "Kronik böbrek hastalığı ve diyaliz",
+          "target": 35
+        },
+        {
+          "name": "Glomerüler hastalıklar",
+          "target": 30
+        },
+        {
+          "name": "Tübülointerstisyel ve vasküler hastalıklar",
+          "target": 11
+        },
+        {
+          "name": "Taş hastalığı ve polikistik böbrek",
+          "target": 10
+        },
+        {
+          "name": "İdrar incelemesi ve proteinüri",
+          "target": 11
+        }
+      ]
+    },
+    {
+      "name": "Gastroenteroloji",
+      "clinical_focus": "Kanama, reflü ve disfaji, ülser, ishal-kabızlık, IBS, malabsorpsiyon, İBH, pankreatit ve safra yolu acilleri önceliklidir.",
+      "topics": [
+        {
+          "name": "Özofagus ve reflü hastalıkları",
+          "target": 16
+        },
+        {
+          "name": "Peptik ülser ve H. pylori",
+          "target": 12
+        },
+        {
+          "name": "Malabsorpsiyon ve çölyak",
+          "target": 11
+        },
+        {
+          "name": "İnflamatuvar bağırsak hastalıkları",
+          "target": 15
+        },
+        {
+          "name": "Gastrointestinal kanamalar",
+          "target": 10
+        },
+        {
+          "name": "Pankreas ve safra yolu hastalıkları",
+          "target": 21
+        },
+        {
+          "name": "İshal, kabızlık ve fonksiyonel bozukluklar",
+          "target": 15
+        }
+      ]
+    },
+    {
+      "name": "Hepatoloji",
+      "clinical_focus": "Viral hepatit izlemi, yağlı karaciğer, karaciğer testlerinin yorumu, siroz, asit, SBP, HRS, varis kanaması ve ensefalopati önceliklidir.",
+      "topics": [
+        {
+          "name": "Karaciğer testleri ve viral hepatitler",
+          "target": 28
+        },
+        {
+          "name": "Siroz ve portal hipertansiyon",
+          "target": 15
+        },
+        {
+          "name": "Asit, peritonit ve hepatorenal sendrom",
+          "target": 23
+        },
+        {
+          "name": "Hepatik ensefalopati",
+          "target": 7
+        },
+        {
+          "name": "Yağlı karaciğer, alkol ve ilaç hasarı",
+          "target": 14
+        },
+        {
+          "name": "Metabolik ve otoimmün karaciğer hastalıkları",
+          "target": 10
+        },
+        {
+          "name": "Karaciğer enfeksiyonları ve kitleleri",
+          "target": 3
+        }
+      ]
+    },
+    {
+      "name": "Kardiyoloji",
+      "clinical_focus": "Kalp yetmezliği, akut koroner sendrom, hipertansiyon ve önemli ritim sorunları korunmuş; ayrıntıların ağırlığı azaltılmıştır.",
+      "topics": [
+        {
+          "name": "Kalp yetmezliği",
+          "target": 14
+        },
+        {
+          "name": "Koroner arter hastalığı ve akut koroner sendrom",
+          "target": 12
+        },
+        {
+          "name": "Hipertansiyon",
+          "target": 7
+        },
+        {
+          "name": "Aritmiler ve ileti bozuklukları",
+          "target": 8
+        },
+        {
+          "name": "Kapak hastalıkları",
+          "target": 5
+        },
+        {
+          "name": "Perikardit ve tamponad",
+          "target": 2
+        },
+        {
+          "name": "Enfektif endokardit",
+          "target": 1
+        },
+        {
+          "name": "Aort hastalıkları",
+          "target": 1
+        }
+      ]
+    },
+    {
+      "name": "Göğüs Hastalıkları",
+      "clinical_focus": "KOAH, astım, pulmoner emboli, plevra sorunları ve temel solunum değerlendirmesi.",
+      "topics": [
+        {
+          "name": "Solunum muayenesi ve ayırıcı tanı",
+          "target": 6
+        },
+        {
+          "name": "Solunum fonksiyon testleri",
+          "target": 4
+        },
+        {
+          "name": "KOAH",
+          "target": 10
+        },
+        {
+          "name": "Astım",
+          "target": 7
+        },
+        {
+          "name": "Pulmoner emboli",
+          "target": 7
+        },
+        {
+          "name": "Bronşiektazi ve interstisyel hastalıklar",
+          "target": 3
+        },
+        {
+          "name": "Plevra hastalıkları",
+          "target": 5
+        },
+        {
+          "name": "Uyku apnesi",
+          "target": 3
+        }
+      ]
+    },
+    {
+      "name": "Hematoloji",
+      "clinical_focus": "Sık anemiler, hemoliz, önemli hematolojik maligniteler ve kanama-tromboz acilleri.",
+      "topics": [
+        {
+          "name": "Anemiler",
+          "target": 9
+        },
+        {
+          "name": "Hemoliz ve hemoglobinopatiler",
+          "target": 7
+        },
+        {
+          "name": "Hematolojik maligniteler",
+          "target": 8
+        },
+        {
+          "name": "Kanama, tromboz ve hematolojik aciller",
+          "target": 11
+        }
+      ]
+    }
+  ]
+}

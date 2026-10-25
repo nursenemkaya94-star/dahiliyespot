@@ -113,6 +113,8 @@ def build(pdf=None):
     result = append_first_part(result)
     from first_volume_cards import append_remaining_volume
     result = append_remaining_volume(result)
+    from clinical_1000_cards import apply_clinical_plan
+    result = apply_clinical_plan(result)
     (ROOT / 'data/cards.json').write_text(json.dumps(result, ensure_ascii=False), encoding='utf-8')
     print(f'{len(result["lessons"])} ders, {sum(len(t["cards"]) for l in result["lessons"] for t in l["topics"])} kart; ikinci kitap denetimi: {bool(pages)}; ilk kitabın tüm parçaları denetlendi')
 

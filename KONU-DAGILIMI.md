@@ -1,23 +1,74 @@
-# Konu dağılımı — 750 kart
+# Konu dağılımı — 1.000 kart
 
-Geçici klinik çalışma planı. İnternet kaynaklarındaki TUS/YDUS dağılımları henüz doğrulanmadı. Sayılar uygulamadaki gerçek kart sayılarıdır; sınav yüzdeleri veya klinik prevalans ölçümleri değildir.
+İlk kitap: **500 kart** · İkinci kitap: **500 kart**.
 
-İlk kitabın 1–658. sayfaları eksiksiz alınmıştır. Kartlar seçilmiş önemli bilgilerdir; bütün kitap cümlelerini kapsamaz.
+Servis yatışı ve poliklinik pratiğinde önemli sorunları önceleyen editoryal çalışma dağılımı. Doğrulanmış yatış/poliklinik sıklığı, prevalans veya TUS/YDUS yüzdesi değildir.
 
-## Kardiyoloji — 80 kart
+İlk kitabın 1–658. sayfaları eksiksizdir. Kartlar seçilmiş bilgilerdir; her kitap cümlesinin kartlaştırıldığı anlamına gelmez.
+
+# İlk kitap — 500 kart
+
+## Nefroloji — 170 kart
+
+Akut ve kronik böbrek hasarı, sıvı-elektrolit ve asit-baz bozuklukları, proteinüri ve diyaliz sorunları önceliklidir.
 
 | Konu | Kart |
 | --- | ---: |
-| Kalp yetmezliği | 18 |
-| Koroner arter hastalığı ve akut koroner sendrom | 16 |
-| Hipertansiyon | 10 |
-| Aritmiler ve ileti bozuklukları | 18 |
-| Kapak hastalıkları | 8 |
-| Perikardit ve tamponad | 5 |
-| Enfektif endokardit | 3 |
-| Aort hastalıkları | 2 |
+| Sıvı ve elektrolit bozuklukları | 38 |
+| Asit-baz bozuklukları | 10 |
+| Akut böbrek hasarı | 25 |
+| Kronik böbrek hastalığı ve diyaliz | 35 |
+| Glomerüler hastalıklar | 30 |
+| Tübülointerstisyel ve vasküler hastalıklar | 11 |
+| Taş hastalığı ve polikistik böbrek | 10 |
+| İdrar incelemesi ve proteinüri | 11 |
+
+## Gastroenteroloji — 100 kart
+
+Kanama, reflü ve disfaji, ülser, ishal-kabızlık, IBS, malabsorpsiyon, İBH, pankreatit ve safra yolu acilleri önceliklidir.
+
+| Konu | Kart |
+| --- | ---: |
+| Özofagus ve reflü hastalıkları | 16 |
+| Peptik ülser ve H. pylori | 12 |
+| Malabsorpsiyon ve çölyak | 11 |
+| İnflamatuvar bağırsak hastalıkları | 15 |
+| Gastrointestinal kanamalar | 10 |
+| Pankreas ve safra yolu hastalıkları | 21 |
+| İshal, kabızlık ve fonksiyonel bozukluklar | 15 |
+
+## Hepatoloji — 100 kart
+
+Viral hepatit izlemi, yağlı karaciğer, karaciğer testlerinin yorumu, siroz, asit, SBP, HRS, varis kanaması ve ensefalopati önceliklidir.
+
+| Konu | Kart |
+| --- | ---: |
+| Karaciğer testleri ve viral hepatitler | 28 |
+| Siroz ve portal hipertansiyon | 15 |
+| Asit, peritonit ve hepatorenal sendrom | 23 |
+| Hepatik ensefalopati | 7 |
+| Yağlı karaciğer, alkol ve ilaç hasarı | 14 |
+| Metabolik ve otoimmün karaciğer hastalıkları | 10 |
+| Karaciğer enfeksiyonları ve kitleleri | 3 |
+
+## Kardiyoloji — 50 kart
+
+Kalp yetmezliği, akut koroner sendrom, hipertansiyon ve önemli ritim sorunları korunmuş; ayrıntıların ağırlığı azaltılmıştır.
+
+| Konu | Kart |
+| --- | ---: |
+| Kalp yetmezliği | 14 |
+| Koroner arter hastalığı ve akut koroner sendrom | 12 |
+| Hipertansiyon | 7 |
+| Aritmiler ve ileti bozuklukları | 8 |
+| Kapak hastalıkları | 5 |
+| Perikardit ve tamponad | 2 |
+| Enfektif endokardit | 1 |
+| Aort hastalıkları | 1 |
 
 ## Göğüs Hastalıkları — 45 kart
+
+KOAH, astım, pulmoner emboli, plevra sorunları ve temel solunum değerlendirmesi.
 
 | Konu | Kart |
 | --- | ---: |
@@ -30,44 +81,18 @@ Geçici klinik çalışma planı. İnternet kaynaklarındaki TUS/YDUS dağılım
 | Plevra hastalıkları | 5 |
 | Uyku apnesi | 3 |
 
-## Hematoloji — 30 kart
+## Hematoloji — 35 kart
+
+Sık anemiler, hemoliz, önemli hematolojik maligniteler ve kanama-tromboz acilleri.
 
 | Konu | Kart |
 | --- | ---: |
 | Anemiler | 9 |
-| Hemoliz ve hemoglobinopatiler | 2 |
+| Hemoliz ve hemoglobinopatiler | 7 |
 | Hematolojik maligniteler | 8 |
 | Kanama, tromboz ve hematolojik aciller | 11 |
 
-## Nefroloji — 45 kart
-
-| Konu | Kart |
-| --- | ---: |
-| Sıvı ve elektrolit bozuklukları | 12 |
-| Asit-baz bozuklukları | 5 |
-| Akut böbrek hasarı | 6 |
-| Kronik böbrek hastalığı ve diyaliz | 9 |
-| Glomerüler hastalıklar | 13 |
-
-## Gastroenteroloji — 30 kart
-
-| Konu | Kart |
-| --- | ---: |
-| Özofagus ve reflü hastalıkları | 6 |
-| Peptik ülser ve H. pylori | 4 |
-| Malabsorpsiyon ve çölyak | 4 |
-| İnflamatuvar bağırsak hastalıkları | 7 |
-| Gastrointestinal kanamalar | 2 |
-| Pankreas ve safra yolu hastalıkları | 7 |
-
-## Hepatoloji — 20 kart
-
-| Konu | Kart |
-| --- | ---: |
-| Karaciğer testleri ve viral hepatitler | 7 |
-| Siroz ve portal hipertansiyon | 2 |
-| Asit, peritonit ve hepatorenal sendrom | 7 |
-| Hepatik ensefalopati | 4 |
+# İkinci kitap — 500 kart
 
 ## Endokrinoloji — 150 kart
 
