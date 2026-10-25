@@ -1,8 +1,28 @@
-# Konu dağılımı — 500 kart
+# Konu dağılımı — 590 kart
 
 Geçici klinik çalışma planı. İnternet kaynaklarındaki TUS/YDUS dağılımları henüz doğrulanmadı. Sayılar uygulamadaki gerçek kart sayılarıdır; sınav yüzdeleri veya klinik prevalans ölçümleri değildir.
 
-Bu tablo uygulamadaki gerçek içerikten hesaplanmıştır. Kart sayıları, resmî veya doğrulanmış bir TUS/YDUS soru dağılımı değildir.
+İlk kitabın yalnızca 1. parçası eklendi. Göğüs hastalıklarında yalnız muayene ve solunum fonksiyonları var; 2–5. parçalar aktarım sınırını aştı.
+
+## Kardiyoloji — 80 kart
+
+| Konu | Kart |
+| --- | ---: |
+| Kalp yetmezliği | 18 |
+| Koroner arter hastalığı ve akut koroner sendrom | 16 |
+| Hipertansiyon | 10 |
+| Aritmiler ve ileti bozuklukları | 18 |
+| Kapak hastalıkları | 8 |
+| Perikardit ve tamponad | 5 |
+| Enfektif endokardit | 3 |
+| Aort hastalıkları | 2 |
+
+## Göğüs Hastalıkları — 10 kart
+
+| Konu | Kart |
+| --- | ---: |
+| Solunum muayenesi ve ayırıcı tanı | 6 |
+| Solunum fonksiyon testleri | 4 |
 
 ## Endokrinoloji — 150 kart
 
@@ -90,5 +110,3 @@ Bu tablo uygulamadaki gerçek içerikten hesaplanmıştır. Kart sayıları, res
 | Konu | Kart |
 | --- | ---: |
 | Temel klinik immünoloji bilgileri | 5 |
-
-**Toplam: 500 kart.**

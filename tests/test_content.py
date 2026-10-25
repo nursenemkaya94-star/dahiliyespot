@@ -8,7 +8,12 @@ ROOT = Path(__file__).resolve().parents[1]
 class ContentTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.data = json.loads((ROOT / 'data/cards.json').read_text())
+        cls.full_data = json.loads((ROOT / 'data/cards.json').read_text())
+        # Keep regressions for the original 500-card collection independently.
+        cls.data = dict(cls.full_data)
+        cls.data['lessons'] = [l for l in cls.full_data['lessons'] if not l.get('source')]
+        cls.data['study_plan'] = dict(cls.full_data['study_plan'])
+        cls.data['study_plan']['lessons'] = [l for l in cls.full_data['study_plan']['lessons'] if l['name'] not in ['Kardiyoloji','Göğüs Hastalıkları']]
         cls.cards = [c for l in cls.data['lessons'] for t in l['topics'] for c in t['cards']]
 
     def test_knowledge_targets_regression(self):

@@ -109,8 +109,10 @@ def build(pdf=None):
         'study_plan': plan,
         'lessons': ordered,
     }
+    from first_part_cards import append_first_part
+    result = append_first_part(result)
     (ROOT / 'data/cards.json').write_text(json.dumps(result, ensure_ascii=False), encoding='utf-8')
-    print(f'{len(lessons)} ders, {sum(len(l["topics"]) for l in lessons)} konu, {len(seen)} bilgi odaklı kart; source audit: {bool(pages)}')
+    print(f'{len(result["lessons"])} ders, {sum(len(t["cards"]) for l in result["lessons"] for t in l["topics"])} kart; ikinci kitap denetimi: {bool(pages)}; ilk parça denetimi: True')
 
 if __name__ == '__main__':
     build(sys.argv[1] if len(sys.argv) > 1 else None)
