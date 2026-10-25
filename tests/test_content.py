@@ -13,7 +13,7 @@ class ContentTests(unittest.TestCase):
         cls.data = dict(cls.full_data)
         cls.data['lessons'] = [l for l in cls.full_data['lessons'] if not l.get('source')]
         cls.data['study_plan'] = dict(cls.full_data['study_plan'])
-        cls.data['study_plan']['lessons'] = [l for l in cls.full_data['study_plan']['lessons'] if l['name'] not in ['Kardiyoloji','Göğüs Hastalıkları']]
+        cls.data['study_plan']['lessons'] = [l for l in cls.full_data['study_plan']['lessons'] if l['name'] in {x['name'] for x in cls.data['lessons']}]
         cls.cards = [c for l in cls.data['lessons'] for t in l['topics'] for c in t['cards']]
 
     def test_knowledge_targets_regression(self):

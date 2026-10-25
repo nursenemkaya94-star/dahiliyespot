@@ -15,17 +15,17 @@ class FirstPartTests(unittest.TestCase):
         cls.new = [c for l in cls.data['lessons'] for t in l['topics'] for c in t['cards'] if c.get('source') == 'first-part-1']
 
     def test_new_scope_and_clinical_priority(self):
-        self.assertEqual(len(self.data['lessons']), 11)
+        self.assertEqual(len(self.data['lessons']), 15)
         all_cards = [c for l in self.data['lessons'] for t in l['topics'] for c in t['cards']]
-        self.assertEqual(len(all_cards), 590)
-        self.assertEqual(len({c['id'] for c in all_cards}), 590)
+        self.assertEqual(len(all_cards), 750)
+        self.assertEqual(len({c['id'] for c in all_cards}), 750)
         self.assertEqual(len(self.new), 90)
         counts = {l['name']: sum(len(t['cards']) for t in l['topics']) for l in self.data['lessons']}
         self.assertEqual(counts['Kardiyoloji'], 80)
-        self.assertEqual(counts['Göğüs Hastalıkları'], 10)
+        self.assertEqual(counts['Göğüs Hastalıkları'], 45)
         pulm = next(l for l in self.data['lessons'] if l['name']=='Göğüs Hastalıkları')
-        self.assertIn('İlk bölüm', pulm['coverage'])
-        self.assertEqual(self.data['study_plan']['first_volume_status']['blocked_parts'], [2,3,4,5])
+        self.assertNotIn('coverage', pulm)
+        self.assertEqual(self.data['study_plan']['first_volume_status']['blocked_parts'], [])
         for l in self.data['lessons']:
             targets=next(p for p in self.data['study_plan']['lessons'] if p['name']==l['name'])
             self.assertEqual({t['name']:len(t['cards']) for t in l['topics']},{t['name']:t['target'] for t in targets['topics']})

@@ -1,8 +1,8 @@
-# Konu dağılımı — 590 kart
+# Konu dağılımı — 750 kart
 
 Geçici klinik çalışma planı. İnternet kaynaklarındaki TUS/YDUS dağılımları henüz doğrulanmadı. Sayılar uygulamadaki gerçek kart sayılarıdır; sınav yüzdeleri veya klinik prevalans ölçümleri değildir.
 
-İlk kitabın yalnızca 1. parçası eklendi. Göğüs hastalıklarında yalnız muayene ve solunum fonksiyonları var; 2–5. parçalar aktarım sınırını aştı.
+İlk kitabın 1–658. sayfaları eksiksiz alınmıştır. Kartlar seçilmiş önemli bilgilerdir; bütün kitap cümlelerini kapsamaz.
 
 ## Kardiyoloji — 80 kart
 
@@ -17,12 +17,57 @@ Geçici klinik çalışma planı. İnternet kaynaklarındaki TUS/YDUS dağılım
 | Enfektif endokardit | 3 |
 | Aort hastalıkları | 2 |
 
-## Göğüs Hastalıkları — 10 kart
+## Göğüs Hastalıkları — 45 kart
 
 | Konu | Kart |
 | --- | ---: |
 | Solunum muayenesi ve ayırıcı tanı | 6 |
 | Solunum fonksiyon testleri | 4 |
+| KOAH | 10 |
+| Astım | 7 |
+| Pulmoner emboli | 7 |
+| Bronşiektazi ve interstisyel hastalıklar | 3 |
+| Plevra hastalıkları | 5 |
+| Uyku apnesi | 3 |
+
+## Hematoloji — 30 kart
+
+| Konu | Kart |
+| --- | ---: |
+| Anemiler | 9 |
+| Hemoliz ve hemoglobinopatiler | 2 |
+| Hematolojik maligniteler | 8 |
+| Kanama, tromboz ve hematolojik aciller | 11 |
+
+## Nefroloji — 45 kart
+
+| Konu | Kart |
+| --- | ---: |
+| Sıvı ve elektrolit bozuklukları | 12 |
+| Asit-baz bozuklukları | 5 |
+| Akut böbrek hasarı | 6 |
+| Kronik böbrek hastalığı ve diyaliz | 9 |
+| Glomerüler hastalıklar | 13 |
+
+## Gastroenteroloji — 30 kart
+
+| Konu | Kart |
+| --- | ---: |
+| Özofagus ve reflü hastalıkları | 6 |
+| Peptik ülser ve H. pylori | 4 |
+| Malabsorpsiyon ve çölyak | 4 |
+| İnflamatuvar bağırsak hastalıkları | 7 |
+| Gastrointestinal kanamalar | 2 |
+| Pankreas ve safra yolu hastalıkları | 7 |
+
+## Hepatoloji — 20 kart
+
+| Konu | Kart |
+| --- | ---: |
+| Karaciğer testleri ve viral hepatitler | 7 |
+| Siroz ve portal hipertansiyon | 2 |
+| Asit, peritonit ve hepatorenal sendrom | 7 |
+| Hepatik ensefalopati | 4 |
 
 ## Endokrinoloji — 150 kart
 

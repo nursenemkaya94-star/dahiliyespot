@@ -1,0 +1,74 @@
+[
+  {
+    "file": "dahiliye-ilk-parca1.pdf",
+    "first": 1,
+    "last": 140,
+    "pages": 140
+  },
+  {
+    "file": "001-060.pdf",
+    "first": 141,
+    "last": 200,
+    "pages": 60
+  },
+  {
+    "file": "061-120.pdf",
+    "first": 201,
+    "last": 260,
+    "pages": 60
+  },
+  {
+    "file": "121-140.pdf",
+    "first": 261,
+    "last": 280,
+    "pages": 20
+  },
+  {
+    "file": "001-060 2.pdf",
+    "first": 281,
+    "last": 340,
+    "pages": 60
+  },
+  {
+    "file": "061-120 2.pdf",
+    "first": 341,
+    "last": 400,
+    "pages": 60
+  },
+  {
+    "file": "121-140 2.pdf",
+    "first": 401,
+    "last": 420,
+    "pages": 20
+  },
+  {
+    "file": "001-060 3.pdf",
+    "first": 421,
+    "last": 480,
+    "pages": 60
+  },
+  {
+    "file": "061-120 3.pdf",
+    "first": 481,
+    "last": 540,
+    "pages": 60
+  },
+  {
+    "file": "121-140 3.pdf",
+    "first": 541,
+    "last": 560,
+    "pages": 20
+  },
+  {
+    "file": "01-60.pdf",
+    "first": 561,
+    "last": 620,
+    "pages": 60
+  },
+  {
+    "file": "61-98.pdf",
+    "first": 621,
+    "last": 658,
+    "pages": 38
+  }
+]

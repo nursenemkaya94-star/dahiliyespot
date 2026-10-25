@@ -111,8 +111,10 @@ def build(pdf=None):
     }
     from first_part_cards import append_first_part
     result = append_first_part(result)
+    from first_volume_cards import append_remaining_volume
+    result = append_remaining_volume(result)
     (ROOT / 'data/cards.json').write_text(json.dumps(result, ensure_ascii=False), encoding='utf-8')
-    print(f'{len(result["lessons"])} ders, {sum(len(t["cards"]) for l in result["lessons"] for t in l["topics"])} kart; ikinci kitap denetimi: {bool(pages)}; ilk parça denetimi: True')
+    print(f'{len(result["lessons"])} ders, {sum(len(t["cards"]) for l in result["lessons"] for t in l["topics"])} kart; ikinci kitap denetimi: {bool(pages)}; ilk kitabın tüm parçaları denetlendi')
 
 if __name__ == '__main__':
     build(sys.argv[1] if len(sys.argv) > 1 else None)

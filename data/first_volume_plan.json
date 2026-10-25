@@ -1,0 +1,176 @@
+{
+  "basis": "clinical_editorial_draft",
+  "note": "Günlük klinikte önemli hastalıklar, tanı ve tedavi kararları, aciller önceliklidir. Doğrulanmış sınav soru yüzdesi değildir.",
+  "lessons": [
+    {
+      "name": "Kardiyoloji",
+      "topics": [
+        {
+          "name": "Kalp yetmezliği",
+          "target": 18
+        },
+        {
+          "name": "Koroner arter hastalığı ve akut koroner sendrom",
+          "target": 16
+        },
+        {
+          "name": "Hipertansiyon",
+          "target": 10
+        },
+        {
+          "name": "Aritmiler ve ileti bozuklukları",
+          "target": 18
+        },
+        {
+          "name": "Kapak hastalıkları",
+          "target": 8
+        },
+        {
+          "name": "Perikardit ve tamponad",
+          "target": 5
+        },
+        {
+          "name": "Enfektif endokardit",
+          "target": 3
+        },
+        {
+          "name": "Aort hastalıkları",
+          "target": 2
+        }
+      ]
+    },
+    {
+      "name": "Göğüs Hastalıkları",
+      "topics": [
+        {
+          "name": "Solunum muayenesi ve ayırıcı tanı",
+          "target": 6
+        },
+        {
+          "name": "Solunum fonksiyon testleri",
+          "target": 4
+        },
+        {
+          "name": "KOAH",
+          "target": 10
+        },
+        {
+          "name": "Astım",
+          "target": 7
+        },
+        {
+          "name": "Pulmoner emboli",
+          "target": 7
+        },
+        {
+          "name": "Bronşiektazi ve interstisyel hastalıklar",
+          "target": 3
+        },
+        {
+          "name": "Plevra hastalıkları",
+          "target": 5
+        },
+        {
+          "name": "Uyku apnesi",
+          "target": 3
+        }
+      ]
+    },
+    {
+      "name": "Hematoloji",
+      "topics": [
+        {
+          "name": "Anemiler",
+          "target": 9
+        },
+        {
+          "name": "Hemoliz ve hemoglobinopatiler",
+          "target": 2
+        },
+        {
+          "name": "Hematolojik maligniteler",
+          "target": 8
+        },
+        {
+          "name": "Kanama, tromboz ve hematolojik aciller",
+          "target": 11
+        }
+      ]
+    },
+    {
+      "name": "Nefroloji",
+      "topics": [
+        {
+          "name": "Sıvı ve elektrolit bozuklukları",
+          "target": 12
+        },
+        {
+          "name": "Asit-baz bozuklukları",
+          "target": 5
+        },
+        {
+          "name": "Akut böbrek hasarı",
+          "target": 6
+        },
+        {
+          "name": "Kronik böbrek hastalığı ve diyaliz",
+          "target": 9
+        },
+        {
+          "name": "Glomerüler hastalıklar",
+          "target": 13
+        }
+      ]
+    },
+    {
+      "name": "Gastroenteroloji",
+      "topics": [
+        {
+          "name": "Özofagus ve reflü hastalıkları",
+          "target": 6
+        },
+        {
+          "name": "Peptik ülser ve H. pylori",
+          "target": 4
+        },
+        {
+          "name": "Malabsorpsiyon ve çölyak",
+          "target": 4
+        },
+        {
+          "name": "İnflamatuvar bağırsak hastalıkları",
+          "target": 7
+        },
+        {
+          "name": "Gastrointestinal kanamalar",
+          "target": 2
+        },
+        {
+          "name": "Pankreas ve safra yolu hastalıkları",
+          "target": 7
+        }
+      ]
+    },
+    {
+      "name": "Hepatoloji",
+      "topics": [
+        {
+          "name": "Karaciğer testleri ve viral hepatitler",
+          "target": 7
+        },
+        {
+          "name": "Siroz ve portal hipertansiyon",
+          "target": 2
+        },
+        {
+          "name": "Asit, peritonit ve hepatorenal sendrom",
+          "target": 7
+        },
+        {
+          "name": "Hepatik ensefalopati",
+          "target": 4
+        }
+      ]
+    }
+  ]
+}
