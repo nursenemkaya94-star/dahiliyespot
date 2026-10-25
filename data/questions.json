@@ -1,0 +1,814 @@
+{
+  "version": "endo-mcq-v1",
+  "lesson": "Endokrinoloji",
+  "level": "Orta–üst",
+  "note": "Örnek PDF’nin klinik vaka ve bilgi yorumlama tarzı esas alınarak hazırlanmış özgün çalışma soruları. Açıklamalar ders kitabına dayalı özetlerdir; birebir alıntı değildir. Resmî sınav sorusu değildir; uzman incelemesinden geçmemiştir.",
+  "questions": [
+    {
+      "id": "endo-mcq-001",
+      "topic": "Diyabet",
+      "question": "Poliüri, polidipsi ve son iki ayda 5 kg kaybı olan hastanın rastgele venöz plazma glukozu 248 mg/dL; HbA1c sonucu henüz çıkmamış. Tanıyı koymak için en uygun değerlendirme hangisidir?",
+      "options": [
+        "Klasik semptomlarla bu değer diyabet tanısı için yeterlidir",
+        "Önce mutlaka 75 g OGTT yapılmalıdır",
+        "HbA1c sonucu çıkmadan tanı konamaz",
+        "İki ayrı açlık glukozunun 126 mg/dL üzerinde olması zorunludur"
+      ],
+      "correct": 0,
+      "explanation": "Klasik hiperglisemi semptomlarıyla birlikte rastgele plazma glukozunun ≥200 mg/dL olması tanı ölçütüdür. Açlık glukozu veya OGTT her hastada zorunlu değildir.",
+      "pages": [
+        180
+      ]
+    },
+    {
+      "id": "endo-mcq-002",
+      "topic": "Diyabet",
+      "question": "Yakınması olmayan bir hastada ilk kez açlık plazma glukozu 130 mg/dL ölçülüyor. Belirgin hiperglisemik kriz yoksa en uygun yaklaşım hangisidir?",
+      "options": [
+        "Başka bir gün tanısal testi tekrarlayarak doğrulamak",
+        "Tanı için yalnız idrar glukozuna bakmak",
+        "Değeri normal kabul etmek",
+        "Tek ölçümle kesin tanı koymak"
+      ],
+      "correct": 0,
+      "explanation": "Açlık plazma glukozu için tanı eşiği 126 mg/dL'dir. Ancak belirgin semptom veya kriz olmayan hastada tek anormal sonucun tekrar ölçümle ya da ikinci bir tanısal testle doğrulanması gerekir.",
+      "pages": [
+        179,
+        180
+      ]
+    },
+    {
+      "id": "endo-mcq-003",
+      "topic": "Diyabet",
+      "question": "75 g OGTT yapılan bir hastada açlık glukozu 112 mg/dL, ikinci saat glukozu 218 mg/dL bulunuyor. Sonuçların sınıflandırılması hangisidir?",
+      "options": [
+        "Yalnız bozulmuş açlık glukozu",
+        "İkinci saat değeri diyabet tanı eşiğini aşmıştır",
+        "Reaktif hipoglisemi",
+        "Normal glukoz toleransı"
+      ],
+      "correct": 1,
+      "explanation": "75 g OGTT'de ikinci saat plazma glukozunun ≥200 mg/dL olması diyabet aralığıdır. Açlık değerinin 126 mg/dL altında olması bu sonucu ortadan kaldırmaz; semptomsuz hastada tanı doğrulanır.",
+      "pages": [
+        180
+      ]
+    },
+    {
+      "id": "endo-mcq-004",
+      "topic": "Diyabet",
+      "question": "Tip 1 diyabetli hastada kusma, taşipne, glukoz 410 mg/dL, pH 7,16, bikarbonat 10 mmol/L ve ketonemi vardır. Serum potasyumu 5,2 mmol/L olsa da toplam vücut potasyumu için ne beklenir?",
+      "options": [
+        "Belirgin artış",
+        "Mutlaka normal düzey",
+        "Osmotik diüreze bağlı azalma",
+        "Yalnız fosfat normal ise artış"
+      ],
+      "correct": 2,
+      "explanation": "Diyabetik ketoasidozda toplam vücut potasyumu azalır. İnsülin eksikliği ve asidoz nedeniyle hücre dışına potasyum geçişi serum değerini başlangıçta normal veya yüksek gösterebilir.",
+      "pages": [
+        188
+      ]
+    },
+    {
+      "id": "endo-mcq-005",
+      "topic": "Diyabet",
+      "question": "Diyabetik ketoasidoz düşünülen hastada belirgin asidoza rağmen idrar keton çubuğu zayıf pozitiftir. Bu uyumsuzluğu en iyi açıklayan neden hangisidir?",
+      "options": [
+        "Çubuğun baskın keton olan beta-hidroksibütiratı yeterince ölçmemesi",
+        "Hipergliseminin keton üretimini tamamen durdurması",
+        "Ketoasidozda keton oluşmaması",
+        "İdrar ketonunun yalnız laktatı ölçmesi"
+      ],
+      "correct": 0,
+      "explanation": "Standart nitroprussid temelli idrar testleri başlıca asetoasetatı saptar; beta-hidroksibütiratı ölçmez. Bu nedenle kan beta-hidroksibütiratı, uygun klinikte idrar testinden daha açıklayıcıdır.",
+      "pages": [
+        188
+      ]
+    },
+    {
+      "id": "endo-mcq-006",
+      "topic": "Diyabet",
+      "question": "SGLT2 inhibitörü kullanan, enfeksiyon sırasında beslenmesi azalmış hastada glukoz 184 mg/dL, pH 7,21, yüksek anyon açıklığı ve ketonemi saptanıyor. En olası tanı hangisidir?",
+      "options": [
+        "Öglisemik diyabetik ketoasidoz",
+        "Hiperosmolar hiperglisemik durum",
+        "İzole solunumsal alkaloz",
+        "Yalnız ilaç ilişkili hipoglisemi"
+      ],
+      "correct": 0,
+      "explanation": "SGLT2 inhibitörleri özellikle hastalık, açlık ve insülin yetersizliği durumlarında belirgin hiperglisemi olmadan ketoasidoza yol açabilir. Glukozun 200 mg/dL altında olması ketonemi ve metabolik asidozu önemsizleştirmez.",
+      "pages": [
+        183
+      ]
+    },
+    {
+      "id": "endo-mcq-007",
+      "topic": "Diyabet",
+      "question": "Yaşlı tip 2 diyabetli hastada ağır dehidratasyon, glukoz 860 mg/dL ve bilinç değişikliği var. pH 7,38, bikarbonat 23 mmol/L, belirgin ketonemi yok. En olası tablo hangisidir?",
+      "options": [
+        "İnsülinoma",
+        "Diyabetik ketoasidoz",
+        "Adrenal kriz",
+        "Hiperosmolar hiperglisemik durum"
+      ],
+      "correct": 3,
+      "explanation": "Çok yüksek glukoz, ağır dehidratasyon ve belirgin ketoasidozun olmaması hiperosmolar hiperglisemik durumu düşündürür. Değerlendirmede efektif osmolalite de hesaplanır.",
+      "pages": [
+        189
+      ]
+    },
+    {
+      "id": "endo-mcq-008",
+      "topic": "Diyabet",
+      "question": "Şok bulguları olan diyabetik ketoasidozlu bir erişkinde başlangıç resüsitasyonunun temel bileşeni hangisidir?",
+      "options": [
+        "İzotonik intravenöz kristalloid sıvı",
+        "Oral serbest su",
+        "Yalnız subkütan uzun etkili insülin",
+        "Rutin yüksek doz bikarbonat"
+      ],
+      "correct": 0,
+      "explanation": "Başlangıçta dolaşımın izotonik kristalloidle desteklenmesi gerekir. Sıvı miktarı kalp ve böbrek durumuna göre ayarlanır; insülin ve elektrolit tedavisi yakın izlemle birlikte yürütülür.",
+      "pages": [
+        188
+      ]
+    },
+    {
+      "id": "endo-mcq-009",
+      "topic": "Diyabet",
+      "question": "Uzun süredir metformin kullanan hastada makrositoz, dilde yanma ve parestezi gelişiyor. İlaçla ilişkili olarak öncelikle hangi eksiklik araştırılmalıdır?",
+      "options": [
+        "Vitamin K",
+        "Vitamin B12",
+        "Bakır fazlalığı",
+        "Vitamin A"
+      ],
+      "correct": 1,
+      "explanation": "Uzun süreli metformin kullanımı B12 eksikliğiyle ilişkilidir. Anemi ve nöropatinin doğrudan diyabete bağlanması bu düzeltilebilir nedeni gözden kaçırabilir.",
+      "pages": [
+        181
+      ]
+    },
+    {
+      "id": "endo-mcq-010",
+      "topic": "Diyabet",
+      "question": "Tip 2 diyabetli ve semptomatik kalp yetersizliği olan hastada ödemi artırabileceği için hangi ilaç sınıfından kaçınmak gerekir?",
+      "options": [
+        "Alfa-glukozidaz inhibitörleri",
+        "GLP-1 reseptör agonistleri",
+        "SGLT2 inhibitörleri",
+        "Tiyazolidindionlar"
+      ],
+      "correct": 3,
+      "explanation": "Tiyazolidindionlar PPAR-gama agonistidir; sıvı tutulumu ve ödem yaparak kalp yetersizliğini kötüleştirebilir. Bu risk bütün antidiyabetik sınıflara genellenemez.",
+      "pages": [
+        182
+      ]
+    },
+    {
+      "id": "endo-mcq-011",
+      "topic": "Diyabet",
+      "question": "İleri kronik böbrek hastalığı olan hastada DPP-4 inhibitörü seçilecek. Böbrek işlevine göre doz ayarı gerektirmeyen seçenek hangisidir?",
+      "options": [
+        "Alogliptin",
+        "Saksagliptin",
+        "Linagliptin",
+        "Sitagliptin"
+      ],
+      "correct": 2,
+      "explanation": "Linagliptin, ağırlıklı olarak renal yolla atılmadığı için böbrek yetmezliğinde doz ayarlaması gerektirmeyen DPP-4 inhibitörüdür. Diğer seçeneklerde renal doz değerlendirmesi gerekir.",
+      "pages": [
+        183
+      ]
+    },
+    {
+      "id": "endo-mcq-012",
+      "topic": "Diyabet",
+      "question": "Obezitesi olan tip 2 diyabetli hastada iştah azalması ve kilo kaybı sağlayabilen, glukoza bağımlı insülin yanıtını artıran ilaç hangisidir?",
+      "options": [
+        "Glimepirid",
+        "Pioglitazon",
+        "İnsülin glarjin",
+        "Semaglutid"
+      ],
+      "correct": 3,
+      "explanation": "Semaglutid bir GLP-1 reseptör agonistidir. İştahı azaltır ve kilo kaybı sağlar; glukoza bağımlı etkisi nedeniyle tek başına hipoglisemi riski düşüktür.",
+      "pages": [
+        183
+      ]
+    },
+    {
+      "id": "endo-mcq-013",
+      "topic": "Diyabet",
+      "question": "Tip 2 diyabetli ve albüminürik kronik böbrek hastalığı olan hastada ACE inhibitörüne rağmen albüminüri sürüyor. Potasyumu ve böbrek işlevi uygun hastada renal ve kardiyovasküler koruma amacıyla hangi ajan eklenebilir?",
+      "options": [
+        "Albüminüri için rutin furosemid monoterapisi",
+        "Spironolaktonun izlem gerektirmeyen yüksek dozu",
+        "ACE inhibitörüne ek olarak ARB",
+        "Finerenon"
+      ],
+      "correct": 3,
+      "explanation": "Finerenon, nonsteroid mineralokortikoid reseptör antagonistidir. Uygun tip 2 diyabetli albüminürik KBH hastalarında standart tedaviye eklenebilir; hiperkalemi açısından potasyum ve böbrek işlevi izlenir.",
+      "pages": [
+        194
+      ]
+    },
+    {
+      "id": "endo-mcq-014",
+      "topic": "Diyabet",
+      "question": "Yeni tip 2 diyabet tanısı alan hastada albüminüri taramasına ne zaman başlanmalıdır?",
+      "options": [
+        "Tanıdan 10 yıl sonra",
+        "Tanı sırasında",
+        "Yalnız kreatinin yükseldiğinde",
+        "Yalnız periferik nöropati gelişirse"
+      ],
+      "correct": 1,
+      "explanation": "Tip 2 diyabetin tanı öncesi sessiz dönemi olabileceğinden albüminüri taraması tanıdan itibaren yapılır. Tip 1 diyabette olağan başlangıç zamanı tanıdan beş yıl sonradır.",
+      "pages": [
+        193
+      ]
+    },
+    {
+      "id": "endo-mcq-015",
+      "topic": "Diyabet",
+      "question": "Uzun süreli diyabeti olan hastada aniden diplopi ve pitoz gelişiyor. Sağ göz aşağı-dışa bakıyor, pupil ışık refleksi korunmuş. En olası tutulum hangisidir?",
+      "options": [
+        "Abdusens siniri",
+        "Fasiyal sinir",
+        "Optik sinir",
+        "Okülomotor sinirin mikrovasküler iskemik tutulumu"
+      ],
+      "correct": 3,
+      "explanation": "Diyabetik mikrovasküler üçüncü sinir felcinde diplopi ve pitoz gelişebilir; pupil sıklıkla korunur. Akut üçüncü sinir felci yine de kompresif nedenler açısından acil klinik değerlendirme gerektirir.",
+      "pages": [
+        191
+      ]
+    },
+    {
+      "id": "endo-mcq-016",
+      "topic": "Diyabet",
+      "question": "Uzun süreli diyabeti olan hastada erken doyma, yemek sonrası şişkinlik ve saatler sonra sindirilmemiş gıda kusma var. Endoskopide mekanik tıkanıklık yok. En olası mekanizma hangisidir?",
+      "options": [
+        "Ekzokrin pankreas yetmezliğine bağlı maldijesyon",
+        "Vagal uyarı artışına bağlı hızlanmış mide boşalması",
+        "Otonom nöropatiye bağlı mide boşalmasında gecikme",
+        "Hiperglisemiye bağlı primer mekanik pilor stenozu"
+      ],
+      "correct": 2,
+      "explanation": "Diyabetik gastroparezi, mekanik engel olmadan mide boşalmasının gecikmesidir. Otonom nöropatiyle ilişkilidir ve öğün-insülin zamanlamasını bozarak glukoz dalgalanmalarına yol açabilir.",
+      "pages": [
+        192
+      ]
+    },
+    {
+      "id": "endo-mcq-017",
+      "topic": "Diyabet",
+      "question": "Gebeliğin 26. haftasında tek aşamalı 75 g OGTT sonuçları açlık 94, birinci saat 174, ikinci saat 149 mg/dL. Bu yöntem için en uygun yorum hangisidir?",
+      "options": [
+        "Açlık değeri nedeniyle gestasyonel diyabet ölçütü karşılanır",
+        "Üç değerin de yüksek olması gerekir",
+        "Yalnız ikinci saat değeri tanısaldır",
+        "Açlık 126 altında olduğu için test tamamen normaldir"
+      ],
+      "correct": 0,
+      "explanation": "Tek aşamalı 75 g testte eşikler açlık 92, birinci saat 180, ikinci saat 153 mg/dL'dir. Bunlardan birinin karşılanması yeterlidir; 100 g iki aşamalı testin ölçütleriyle karıştırılmamalıdır.",
+      "pages": [
+        196
+      ]
+    },
+    {
+      "id": "endo-mcq-018",
+      "topic": "Diyabet",
+      "question": "İnsülin kullanan diyabetli hastada hipoglisemi sırasında çarpıntı ve terleme uyarıları giderek azalıyor. Bu durum en çok hangi mekanizmayla ilişkilidir?",
+      "options": [
+        "Hipoglisemide sempatik aktivitenin giderek güçlenmesi",
+        "Hipoglisemi sırasında glukagon yanıtının belirgin artması",
+        "Hipoglisemiye karşı katekolamin yanıtının azalması",
+        "İnsülin karşıtı hormon eşiklerinin daha yüksek glukoz düzeyine kayması"
+      ],
+      "correct": 2,
+      "explanation": "Tekrarlayan hipoglisemi, karşı düzenleyici hormon yanıtlarını ve uyarı semptomlarını azaltabilir. Bu farkındalık kaybı ağır hipoglisemi riskini artırır ve tedavi hedeflerinin yeniden değerlendirilmesini gerektirir.",
+      "pages": [
+        192
+      ]
+    },
+    {
+      "id": "endo-mcq-019",
+      "topic": "Tiroid hastalıkları",
+      "question": "Süregen yorgunluğu olan hastada TSH 38 mIU/L, serbest T4 düşük, sodyum 133 mmol/L ve prolaktin hafif yüksek. Baş ağrısı veya görme alanı kaybı yok. Bu laboratuvar örüntüsünün en olası temel nedeni hangisidir?",
+      "options": [
+        "TSH salgılayan hipofiz adenomu",
+        "Santral hipotiroidi",
+        "Primer hipotiroidi",
+        "Tiroid hormon direnci"
+      ],
+      "correct": 2,
+      "explanation": "Primer tiroid bezi yetersizliğinde T4 düşerken negatif geri bildirimin azalması TSH'yi yükseltir. Santral hipotiroidide TSH bu düşüklüğe uygun biçimde yükselemez.",
+      "pages": [
+        141
+      ]
+    },
+    {
+      "id": "endo-mcq-020",
+      "topic": "Tiroid hastalıkları",
+      "question": "Hipofiz makroadenomu olan hastada serbest T4 düşük, TSH normal ve adrenal yetmezlik şüphesi var. Tedavide hangi sıra daha uygundur?",
+      "options": [
+        "Yalnız TSH normal olduğu için izlem",
+        "Önce radyoaktif iyot",
+        "Önce adrenal ekseni değerlendirmek ve gerektiğinde glukokortikoid, ardından levotiroksin",
+        "Önce yüksek doz levotiroksin, sonra değerlendirme"
+      ],
+      "correct": 2,
+      "explanation": "Santral hipotiroidide eşlik eden ACTH eksikliği araştırılır. Adrenal yetmezlik varsa tiroid hormonundan önce glukokortikoid verilmesi adrenal krizin tetiklenmesini önler.",
+      "pages": [
+        141
+      ]
+    },
+    {
+      "id": "endo-mcq-021",
+      "topic": "Tiroid hastalıkları",
+      "question": "Graves nedeniyle metimazol başlanan hastada altıncı haftada serbest T4 normale dönmüş, TSH hâlâ baskılı. Erken dönem doz değerlendirmesinde hangi parametre esas alınmalıdır?",
+      "options": [
+        "Serbest T4 ve gerektiğinde serbest T3",
+        "Yalnız anti-TPO titresi",
+        "Yalnız tiroglobulin",
+        "Yalnız TSH"
+      ],
+      "correct": 0,
+      "explanation": "Graves tedavisinde TSH, hormonlar normale döndükten sonra bir süre baskılı kalabilir. Erken dönemde yalnız TSH'ye göre doz artırılması iyatrojenik hipotiroidiye yol açabilir.",
+      "pages": [
+        145
+      ]
+    },
+    {
+      "id": "endo-mcq-022",
+      "topic": "Tiroid hastalıkları",
+      "question": "Çarpıntı, kilo kaybı, diffüz guatr ve proptozisi olan hastada hangi antikor hastalığın mekanizmasını en doğrudan açıklar?",
+      "options": [
+        "Anti-tiroglobulin antikoru",
+        "TSH reseptörünü uyaran antikor",
+        "Anti-tiroid peroksidaz antikoru",
+        "TSH reseptörünü bloke eden antikor"
+      ],
+      "correct": 1,
+      "explanation": "Graves hastalığında uyarıcı TSH reseptör antikorları tiroid hormon sentezini artırır. Oftalmopati klinik olarak Graves lehine ayırt edici bir bulgudur.",
+      "pages": [
+        143,
+        144
+      ]
+    },
+    {
+      "id": "endo-mcq-023",
+      "topic": "Tiroid hastalıkları",
+      "question": "Doğumdan dört ay sonra çarpıntısı başlayan kadında tiroid ağrısız, radyoaktif iyot tutulumu düşük ve TSH baskılı. En olası tanı hangisidir?",
+      "options": [
+        "TSH salgılayan adenom",
+        "Medüller tiroid kanseri",
+        "Toksik multinodüler guatr",
+        "Postpartum tiroidit"
+      ],
+      "correct": 3,
+      "explanation": "Doğum sonrası ilk yıl içindeki ağrısız destrüktif tiroidit postpartum tiroiditi düşündürür. Hormon salınımı artmış sentezden değil depolanmış hormonun açığa çıkmasından kaynaklandığı için tutulum düşüktür.",
+      "pages": [
+        149
+      ]
+    },
+    {
+      "id": "endo-mcq-024",
+      "topic": "Tiroid hastalıkları",
+      "question": "Üst solunum yolu enfeksiyonu sonrası boyun ağrısı, tiroid hassasiyeti, yüksek sedimentasyon ve geçici tirotoksikoz gelişiyor. Antitiroid ilaçların genellikle etkisiz olmasının nedeni nedir?",
+      "options": [
+        "Hastalığın yalnız hipofizi tutması",
+        "Hormon fazlalığının artmış sentezden değil foliküler yıkımdan kaynaklanması",
+        "TSH salgısının artması",
+        "İyot eksikliğinin tek etken olması"
+      ],
+      "correct": 1,
+      "explanation": "Subakut ağrılı tiroiditte depolanmış hormonlar salınır. Antitiroid ilaçlar yeni sentezi baskıladığından temel mekanizmayı düzeltmez; ağrı için NSAİİ, ağır veya dirençli olguda glukokortikoid kullanılır.",
+      "pages": [
+        149
+      ]
+    },
+    {
+      "id": "endo-mcq-025",
+      "topic": "Tiroid hastalıkları",
+      "question": "Ateş, ağır taşikardi ve bilinç değişikliğiyle tiroid fırtınası düşünülen hastada iyodür ne zaman verilmelidir?",
+      "options": [
+        "Antitiroid tedavi olmaksızın tek başına",
+        "Yalnız TSH normale döndükten sonra",
+        "Tiyonamidden en az bir gün önce",
+        "Tiyonamid verildikten en az bir saat sonra"
+      ],
+      "correct": 3,
+      "explanation": "İyodürün tiyonamidden sonra verilmesi, iyodun yeni hormon sentezinde substrat olarak kullanılmasını engellemeyi amaçlar. Tiroid fırtınası çok bileşenli acil tedavi gerektirir.",
+      "pages": [
+        147
+      ]
+    },
+    {
+      "id": "endo-mcq-026",
+      "topic": "Tiroid hastalıkları",
+      "question": "Bilinen Graves hastalığı olan sekiz haftalık gebede antitiroid ilaç tedavisi zorunlu. İlk trimester için genellikle tercih edilen ajan hangisidir?",
+      "options": [
+        "Radyoaktif iyot",
+        "Levotiroksin",
+        "İyodürün uzun süreli tek başına kullanımı",
+        "Propiltiourasil"
+      ],
+      "correct": 3,
+      "explanation": "İlk trimesterde metimazole bağlı embriyopati riski nedeniyle genellikle PTU tercih edilir. PTU'nun hepatotoksisitesi nedeniyle sonraki dönemde tedavi yeniden değerlendirilir; radyoaktif iyot gebelikte kontrendikedir.",
+      "pages": [
+        145,
+        147
+      ]
+    },
+    {
+      "id": "endo-mcq-027",
+      "topic": "Tiroid hastalıkları",
+      "question": "Tiroid nodülü olan hastada TSH baskılı saptanıyor. Nodülün hormon üretip üretmediğini değerlendirmek için en uygun inceleme hangisidir?",
+      "options": [
+        "Serum anti-dsDNA",
+        "Tiroid sintigrafisi",
+        "Hipofiz biyopsisi",
+        "Kemik sintigrafisi"
+      ],
+      "correct": 1,
+      "explanation": "Baskılı TSH varlığında sintigrafi nodülün hiperfonksiyonunu gösterebilir. Nodül değerlendirmesinde ultrason da yapılır; biyopsi kararı fonksiyon ve ultrason riskine göre verilir.",
+      "pages": [
+        138,
+        139
+      ]
+    },
+    {
+      "id": "endo-mcq-028",
+      "topic": "Tiroid hastalıkları",
+      "question": "Tiroid nodülünün ince iğne aspirasyonunda foliküler neoplazi bildiriliyor. Adenom ile karsinom ayrımının kesin yapılamamasının temel nedeni nedir?",
+      "options": [
+        "Kapsül veya damar invazyonunun histolojik olarak değerlendirilmesi gereği",
+        "Her foliküler lezyonun benign olması",
+        "Sitolojide hiçbir tiroid hücresinin görülememesi",
+        "Kalsitoninin daima normal olması"
+      ],
+      "correct": 0,
+      "explanation": "Foliküler karsinom tanısı kapsül ve/veya damar invazyonuna dayanır. Sitoloji hücreleri değerlendirir; invazyonu göstermek için doku mimarisi gerekir.",
+      "pages": [
+        153
+      ]
+    },
+    {
+      "id": "endo-mcq-029",
+      "topic": "Tiroid hastalıkları",
+      "question": "Medüller tiroid kanseri ve MEN2 şüphesi olan hastada tiroidektomi öncesi hangi hastalık özellikle araştırılmalıdır?",
+      "options": [
+        "Feokromositoma",
+        "İnsülinoma",
+        "Hipofizer ACTH adenomu",
+        "Prolaktinoma"
+      ],
+      "correct": 0,
+      "explanation": "Eşlik eden feokromositoma fark edilmeden ameliyat yapılması katekolamin krizini tetikleyebilir. MEN2 değerlendirmesinde feokromositoma dışlanır ve varsa öncelikle uygun şekilde tedavi edilir.",
+      "pages": [
+        154
+      ]
+    },
+    {
+      "id": "endo-mcq-030",
+      "topic": "Tiroid hastalıkları",
+      "question": "Tirotoksikozu olan hastada tiroid tutulumu düşük ve serum tiroglobulini de düşük. En olası neden hangisidir?",
+      "options": [
+        "Dışarıdan tiroid hormonu alımı",
+        "Toksik adenom",
+        "Subakut tiroidit",
+        "Graves hastalığı"
+      ],
+      "correct": 0,
+      "explanation": "Dışarıdan tiroid hormonu alımında bezin aktivitesi ve tiroglobulin salınımı baskılanır. Destrüktif tiroiditte ise foliküler yıkım tiroglobulini genellikle yükseltir.",
+      "pages": [
+        138
+      ]
+    },
+    {
+      "id": "endo-mcq-031",
+      "topic": "Tiroid hastalıkları",
+      "question": "Hipotiroidi nedeniyle levotiroksin kullanan kadın gebe kaldığını öğreniyor. Gebelik boyunca hormon gereksinimi için en olası beklenti hangisidir?",
+      "options": [
+        "İlaç gereksiniminin kesin olarak sıfırlanması",
+        "Dozun her hastada yarıya indirilmesi",
+        "Gereksinimin artması ve erken laboratuvar/doz değerlendirmesi",
+        "TSH izleminin doğuma kadar bırakılması"
+      ],
+      "correct": 2,
+      "explanation": "Gebelikte levotiroksin ihtiyacı sıklıkla artar. Erken TSH değerlendirmesi ve kişiye özgü doz ayarlaması gerekir; önceki dozun değişmeden yeterli kalacağı varsayılmamalıdır.",
+      "pages": [
+        142
+      ]
+    },
+    {
+      "id": "endo-mcq-032",
+      "topic": "Tiroid hastalıkları",
+      "question": "Gebede total T4 yüksek, gebeliğe uygun referanslarla değerlendirilen serbest T4 ve TSH normal. Bu bulguyu en iyi açıklayan değişiklik hangisidir?",
+      "options": [
+        "Hipofiz nekrozu",
+        "Östrojene bağlı TBG artışı",
+        "Tiroid bezinin malign dönüşümü",
+        "Tiroid hormonlarına tam direnç"
+      ],
+      "correct": 1,
+      "explanation": "Gebelikte östrojen TBG düzeyini artırır ve total T4 yükselir. Bu durum tek başına hipertiroidi anlamına gelmez; hormonlar gebeliğe ve kullanılan yönteme uygun aralıklarla yorumlanır.",
+      "pages": [
+        139
+      ]
+    },
+    {
+      "id": "endo-mcq-033",
+      "topic": "Tiroid hastalıkları",
+      "question": "Tiroid tümöründe psammoma cisimcikleri ve ağırlıklı lenfatik yayılım gözleniyor. En olası histolojik tip hangisidir?",
+      "options": [
+        "Foliküler karsinom",
+        "Medüller karsinom",
+        "Anaplastik karsinom",
+        "Papiller karsinom"
+      ],
+      "correct": 3,
+      "explanation": "Psammoma cisimcikleri ve lenfatik yayılım papiller tiroid karsinomu lehinedir. Foliküler karsinomda hematojen yayılım daha karakteristiktir.",
+      "pages": [
+        153
+      ]
+    },
+    {
+      "id": "endo-mcq-034",
+      "topic": "Tiroid hastalıkları",
+      "question": "Hashimoto tiroiditi olan hastada kısa süreli tirotoksikozdan sonra hipotiroidi gelişiyor. İlk dönemin en uygun açıklaması hangisidir?",
+      "options": [
+        "Yeni gelişen TSH reseptörü uyarıcı antikora bağlı kalıcı sentez artışı",
+        "TSH salgılayan adenomun tiroidi sürekli uyarması",
+        "Foliküler otonomiye bağlı toksik adenom gelişmesi",
+        "Destrüksiyona bağlı geçici hormon salınımı, yani haşitoksikoz"
+      ],
+      "correct": 3,
+      "explanation": "Hashimoto tiroiditinde foliküler yıkımla geçici hormon salınımı olabilir. Haşitoksikoz denen bu dönem hastalığın her zaman sürekli hipertiroidiyle seyredeceği anlamına gelmez.",
+      "pages": [
+        150
+      ]
+    },
+    {
+      "id": "endo-mcq-035",
+      "topic": "Adrenal hastalıklar",
+      "question": "Uzun süre yüksek doz prednizolon kullanan hasta ilacı aniden kesiyor. Halsizlik, bulantı ve hipotansiyon gelişiyor; potasyum normal. En olası mekanizma hangisidir?",
+      "options": [
+        "Hipotalamo-hipofizer-adrenal eksenin baskılanması",
+        "Renin salgılayan tümör",
+        "Aldosteron salgılayan adenom",
+        "Otoimmün adrenal korteks yıkımı"
+      ],
+      "correct": 0,
+      "explanation": "Uzun süreli dışarıdan glukokortikoid ACTH eksenini baskılar. Ani kesilme santral adrenal yetmezlik yapabilir; aldosteron çoğunlukla renin-anjiyotensin sistemiyle korunduğu için hiperkalemi beklenmeyebilir.",
+      "pages": [
+        204
+      ]
+    },
+    {
+      "id": "endo-mcq-036",
+      "topic": "Adrenal hastalıklar",
+      "question": "Kortizol eksikliği olan iki hastadan birinde belirgin hiperkalemi ve hiperpigmentasyon var. Bu bulgular hangi durumu daha çok destekler?",
+      "options": [
+        "Ekzojen glukokortikoid fazlalığı",
+        "İzole hipotiroidi",
+        "Yalnız sekonder adrenal yetmezlik",
+        "Primer adrenal yetmezlik"
+      ],
+      "correct": 3,
+      "explanation": "Primer adrenal yetmezlikte kortizol yanında aldosteron kaybı hiperkalemiye, yüksek ACTH ise hiperpigmentasyona yol açabilir. Santral yetmezlikte aldosteron genellikle korunur ve ACTH yükselmez.",
+      "pages": [
+        203,
+        204
+      ]
+    },
+    {
+      "id": "endo-mcq-037",
+      "topic": "Adrenal hastalıklar",
+      "question": "Cushing görünümü olan hastada ayrıntılı ilaç öyküsü neden ilk değerlendirmede önemlidir?",
+      "options": [
+        "Tüm antihipertansifler kortizol salgılar",
+        "Cushing sendromunun en sık nedeni dışarıdan glukokortikoid kullanımıdır",
+        "İlaç öyküsü ACTH ölçümünün yerini daima tutar",
+        "Endojen Cushing her zaman ilaçla oluşur"
+      ],
+      "correct": 1,
+      "explanation": "Cushing sendromunun en sık nedeni iyatrojenik glukokortikoid maruziyetidir. Endojen olguların en sık nedeni ise hipofizer ACTH salgılayan adenom, yani Cushing hastalığıdır.",
+      "pages": [
+        127
+      ]
+    },
+    {
+      "id": "endo-mcq-038",
+      "topic": "Adrenal hastalıklar",
+      "question": "Dirençli hipertansiyon, spontan hipokalemi ve metabolik alkalozu olan hastada primer hiperaldosteronizm düşünülüyor. Hangi hormon örüntüsü beklenir?",
+      "options": [
+        "Yüksek renin, düşük aldosteron",
+        "Yüksek renin, yüksek aldosteron",
+        "Baskılı renin, uygunsuz yüksek aldosteron",
+        "Baskılı renin, baskılı aldosteron"
+      ],
+      "correct": 2,
+      "explanation": "Otonom aldosteron etkisi sodyum tutulumuyla renini baskılar; potasyum ve hidrojen kaybına neden olabilir. Hipokalemi her hastada bulunmaz. Sekonder hiperaldosteronizmde renin de yükselir.",
+      "pages": [
+        208
+      ]
+    },
+    {
+      "id": "endo-mcq-039",
+      "topic": "Adrenal hastalıklar",
+      "question": "Dirençli hipertansiyon nedeniyle primer hiperaldosteronizm tanısı doğrulanan hastaya, etiyolojinin tedavi seçimini değiştireceği anlatılıyor. Bu hastalıkta en sık karşılaşılan etiyoloji hangisidir?",
+      "options": [
+        "Aldosteron salgılayan adrenal karsinom",
+        "Bilateral adrenal hiperplazi",
+        "Tek taraflı aldosteron salgılayan adenom",
+        "Ailesel glukokortikoidle düzelen hiperaldosteronizm"
+      ],
+      "correct": 1,
+      "explanation": "Primer hiperaldosteronizmin en sık nedeni bilateral adrenal hiperplazidir. Aldosteron salgılayan tek taraflı adenom önemli bir diğer nedendir; ayırım tedavi seçimini etkiler.",
+      "pages": [
+        208
+      ]
+    },
+    {
+      "id": "endo-mcq-040",
+      "topic": "Adrenal hastalıklar",
+      "question": "Feokromositoma çıkarılan hastada hangi bulgu metastatik hastalık için en belirleyicidir?",
+      "options": [
+        "Tümörün büyük olması",
+        "Çekirdeklerde pleomorfizm",
+        "Kromaffin dokunun normalde bulunmadığı uzak organda tümör odağı",
+        "Katekolaminin çok yüksek olması"
+      ],
+      "correct": 2,
+      "explanation": "Feokromositomada histoloji tek başına davranışı güvenilir biçimde belirlemez. Normal kromaffin doku içermeyen bölgelerde metastazın gösterilmesi belirleyicidir.",
+      "pages": [
+        212
+      ]
+    },
+    {
+      "id": "endo-mcq-041",
+      "topic": "Adrenal hastalıklar",
+      "question": "Endojen hiperkortizolizm doğrulanan hastada ACTH belirgin baskılı. İlk olarak hangi kaynak grubu düşünülmelidir?",
+      "options": [
+        "Hipofizer ACTH adenomu",
+        "Normal stres yanıtı",
+        "Ektopik ACTH üretimi",
+        "ACTH'den bağımsız adrenal kortizol üretimi"
+      ],
+      "correct": 3,
+      "explanation": "ACTH'nin baskılanması kortizol fazlalığının negatif geri bildirimine işaret eder ve ACTH'den bağımsız adrenal kaynak lehinedir. Hipofizer veya ektopik ACTH kaynaklarında ACTH genellikle baskılanmış değildir.",
+      "pages": [
+        129
+      ]
+    },
+    {
+      "id": "endo-mcq-042",
+      "topic": "Hipofiz hastalıkları",
+      "question": "Amenore, galaktore ve prolaktin 265 ng/mL bulunan hastada gebelik, ilaç etkisi ve hipotiroidi dışlanmış. En olası tanı hangisidir?",
+      "options": [
+        "Prolaktinoma",
+        "Primer over yetmezliği",
+        "Diabetes insipidus",
+        "Sheehan sendromu"
+      ],
+      "correct": 0,
+      "explanation": "Belirgin prolaktin yüksekliği, diğer nedenler dışlandıktan sonra prolaktinomayı destekler. Prolaktin GnRH eksenini baskılayarak amenore ve hipogonadizme neden olabilir; görüntüleme ve uygun laboratuvar değerlendirmesi gerekir.",
+      "pages": [
+        111,
+        121
+      ]
+    },
+    {
+      "id": "endo-mcq-043",
+      "topic": "Hipofiz hastalıkları",
+      "question": "Prolaktinoma saptanan, acil cerrahi gerektiren komplikasyonu olmayan hastada genellikle ilk tercih ilaç hangisidir?",
+      "options": [
+        "Pegvisomant",
+        "Kabergolin",
+        "Oktreotid",
+        "Pasireotid"
+      ],
+      "correct": 1,
+      "explanation": "Dopamin agonisti kabergolin prolaktini düşürür ve tümör boyutunu küçültebilir. Prolaktinoma için genellikle ilk tercih medikal tedavidir.",
+      "pages": [
+        122
+      ]
+    },
+    {
+      "id": "endo-mcq-044",
+      "topic": "Hipofiz hastalıkları",
+      "question": "Doğumda ağır kanama geçiren kadında süt verememe, amenore ve halsizlik gelişiyor. En olası tanı hangisidir?",
+      "options": [
+        "Primer hiperparatiroidi",
+        "Sheehan sendromu",
+        "Feokromositoma",
+        "Postpartum Graves"
+      ],
+      "correct": 1,
+      "explanation": "Ağır obstetrik kanama sonrası hipofiz iskemik nekrozu Sheehan sendromudur. Laktasyon yetersizliği prolaktin eksikliğine, amenore ve diğer yakınmalar ek hipofiz hormon eksikliklerine bağlı olabilir.",
+      "pages": [
+        116
+      ]
+    },
+    {
+      "id": "endo-mcq-045",
+      "topic": "Hipofiz hastalıkları",
+      "question": "Hipofiz makroadenomu olan hastada her iki gözün temporal görme alanında kayıp var. En olası bası yeri hangisidir?",
+      "options": [
+        "Optik kiazma",
+        "Sağ optik traktus",
+        "Sağ oksipital korteks",
+        "Sol optik radyasyon"
+      ],
+      "correct": 0,
+      "explanation": "Optik kiazmada çaprazlaşan nazal retina liflerinin basısı bitemporal hemianopsiye yol açar. Makroadenomlarda görme alanı değerlendirmesi önemlidir.",
+      "pages": [
+        119
+      ]
+    },
+    {
+      "id": "endo-mcq-046",
+      "topic": "Hipofiz hastalıkları",
+      "question": "Hipofiz adenomu olan hastada ani şiddetli baş ağrısı, hipotansiyon ve hiponatremi gelişiyor; hipofiz apopleksisi düşünülüyor. Serbest T4 de düşük bulunuyor. Acil hormon replasmanında öncelik hangisidir?",
+      "options": [
+        "Desmopressin",
+        "Fludrokortizon monoterapisi",
+        "Glukokortikoid",
+        "Levotiroksin"
+      ],
+      "correct": 2,
+      "explanation": "Hipofiz apopleksisinde akut ACTH eksikliği yaşamı tehdit edebilir; glukokortikoid önceliklidir. Bu tedavi acil görüntüleme, görme değerlendirmesi ve nöroşirürji görüşünün yerini almaz.",
+      "pages": [
+        116
+      ]
+    },
+    {
+      "id": "endo-mcq-047",
+      "topic": "Kalsiyum ve kemik metabolizması",
+      "question": "Tekrarlayan böbrek taşı olan hastada kalsiyum yüksek, fosfat düşük ve PTH yüksek. En olası tanı hangisidir?",
+      "options": [
+        "Granülomatöz hastalığa bağlı hiperkalsemi",
+        "D vitamini intoksikasyonu",
+        "Primer hiperparatiroidi",
+        "PTHrP salgılayan maligniteye bağlı hiperkalsemi"
+      ],
+      "correct": 2,
+      "explanation": "Hiperkalsemiye rağmen baskılanmamış veya yüksek PTH primer hiperparatiroidiyi düşündürür. PTH'nin fosfat atılımını artırması hipofosfatemiye katkıda bulunur.",
+      "pages": [
+        160
+      ]
+    },
+    {
+      "id": "endo-mcq-048",
+      "topic": "Kalsiyum ve kemik metabolizması",
+      "question": "Tiroidektomi sonrası perioral uyuşma ve karpopedal spazm gelişen hastada hangi EKG değişikliği beklenir?",
+      "options": [
+        "Sivri T dalgaları",
+        "Uzamış QT",
+        "Kısalmış PR ve delta dalgası",
+        "Kısalmış QT"
+      ],
+      "correct": 1,
+      "explanation": "Cerrahi sonrası hipoparatiroidi hipokalsemiye yol açabilir. Hipokalsemi nöromüsküler uyarılabilirliği artırır ve QT uzaması yapabilir.",
+      "pages": [
+        157
+      ]
+    },
+    {
+      "id": "endo-mcq-049",
+      "topic": "Kalsiyum ve kemik metabolizması",
+      "question": "62 yaşındaki postmenopozal kadında düşük travmalı kırık öyküsü yok. Femur boynu DXA T-skoru −2,7, Z-skoru −1,2; serum kalsiyumu normal. Kemik yoğunluğunun en uygun sınıflaması hangisidir?",
+      "options": [
+        "Kalsiyum normal olduğu için osteoporoz dışlanır",
+        "Kırık olmadığı için yalnız osteopeni",
+        "Osteoporoz",
+        "Z-skoru −2 üzerinde olduğundan normal kemik yoğunluğu"
+      ],
+      "correct": 2,
+      "explanation": "Postmenopozal kadınlarda uygun DXA bölgesinde T-skorunun −2,5 veya altında olması osteoporoz ölçütüdür. Paget ve osteomalazi yalnız bu eşikle tanınmaz.",
+      "pages": [
+        167
+      ]
+    },
+    {
+      "id": "endo-mcq-050",
+      "topic": "Kalsiyum ve kemik metabolizması",
+      "question": "Kemik mineral yoğunluğu tek başına kırık riskini tam açıklamayan hastada FRAX hangi amaçla kullanılır?",
+      "options": [
+        "Kemik metastazının yerini göstermek",
+        "On yıllık majör osteoporotik ve kalça kırığı olasılığını tahmin etmek",
+        "Bir yıllık hiperkalsemi riskini hesaplamak",
+        "PTH salgısını ölçmek"
+      ],
+      "correct": 1,
+      "explanation": "FRAX klinik risk etmenlerini, gerektiğinde femur boynu kemik yoğunluğuyla birlikte kullanarak on yıllık kırık olasılığını tahmin eder. Bir görüntüleme veya biyokimyasal tanı testi değildir.",
+      "pages": [
+        166
+      ]
+    }
+  ]
+}
