@@ -2,7 +2,8 @@
 
 Usage: python3 scripts/build_cards.py [source.pdf]
 An optional source PDF enables a full verbatim-sentence audit via pdftotext.
-Only data/editorial_cards.tsv defines inclusion, topic, and the exact hidden fact.
+data/editorial_cards.tsv defines the unmodified quote, hidden fact, and a separate
+question that integrates the missing disease/drug/patient context into its sentence.
 """
 import hashlib
 import json
@@ -27,7 +28,7 @@ def build(pdf=None):
     for line_number, row in enumerate((ROOT / 'data/editorial_cards.tsv').read_text().splitlines(), 1):
         if not row.strip() or row.startswith('#'):
             continue
-        name, page, topic, statement = row.split('|')
+        name, page, topic, statement, question = row.split('|')
         page = int(page)
         li = NAMES.index(name)
         assert STARTS[li] <= page < STARTS[li+1], f'Wrong lesson/page at line {line_number}'
@@ -35,6 +36,9 @@ def build(pdf=None):
         assert len(answers) == 1, f'Exactly one knowledge target required at line {line_number}'
         answer = answers[0]
         assert len(statement.split()) <= 90, f'Verbatim passage too long at line {line_number}'
+        assert question.count('________') == 1, f'Exactly one blank required at line {line_number}'
+        assert answer.casefold() not in question.casefold(), f'Question reveals its answer at line {line_number}'
+        assert not re.match(r'^(Bu |En sık |En önemli |Sıklıkla |Genellikle |Ancak |Hastaların )', question), f'Missing explicit context at line {line_number}'
         if pages:
             quote = statement.replace('{{', '').replace('}}', '')
             assert normalize(quote) in normalize(pages[page-1]), f'Full sentence not found on source page {page}: {quote}'
@@ -45,7 +49,7 @@ def build(pdf=None):
         identity = f'{name}|{page}|{statement}'
         card = {
             'id': 'fact-' + hashlib.sha256(identity.encode()).hexdigest()[:16],
-            'question': statement.replace('{{' + answer + '}}', '________'),
+            'question': question,
             'answer': answer,
             'explanation': explanation,
             'page': page,
@@ -58,9 +62,9 @@ def build(pdf=None):
         group['cards'].append(card)
     assert all(l['topics'] for l in lessons), 'Every included lesson needs cards'
     result = {
-        'version': 'verbatim-300-v3',
+        'version': 'context-300-v4',
         'source': 'Klinisyen Yan Dal Dahiliye Konu Kitabı · 2. PDF',
-        'status': 'Kaynak cümleleri değiştirilmeden, önemli bilgi kısmı gizlenerek hazırlanmış 300 kart. Uzman incelemesi yapılmadı; kitabın tüm önemli konularını kapsama iddiası yoktur.',
+        'status': '300 bilgi kartında hastalık, ilaç veya durum sorunun cümlesinde belirtilir. Cevabın altında kaynak cümlesi değiştirilmeden korunur. Uzman incelemesi yapılmadı; kitabın tüm önemli konularını kapsama iddiası yoktur.',
         'lessons': lessons,
     }
     (ROOT / 'data/cards.json').write_text(json.dumps(result, ensure_ascii=False), encoding='utf-8')

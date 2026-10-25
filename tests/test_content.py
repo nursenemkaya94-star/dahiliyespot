@@ -14,12 +14,12 @@ class ContentTests(unittest.TestCase):
     def test_knowledge_targets_regression(self):
         # Old code blanked the longest word. These facts must hide their answer.
         examples = [
-            ('Bleomisin:', 'akciğer fibrozisi', 29),
+            ('Bleomisinin', 'akciğer fibrozisi', 29),
             ('Prolaktin düzeyi 200', 'prolaktinoma', 121),
             ('Cushing sendromunun en sık endojen', 'Cushing hastalığı', 127),
-            ('en sık görülen kompleman eksikliği', 'C2', 280),
+            ('Kompleman komponentleri arasında', 'C2', 280),
             ('p-ANCA', 'miyeloperoksidaz', 634),
-            ('Terapötik koşullarda bu NAPQI', 'glutatyon', 840),
+            ('Parasetamolün toksik metaboliti', 'glutatyon', 840),
         ]
         for prompt, answer, page in examples:
             with self.subTest(prompt=prompt):
@@ -33,7 +33,8 @@ class ContentTests(unittest.TestCase):
         for card in self.cards:
             with self.subTest(card=card['id']):
                 self.assertEqual(card['question'].count('________'), 1)
-                self.assertEqual(card['question'].replace('________', card['answer']), card['explanation'])
+                self.assertNotIn(card['answer'].casefold(), card['question'].casefold())
+                self.assertIn(card['answer'], card['explanation'])
                 self.assertLessEqual(len(card['question'].split()), 90)
                 self.assertTrue(card['id'].startswith('fact-'))
                 self.assertTrue(1 <= card['page'] <= 874)
@@ -53,6 +54,29 @@ class ContentTests(unittest.TestCase):
         for card in self.cards:
             self.assertNotIn('kitapta belirtilen', card['explanation'])
             self.assertNotIn('kitapta altın standart olarak belirtilen', card['explanation'])
+
+    def test_ambiguous_source_sentences_have_explicit_question_context(self):
+        examples = [
+            ('Bu sendromun gelişimini önlemek', 'Tümör lizis sendromunu', 'hidrasyon'),
+            ('Ancak ilk tercih genellikle', 'Romatoid artritin', 'metotreksat'),
+            ('Bu hastaların tedavisinde ilk ilaç', 'Beta bloker kullanan hastada anafilaksi', 'vazopresin ve glukagon'),
+            ('Bu nedenle ilk tercih', 'Dağılımsal şokta', 'norepinefrin'),
+            ('En önemli faktör basınçtır.', 'Bası yaralarının', 'basınç'),
+            ('Fenitoin (kardiyotoksisiteyi', 'Trisiklik antidepresan intoksikasyonundaki nöbetlerde', 'Fenitoin'),
+        ]
+        for source, context, answer in examples:
+            with self.subTest(source=source):
+                cards = [c for c in self.cards if c['explanation'].startswith(source)]
+                self.assertEqual(len(cards), 1)
+                self.assertTrue(cards[0]['question'].startswith(context))
+                self.assertEqual(cards[0]['answer'], answer)
+
+    def test_source_headings_define_correct_disease_in_question(self):
+        elane = next(c for c in self.cards if c['answer'] == 'ELANE')
+        self.assertIn('Kostmann', elane['question'])
+        self.assertNotIn('Siklik', elane['question'])
+        histology = next(c for c in self.cards if c['answer'] == '“smudge cell”')
+        self.assertIn('hMPV', histology['question'])
 
 if __name__ == '__main__':
     unittest.main()
