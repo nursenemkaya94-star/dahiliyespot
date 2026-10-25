@@ -1,122 +1,301 @@
-# Ders | PDF sayfası | Konu | Tek bir bilgi hedefleyen cümle ({{cevap}})
-Onkoloji|6|Kanser genetiği|HPV'nin başlıca onkoproteinleri {{E6 ve E7}}'dir.
-Onkoloji|15|Paraneoplastik hiperkalsemi|PTHrP üretimine bağlı hiperkalsemiyle en sık ilişkili akciğer tümörü {{skuamoz hücreli karsinom}}dur.
-Onkoloji|15|Paraneoplastik hiperkalsemi|Kalsitriol üretimine bağlı malignite hiperkalsemisi en sık {{lenfoma}}larda görülür.
-Onkoloji|18|Lambert–Eaton sendromu|Lambert–Eaton miyastenik sendromunun en belirgin kanser ilişkisi {{küçük hücreli akciğer kanseri}}dir.
-Onkoloji|20|Tümör lizis sendromu|Tümör lizisinde kalsiyum-fosfat kristallerinin çökmesi {{hipokalsemi}}ye yol açar.
-Onkoloji|20|Tümör lizis sendromu|Tümör lizisini önlemede tedavi öncesi en önemli adım {{hidrasyon}}dur.
-Onkoloji|20|Tümör lizis sendromu|Tümör lizisinde kullanılan ürat oksidaz enzimi {{rasburikaz}}dır.
-Onkoloji|23|Spinal kord basısı|Malign spinal kord kompresyonuna en sık neden olan primer tümör {{akciğer kanseri}}dir.
-Onkoloji|23|Spinal kord basısı|Malign spinal kord basısında en sık tutulan vertebra bölgesi {{torakal}} bölgedir.
-Onkoloji|29|Antineoplastik ilaçlar|Bleomisinin öne çıkan toksisitesi {{akciğer fibrozisi}}dir.
-Onkoloji|29|Antineoplastik ilaçlar|Doksorubisinin kardiyotoksisitesine karşı kullanılan koruyucu ajan {{deksrazoksan}}dır.
-Onkoloji|70|Kolorektal kanser|Kolon kanserinin en sık visseral metastaz yaptığı organ {{karaciğer}}dir.
-Onkoloji|98|Testis tümörleri|Testis kanseri için bilinen en önemli risk faktörü {{kriptorşidizm}}dir.
-Onkoloji|98|Testis tümörleri|Testis tümöründe tipik başvuru bulgusu {{ağrısız kitle}}dir.
-Onkoloji|102|Mesane kanseri|Mesane kanserinde kesin tanı, {{sistoskopi}} sırasında alınan biyopsiyle konur.
-Endokrinoloji|121|Prolaktinoma|Prolaktin düzeyi 200 ng/mL'nin üzerindeyse kitapta belirtilen en sık neden {{prolaktinoma}}dır.
-Endokrinoloji|121|Prolaktinoma|Büyük hipofiz tümörüne rağmen prolaktinin yalancı düşük ölçülmesi {{Hook fenomeni}} olarak adlandırılır.
-Endokrinoloji|123|Akromegali|Büyüme hormonu fazlalığı epifizler kapandıktan sonra {{akromegali}}ye yol açar.
-Endokrinoloji|127|Cushing sendromu|Cushing sendromunun tüm nedenler içinde en sık nedeni {{iyatrojenik}}tir.
-Endokrinoloji|127|Cushing sendromu|Cushing sendromunun en sık endojen nedeni {{Cushing hastalığı}}dır.
-Endokrinoloji|145|Hipertiroidi|Antitiroid ilaç tedavisinin erken takibinde TSH baskılı kalabileceği için esas alınan değer {{serbest T4}} düzeyidir.
-Endokrinoloji|145|Hipertiroidi|Antitiroid ilaç kullanırken ateş ve boğaz ağrısı gelişmesi, ciddi yan etki olan {{agranülositoz}} açısından değerlendirme gerektirir.
-Endokrinoloji|153|Tiroid kanserleri|En sık görülen tiroid kanseri alt tipi {{papiller}} tiroid kanseridir.
-Endokrinoloji|153|Tiroid kanserleri|Papiller tiroid kanserinde çekirdeklerin karakteristik görünümü {{buzlu cam}} görünümüdür.
-Endokrinoloji|153|Tiroid kanserleri|Papiller tiroid kanserinin baskın yayılım yolu {{lenfatik}} yoldur.
-Endokrinoloji|153|Tiroid kanserleri|Foliküler tiroid kanseri ağırlıklı olarak {{hematojen}} yolla yayılır.
-Endokrinoloji|153|Tiroid kanserleri|Foliküler tiroid kanserini adenomdan ayırmada kapsül veya {{vasküler invazyon}} gösterilmesi gerekir.
-Endokrinoloji|157|Hipokalsemi|Hipokalseminin tipik EKG bulgusu {{QT mesafesinde uzama}}dır.
-Endokrinoloji|170|Kemik metabolizması|Osteomalazinin en sık nedeni {{Vitamin D yetersizliği}}dir.
-Endokrinoloji|181|Diyabet ilaçları|Metforminin başlıca etkisi karaciğerde {{glukoneogenezi}} inhibe etmektir.
-Endokrinoloji|204|Adrenal yetmezlik|Sekonder adrenal yetmezliğin en sık nedeni uzun süreli {{steroid}} kullanımının aniden bırakılmasıdır.
-Endokrinoloji|204|Adrenal yetmezlik|Primerden farklı olarak sekonder adrenal yetmezlikte aldosteron düzeyi genellikle {{normal}}dir.
-Endokrinoloji|208|Primer hiperaldosteronizm|Primer hiperaldosteronizmin en sık nedeni {{bilateral mikronodüler hiperplazi}}dir.
-Endokrinoloji|208|Primer hiperaldosteronizm|Primer hiperaldosteronizmde plazma renin düzeyi {{düşüktür}}.
-Temel İmmünoloji|233|Lenfoid organlar|T lenfositlerin olgunlaşma yeri {{timus}}tur.
-Temel İmmünoloji|233|Lenfoid organlar|Antikor sentezi yapılmayan tek lenforetiküler organ {{timus}}tur.
-Temel İmmünoloji|274|İmmünglobülinler|Serumda pentamerik, B lenfosit yüzeyinde monomerik bulunan immünglobülin {{IgM}}'dir.
-Temel İmmünoloji|274|İmmünglobülinler|Komplemanı en güçlü aktive eden antikor {{IgM}}'dir.
-Temel İmmünoloji|274|İmmünglobülinler|Tip I aşırı duyarlılık ve antiparazitik yanıtta rol alan antikor {{IgE}}'dir.
-Temel İmmünoloji|276|Kompleman sistemi|Kompleman aracılı opsonizasyondan başlıca sorumlu komponent {{C3b}}'dir.
-Temel İmmünoloji|276|Kompleman sistemi|Serumda en çok bulunan kompleman komponenti {{C3}}'tür.
+# Ders | PDF sayfası | Konu | Kaynaktan aynen alınmış cümle ({{bilgi}}). Yalnızca satır boşlukları birleştirildi.
+Onkoloji|1|p53 ve Li–Fraumeni sendromu|{{Li-Fraumeni}} ailevi kanser sendromuna neden olur.
+Onkoloji|5|Kanser etiyolojisi|{{Asbest}}, mezotelyoma ve akciğer kanseri etiyolojisinde yer almaktadır.
+Onkoloji|6|Kanser genetiği|HPV’nin en önemli onkoproteinleri {{E6 ve E7}}’dir.
+Onkoloji|6|Tamoksifen|Meme kanseri tedavisinde kullanılan tamoksifen, {{endometriyum kanserine}} sebep olabilmektedir.
+Onkoloji|6|Serviks kanseri|Serviks kanserinin %70’inde {{HPV 16 ve 18}} DNA’sı pozitiftir.
+Onkoloji|9|Kanserde tanı|Kanser tanısında altın standart {{histopatolojik tanı}}dır.
+Onkoloji|9|Herediter meme ve over kanseri|{{BRCA 1 ve 2}} meme, over kanserlerinin gelişiminden sorumludur.
+Onkoloji|9|Lynch sendromu|Herediter non-polipozis kolorektal kanser (Lynch sendromu), {{miss-match tamir genlerinde}} mutasyon sonucu ortaya çıkar.
+Onkoloji|9|MEN 2|{{Ret protoonkogeni}} 10.kromozomda bulunan ve MEN 2’ye neden olan onkogendir.
+Onkoloji|10|Kolorektal kanser|{{Asetilsalisilik asit (aspirin)}}, kolorektal karsinom ve adenom gelişme insidansını azaltmaktadır.
+Onkoloji|12|Lenfomalarda evreleme|Anamnezde evrelemeye doğrudan katkıda bulunan tek bilgi, lenfomalarda (özellikle Hodgkin hastalığında) bulunan {{B semptomları}}dır.
+Onkoloji|14|Kemoterapi zamanlaması|{{Neoadjuvan tedavi}}: Operasyon öncesi veya perioperatuvar dönemde uygulanan kemoterapidir.
+Onkoloji|18|Paraneoplastik dermatomiyozit|Dermatomiyozit ile en sık ilişkisi olan maligniteler {{nazofarenks, meme, akciğer, over, kolon kanserleri}}dir.
+Onkoloji|19|Paraneoplastik nörolojik sendromlar|Ön medistende kitlesi olan ve myastenia bulguları olan bir hastada {{Timoma}} akla gelmelidir.
+Onkoloji|19|Tümör lizis sendromu|Sıklıkla {{Burkitt’s lenfoma ve ALL}} ile ilişkilidir.
+Onkoloji|20|Tümör lizis sendromu|Bu sendromun gelişimini önlemek için en önemli adım tedavi öncesinde {{hidrasyon}}dur.
+Onkoloji|20|Febril nötropeni|Risk grubunu belirlemede en sık kullanılanı {{MASCC}} (Multinational Association for Supportive Care in Cancer) risk skorlama sistemidir.
+Onkoloji|20|Tümör lizis sendromu|Kalsiyum – fosfat kristallerinin çökmesi sonucu {{hipokalsemi}} oluşur.
+Onkoloji|23|Malign spinal kord basısı|En sık rastlanan semptom basıya bağlı {{lokal bel ağrısı}}dır.
+Onkoloji|23|Spinal kord basısı|Ortaya çıkan ödemi azaltmak amacıyla {{deksametazon}} uygulanır.
+Onkoloji|24|Vena kava süperior sendromu|En sık {{malign kitlelere}} bağlı gelişir.
+Onkoloji|27|Antineoplastik ilaçlar|{{Temozolomid}}: Kan beyin bariyerini geçmesi en önemli özelliğidir.
+Onkoloji|27|Temozolomid|{{MGMT}} (metilguanin metil transferaz) metilasyon varlığında etkinliğinde artış vardır.
+Onkoloji|28|5-FU ve kapesitabin toksisitesi|Kapesitabin veya 5-FU’nın kullanımı sonrasında gelişen toksisiteye karşı {{Uridin triasetat}} kullanımı FDA tarafınca onaylandı.
+Onkoloji|28|Metotreksat|Kronik metotreksat uygulamaları {{karaciğer fibrozisi}}ne neden olabilir.
+Onkoloji|29|Antineoplastik ilaçlar|Bleomisin: Akciğer toksisitesi ({{akciğer fibrozisi}}) en önemli yan etkisidir.
+Onkoloji|30|Vinkristin|Vinkristin uygulaması sonrası {{miyelosupresyon beklenmez}}.
+Onkoloji|33|Meme ve over kanseri|BRCA mutasyonu olan meme ve over kanserinde {{PARP inhibitörleri}} DNA tamirini engelleyerek etki göstermektedir.
+Onkoloji|33|Hedefe yönelik tedaviler|Palbosiklib, ribosiklib ve abemasiklib {{CDK4/6 inhibitörleri}}dir.
+Onkoloji|35|Brentuximab|Brentuximab: {{CD30}}’a karşı geliştirilen monoklonal antikordur.
+Onkoloji|36|Rituksimab|{{CD20}} proteinine karşı geliştirilmiş kimerik bir monoklonal antikordur.
+Onkoloji|39|İmmünoterapi|Anti CTLA 4 antikorlar ({{ipilimumab, tremelimumab}}), CTLA 4’e bağlanarak inhibitör etkiyi ortadan kaldırır.
+Onkoloji|39|İmmünoterapi|PD1 ve ligandına yönelik antikorlar ({{Nivolumab, Pembrolizumab}}) geliştirilmiştir.
+Onkoloji|47|Akciğer kanseri|{{Sigara}} en sık sebeptir ve vakaların %85’inden sorumludur.
+Onkoloji|50|Akciğer kanseri|{{Torasentez}}, plevra sıvı varlığında en kolay ve en sık kullanılan yöntemdir.
+Onkoloji|53|Akciğer kanseri|T790M mutasyon varlığında ise {{Osimertinib}} tercih edilir.
+Onkoloji|55|Pemetrexed|Pemetrexed öncesi mutlaka {{folik asit ve B12}} replasmanı başlanmalıdır.
+Onkoloji|56|BRCA-1 ilişkili meme kanseri|BRCA - 1 mutasyonu olan meme kanserli vakaların %70’i {{triple negatif}}tir.
+Onkoloji|59|Meme kanseri|En sık kullanılan ajanlar {{antrasiklin ve taksan}}lardır (Siklofosfamid – Doksorubisin / Epirubisin, Dosetaksel, Paklitaksel).
+Onkoloji|62|Özefagus kanseri|Özefagus kanserlerinde en sık metastaz yerleri {{karaciğer, akciğer ve kemikler}}dir.
+Onkoloji|62|Özefagus kanseri|Kesin tanı {{endoskopik biyopsi}} ile konulur.
+Onkoloji|70|Kolorektal kanser|Kolon kanserinde en sık visseral metastaz {{karaciğer}}e gözlenmektedir.
+Onkoloji|76|Safra kesesi kanseri|Hastalar yaşlı olup en sık {{karın ağrısı}} ile başvururlar.
+Onkoloji|79|GİST|Çoğunlukla sporadik olsa da, ailesel {{KIT}} geni mutasyonlarına bağlı olarak da gelişebilir.
+Onkoloji|80|Gastrointestinal stromal tümör|GIST’ler en sık {{karaciğer, periton ve lenf nodları}}na metastaz yapmaktadır.
+Onkoloji|80|GİST|{{Exon 11}} mutasyonu olan hastalarda imatinib tedavisine yanıt daha iyidir.
+Onkoloji|85|Endometriyum kanseri|En sık başvuru semptomu {{anormal vajinal kanama}}dır.
+Onkoloji|104|Nazofarenks kanseri|Nazofarenks kanseri en sık başvuru bulgusu {{boyunda ele gelen kitle}}dir.
+Endokrinoloji|109|Hipotalamus hormonları|Tirotropin Releasing Hormon (TRH): {{TSH ve prolaktin}} salınımını arttırır.
+Endokrinoloji|111|Prolaktin|En önemli fonksiyonu postpartum dönemde {{laktasyon}}u uyarmasıdır.
+Endokrinoloji|111|Prolaktin|{{Dopamin}} hipofizden prolaktin salınımını inhibe eder.
+Endokrinoloji|111|Hiperprolaktinemi|Prolaktin fazlalığı hipotalamik GnRH ve dolayısıyla hipofizer gonadotropin sekresyonunu inhibe ederek {{hipogonadizme}} neden olur.
+Endokrinoloji|113|Kallmann sendromu|X’e bağlı {{KAL1 (Anosmin1)}} gen mutasyonu sonucu gelişir.
+Endokrinoloji|114|Hipofiz hormon eksiklikleri|Kombine hipofiz hormon eksikliğinin en sık genetik nedeni {{PROP-1}} mutasyonudur.
+Endokrinoloji|116|Hipofiz apopleksisi|Tedavisinde görme kaybı, bilinç kaybı yoksa {{glukokortikoidler}} ilk tercihtir.
+Endokrinoloji|116|Postpartum hipofiz nekrozu|Doğum sırasında aşırı kanaması olan bir kadında, hipofizde postpartum nekroz ({{Sheehan sendromu}}) ve buna bağlı hipofiz yetmezliği gelişir.
+Endokrinoloji|116|Lenfositik hipofizit|En erken ve ilk bulgu {{ACTH}} eksikliğidir, bunu TSH eksikliği izler.
+Endokrinoloji|118|Hipopituitarizm|Levotiroksin: Dikkat edilmesi gereken bir husus tiroid hormon replasmanı sırasında adrenokortikal yetmezlik belirtileri agreve olabileceği için öncelikle {{glukokortikoid}} tedavinin başlanmasıdır.
+Endokrinoloji|119|Hipofiz adenomu|{{Bitemporal hemianopsi}}: Optik kiazmaya basıya bağlıdır.
+Endokrinoloji|120|Prolaktin|Prolaktin, laktasyonu uyarır ve {{GnRH}} salınımını inhibe eder.
+Endokrinoloji|121|Prolaktinoma|Prolaktin düzeyi 200 ng/mL’nin üstünde ise en sık neden {{prolaktinoma}}dır.
+Endokrinoloji|122|Prolaktinoma|{{Kabergolin}} (ilk tercih) ve bromokriptin kullanılır.
+Endokrinoloji|124|Akromegali|Cerrahi: Hem mikroadenom hem de makroadenomlarda {{transsfenoidal cerrahi}} ilk tercihtir.
+Endokrinoloji|124|Akromegali|{{Oktreotid ve lanreotid}}, cerrahi başarısızlıkta medikal tedavide ilk tercihtir.
+Endokrinoloji|124|Akromegali|{{Bazal IGF-I}}: İlk bakılması gereken testtir.
+Endokrinoloji|124|Akromegali|Oktreotid/lanreotid dirençli hastalıkta {{pasireotid}} tedavisi uygulanır.
+Endokrinoloji|124|Akromegali|Pegvisomant tedavisi alan hastalarda tedavi altında {{adenom boyutunda artış}} olabilir.
+Endokrinoloji|126|Cushing hastalığı|Cushing hastalığı: {{Hipofizde ACTH salgılayan bir adenom}} vardır.
+Endokrinoloji|127|Cushing sendromu|Cushing sendromunun en sık nedeni {{iyatrojenik}}tir.
+Endokrinoloji|127|Cushing sendromu|Cushing sendromunun en sık endojen nedeni ise {{Cushing hastalığı}}dır.
+Endokrinoloji|131|Gebelikte Cushing sendromu|Gebe kadınlarda saptanan Cushing sendromunun en sık sebebi (%40-60 oranında) {{adrenal adenomlar}}dır.
+Endokrinoloji|131|Cushing sendromu|{{Mifepriston}}: Glukokortikoid reseptörlerini bloke eder, özellikle Cushing hastalığında hiperglisemide önerilir.
+Endokrinoloji|135|Lityuma bağlı diabetes insipidus|Lityuma bağlı gelişen DI’da {{amilorid}} kullanılır.
+Endokrinoloji|136|Kronik hiponatremi|Kronik hiponatremide ise ilk basamak yaklaşım {{su kısıtlanması}}dır.
+Endokrinoloji|138|Tiroid hormonları|{{Reverse T3 (rT3)}}: Biyolojik aktivitesi yoktur.
+Endokrinoloji|138|Hipotiroidide ayırıcı tanı|{{TRH Testi}}: Sekonder ve tersiyer hipotiroidiyi ayırt etmede kullanılır.
+Endokrinoloji|138|Ektopik tiroid hormonu üretimi|{{Struma ovarii}}: Overde aşırı tiroid hormonu sentezleyen bir teratom vardır.
+Endokrinoloji|139|Gebelikte tiroid fizyolojisi|Gebelikte artan östrojen, {{tiroid bağlayıcı globulin (TBG)}} miktarında artışa neden olur.
+Endokrinoloji|141|Santral hipotiroidi|Santral hipotiroidide ise genellikle hipofizer yetmezlik eşlik edebileceğinden öncelikle {{kortikosteroid}} başlanır.
+Endokrinoloji|142|Gebelikte hipotiroidi|Gebelerde hipotiroidinin en sık nedeni {{Hashimoto tiroiditi}}dir.
+Endokrinoloji|142|Pendred sendromu|Hastalığın en tipik ve klasik prezantasyonu {{doğumsal işitme kaybı}} ile guatrın bir arada bulunmasıdır.
+Endokrinoloji|142|Gebelikte hipotiroidi|Hipotiroidisi olup hamile kalan kadınlarda tiroid hormon ihtiyacı {{%30-50}} oranında artar.
+Endokrinoloji|144|Graves oftalmopatisi|En sık prezentasyon ise {{göz kapağında şişlik}}tir.
+Endokrinoloji|145|Radyoaktif iyot|{{Hamilelik ve emzirme}} döneminde kontrendikedir.
+Endokrinoloji|145|Graves hastalığı|Graves hastalığında ilaç dozlarındaki değişikliklerde hastalığın ilk dönemlerinde serum {{serbest T4}} düzeyi esas alınmalıdır.
+Endokrinoloji|146|Graves oftalmopatisi|Şiddetli vakalarda (optik sinir tutulumu ve kornea hasarı) ise ilk tercih {{pulse steroid}} uygulamasıdır.
+Endokrinoloji|146|Graves oftalmopatisi|Teprotumumab: {{Anti IGF1 reseptör}} monoklonal antikorudur.
+Endokrinoloji|147|Gebelikte hipertiroidi|{{Graves hastalığı}} gebede de en sık hipertiroidi sebebidir.
+Endokrinoloji|153|Papiller tiroid kanseri|{{Psammoma cisimcikleri}} (konsantrik kalsifikasyonlar) sıklıkla (%40 oranında) eşlik eder ve ultrasonda “mikrokalsifikasyon” olarak izlenir.
+Endokrinoloji|153|Papiller tiroid kanseri|Genellikle {{lenfatik}} sistem yoluyla yayılma eğilimi vardır, ancak hematojen yolla özellikle kemik ve akciğer metastaz yapabilmektedir.
+Endokrinoloji|153|Foliküler tiroid kanseri|Sıklıkla {{hematojen}} yolla yayılır (kemik, akciğer ve beyin metastaz yapma eğilimindedir).
+Endokrinoloji|154|MEN 2B|MEN 2B’de sıklıkla ekzon 16’da {{kodon 918}} mutasyonu mevcuttur.
+Endokrinoloji|154|Medüller tiroid kanseri|Tedavisi cerrahi olup, tedavi öncesinde mutlaka {{feokromasitoma}} açısından tetkik edilmelidirler.
+Endokrinoloji|156|Parathormon|Paratiroid hormon salınımı için en etkili uyaran {{kalsiyum seviyesindeki azalma}}dır.
+Endokrinoloji|159|Primer hiperparatiroidi|En sık nedeni {{soliter paratiroid adenom}}dur.
+Endokrinoloji|162|Osteoporoz|Osteoporozun en önemli komplikasyonu {{kemik kırıkları}}dır.
+Endokrinoloji|164|Tip 1 osteoporoz|Östrojen eksikliğinin en sık nedeni {{menopoz}}dur.
+Endokrinoloji|170|İlaç ilişkili sekonder osteoporoz|{{Glukokortikoid}} kullanımı ilaç ilişkili sekonder osteoporozun en sık sebebidir.
+Endokrinoloji|170|Osteomalazi|En sık sebebi {{Vitamin D yetersizliği}}dir, ikinci en sık nedeni uzamış hipofosfatemidir (özellikle FGF23 artışına bağlı gelişebilir).
+Endokrinoloji|171|Paget hastalığı|{{SQSTM1}} Mutasyonu: Paget hastalığının en önemli genetik nedenidir.
+Endokrinoloji|172|Paget hastalığı|En sık {{pelvis}}, vertebra, kranyum, femur ve tibia tutulur.
+Endokrinoloji|173|Paget hastalığı|Bifosfonatlar ana farmakolojik tedavi seçeneğidir ve ilk tercih IV {{zoledronik asit}}tir.
+Endokrinoloji|181|Sülfonilüreler|Genel olarak en önemli yan etkileri {{hipoglisemi}}dir.
+Endokrinoloji|191|Diyabetik kraniyal nöropati|En sık {{3. kraniyal sinir}} tutulur ve diplopi ile kendini belli eder.
+Endokrinoloji|192|Diyabetik nefropati|Kronik böbrek hastalığının en sık nedeni {{diyabet}}tir.
+Endokrinoloji|195|Diyabet|En önemli bulgusu {{kladikasyo intermittans}}tır.
+Endokrinoloji|204|Sekonder adrenal yetmezlik|En sık nedeni uzun süreli {{steroid}} kullanımının aniden bırakılmasıdır.
+Endokrinoloji|204|Sekonder adrenal yetmezlik|Sekonder adrenal yetmezlikte kortizol eksikliği olur, ancak renin-anjiyotensin sistemi sayesinde aldosteron düzeyi {{normal}}dir.
+Endokrinoloji|208|Primer hiperaldosteronizm|İkinci en sık nedeni {{adrenal adenom}}dur (Conn sendromu).
+Endokrinoloji|208|Primer hiperaldosteronizm|En önemli klinik özelliği {{hipertansiyon}}dur.
+Endokrinoloji|208|Primer hiperaldosteronizm|Primer hiperaldosteronizmin en sık nedeni {{bilateral mikronodüler hiperplazi}}dir, bazen makronodüler olabilir ve yanlışlıkla unilateral adenom olarak algılanabilir.
+Endokrinoloji|208|Primer hiperaldosteronizm|Plazma renini {{düşüktür}} (Sekonder hiperaldosteronizmden ayırımı sağlar.)
+Endokrinoloji|212|Malign feokromositoma|Histolojik ve biyokimyasal özellikleri ile benign feokromositomadan farksız olmasına rağmen, ayırt edilmesini sağlayan en önemli özellik {{organ ve lenf nodu metastazı}} yapmasıdır.
+Endokrinoloji|222|Turner sendromu|{{Yele boyun, kısa boyun}} tipiktir.
+Temel İmmünoloji|233|Dalak|Kırmızı pulpa ise yıpranmış eritrosit ve trombositleri yakalayıp dolaşımdan uzaklaştıran {{makrofajlar}}ın görev bölgesidir.
+Temel İmmünoloji|237|Kompleman|Komplemanın {{C3b}} komponenti, bu erken evrede olay bölgesine toplanmış olan nötrofillerin mikroorganizmaları yakalayarak fagosite edebilmeleri için bir tutacak (opsonin) olarak görev yapar.
+Temel İmmünoloji|240|Fetal hematopoez|Hematopoetik aktiviteye başlayan ilk kemik, {{klavikula}}dır.
+Temel İmmünoloji|240|Fetal antikor sentezi|İntrauterin yaşamın 6. ayında antikor sentezi de başlar; sentezlenen ilk antikor {{IgM}}’dir.
+Temel İmmünoloji|243|Antikor yanıtı|Protein yapısında olmayan antijenlere karşı ise {{hafıza B lenfositleri}} oluşmaz ve dolayısıyla da ikincil antikor yanıtı verilemez.
+Temel İmmünoloji|243|T lenfositler|T lenfositler için primer lenfoid organ {{timus}}tur.
+Temel İmmünoloji|248|TH3 lenfositler|TH3 lenfositler, bol miktarda {{TGF-beta}} sentezlerler.
+Temel İmmünoloji|256|Nötrofil göçü|Nötrofiller, olay bölgesinde serbestleşen kemoatraktanların rehberliğinde az yoğundan çok yoğuna doğru ilerlerler ve enfeksiyon bölgesine ulaşırlar ({{kemotaksi}}).
+Temel İmmünoloji|259|Chediak–Higashi sendromu|{{LYST}} geninin mutasyonuna bağlı olarak gelişir.
+Temel İmmünoloji|259|Ailevi Akdeniz ateşi|Pirin proteinini kodlayan {{MEFV}} genindeki defekt sonucunda nötrofillerin (muhtemelen kemotaksi etkinliğinin) aşırı aktivasyonu engellenemez ve FMF gelişir.
+Temel İmmünoloji|263|Timusa bağımsız antijen yanıtı|CD40-CD40L bağlanması gerçekleşmediğinden, verilen antikor yanıtı {{IgM}} ile sınırlı kalır.
+Temel İmmünoloji|268|Kan grubu antikorları|Dolayısıyla kan grubu antijenlerine karşı gelişen antikorlar da {{IgM}} yapısındadır.
+Temel İmmünoloji|269|Antikor yapısı|{{Ağır zincir}}, antikorların izotipik farklılığını belirleyen determinantıdır.
+Temel İmmünoloji|270|Antikor yapısı|Ağır veya hafif zincirde, her bireyde bulunmayan kişisel farklılıklara {{allotip}} adı verilir.
+Temel İmmünoloji|273|Pasif bağışıklık|On altıncı gebelik haftasından itibaren her dört maternal {{IgG}} alt sınıfı da plasentayı geçerek fötal dolaşıma ulaştırılmaya başlanır.
+Temel İmmünoloji|274|Lipit ve polisakkaritlere antikor yanıtı|Lipit ve polisakkaritlere karşı sadece {{IgM}} yapısında antikorlar oluşturulur.
+Temel İmmünoloji|277|Lektin yolu|En önemli farkı, uyarımın {{nonspesifik}} olmasıdır.
+Temel İmmünoloji|277|Klasik kompleman yolu|Böylece C3 konvertaz ({{C4b2a}}) tamamlanmış olur.
+Temel İmmünoloji|277|Klasik kompleman yolu|{{C4b2a3b}} C5’i bölerek C5a ve C5b’yi oluşturur.
+Temel İmmünoloji|278|Alternatif kompleman yolu|Oluşan {{C3bBbP}} kompleksi, alternatif yoldaki C3 konvertazdır.
 Temel İmmünoloji|280|Kompleman eksiklikleri|En sık görülen kompleman eksikliği {{C2}} eksikliğidir.
-Temel İmmünoloji|280|Kompleman eksiklikleri|Membran atak kompleksi (C5b–9) eksikliğinde özellikle {{Neisseria}} enfeksiyonları beklenir.
-Temel İmmünoloji|280|Kompleman eksiklikleri|C1, C2 ve C4 eksiklikleriyle ilişkili tipik otoimmün hastalık {{SLE}}'dir.
-Temel İmmünoloji|281|Antijen sunumu|CD4+ T lenfositler, antijeni {{MHC class II}} molekülleri üzerinde tanır.
-Temel İmmünoloji|281|Antijen sunumu|CD8+ T lenfositler, antijeni {{MHC class I}} molekülleri üzerinde tanır.
-Klinik İmmünoloji|296|Bruton hastalığı|X'e bağlı infantil agammaglobülinemide defektif enzim {{Bruton tirozin kinaz}}dır.
-Klinik İmmünoloji|297|Bruton hastalığı|Bruton hastalığını CVID'den ayırmada periferik kandaki {{B hücrelerinin azalmış olması}} önemlidir.
-Klinik İmmünoloji|300|Hiper IgM sendromu|X'e bağlı Hiper IgM tip 1'de aktive T hücresindeki {{CD40 ligand}} defektiftir.
-Klinik İmmünoloji|301|DiGeorge sendromu|DiGeorge sendromunun klasik kromozomal bozukluğu {{22q11 delesyonu}}dur.
-Klinik İmmünoloji|303|Ağır kombine immün yetmezlik|En sık görülen X'e bağlı SCID tipinde T hücreleriyle birlikte {{NK hücreleri}} de yoktur.
-Klinik İmmünoloji|303|Ağır kombine immün yetmezlik|T, B ve NK hücrelerinin birlikte azaldığı SCID nedenlerinden biri {{ADA eksikliği}}dir.
-Klinik İmmünoloji|308|Kronik granülomatöz hastalık|Kronik granülomatöz hastalığın temel enzim defekti {{NADPH oksidaz}} eksikliğidir.
-Klinik İmmünoloji|308|Kronik granülomatöz hastalık|Kronik granülomatöz hastalıkta özellikle {{katalaz pozitif}} mikroorganizmaların öldürülmesi bozuktur.
-Klinik İmmünoloji|308|Kronik granülomatöz hastalık|Kronik granülomatöz hastalık tanısında akım sitometrisiyle yapılan test {{DHR testi}}dir.
-Klinik İmmünoloji|309|Chediak–Higashi sendromu|Parsiyel albinizm ve tekrarlayan enfeksiyonlarla giden Chediak–Higashi sendromunda nötrofillerde {{dev sitoplazmik granülasyon}} görülür.
-Klinik İmmünoloji|309|Lökosit adezyon defekti|Tekrarlayan enfeksiyonlara nötrofili ve göbek kordonunun geç düşmesi eşlik ediyorsa {{lökosit adezyon defekti}} düşünülür.
-Klinik İmmünoloji|313|Kompleman incelemeleri|Klasik kompleman yolunu taramak için {{CH50}} testi kullanılır.
-Klinik İmmünoloji|313|Kompleman incelemeleri|Alternatif kompleman yolunu değerlendiren test {{AH50}}'dir.
-Alerji|317|Alerjik yanıt|Alerjik inflamasyonun devamında baskın yardımcı T hücresi yanıtı {{TH2}} yanıtıdır.
-Alerji|320|Alerjik mediyatörler|Erken alerjik reaksiyonların tipik semptomlarından başlıca sorumlu, önceden depolanmış mediyatör {{histamin}}dir.
-Alerji|324|Anafilaksi ayırıcı tanısı|Vazovagal reaksiyonu anafilaksiden ayırmada soluklukla birlikte {{bradikardi}} bulunması önemlidir.
-Alerji|324|Anafilaksi ayırıcı tanısı|Bozulmuş balığa bağlı histamin zehirlenmesinde, histamin dışarıdan alındığı için {{triptaz}} düzeyi yükselmez.
-Alerji|324|Anafilaksi laboratuvarı|Anafilaksi sırasında bazale göre %20 + 2 ng/mL artışı tanıyı destekleyen belirteç {{triptaz}}dır.
-Alerji|325|Anafilaksi tedavisi|Anafilaksi tedavisinin temel ilacı {{epinefrin}}dir.
-Alerji|325|Anafilaksi tedavisi|Anafilakside epinefrin için genellikle başlangıçta tercih edilen uygulama yolu {{intramusküler}} yoldur.
-Alerji|325|Anafilaksi tedavisi|Epinefrinin bronkodilatör etkisi {{β2}} reseptör uyarımıyla oluşur.
-Enfeksiyon Hastalıkları|408|Kulak enfeksiyonları|Yüzücü kulağı ve malign otitis eksternanın tipik etkeni {{Pseudomonas aeruginosa}}'dır.
-Enfeksiyon Hastalıkları|469|Deri enfeksiyonları|Eritrazmanın etkeni {{Corynebacterium minutissimum}}'dur.
-Enfeksiyon Hastalıkları|469|Deri enfeksiyonları|Büllöz impetigonun karakteristik etkeni {{Staphylococcus aureus}}'tur.
-Enfeksiyon Hastalıkları|479|Deri enfeksiyonları|Ektima gangrenozum özellikle {{Pseudomonas aeruginosa}} bakteremisiyle ilişkilidir.
-Enfeksiyon Hastalıkları|486|Üriner sistem enfeksiyonları|Kateterli hastada bakteriüri için en önemli risk faktörü {{kateterizasyon süresi}}dir.
-Enfeksiyon Hastalıkları|508|İnvaziv kandidiyaz|Candida krusei'nin doğal direnç gösterdiği azol {{flukonazol}}dür.
-Enfeksiyon Hastalıkları|508|İnvaziv kandidiyaz|İnvaziv kandidiyaz tanısında kitapta altın standart olarak belirtilen yöntem {{kan kültürü}}dür.
-Enfeksiyon Hastalıkları|508|İnvaziv kandidiyaz|İnvaziv kandidiyaz tedavisinde ilk tercih antifungal grup {{ekinokandinler}}dir.
-Enfeksiyon Hastalıkları|510|Mukormikoz|Diyabetik hastada rino-orbito-serebral mukormikoz için karakteristik damak bulgusu {{siyah nekrotik eskar}}dır.
-Enfeksiyon Hastalıkları|510|Mukormikoz|Mukormikozda histopatolojide geniş, {{septasız hifler}} görülür.
-Enfeksiyon Hastalıkları|536|Bruselloz|Brusellozun en sık komplikasyonu {{osteoartiküler tutulum}}dur.
-Enfeksiyon Hastalıkları|543|Leptospiroz|Leptospirozda serolojik altın standart {{mikroskobik aglütinasyon testi}}dir.
-Enfeksiyon Hastalıkları|547|Sıtma|Serebral malarya özellikle {{P. falciparum}} enfeksiyonuyla ilişkilidir.
-Enfeksiyon Hastalıkları|547|Sıtma|Sıtma tanısında kitapta altın standart olarak belirtilen inceleme {{periferik yayma}}dır.
-Enfeksiyon Hastalıkları|613|Mpox|Mpox tanısında altın standart, lezyon örneğinde viral DNA'nın {{PCR}} ile gösterilmesidir.
-Romatoloji|634|ANCA ilişkili vaskülitler|c-ANCA'nın hedef antijeni {{proteinaz-3}}'tür.
-Romatoloji|634|ANCA ilişkili vaskülitler|p-ANCA'nın hedef antijeni {{miyeloperoksidaz}}dır.
-Romatoloji|634|ANCA ilişkili vaskülitler|c-ANCA en çok {{granülomatöz polianjit}} ile ilişkilidir.
-Romatoloji|634|ANCA ilişkili vaskülitler|ANCA ilişkili vaskülitlerde biyopside belirgin immünkompleks birikimi olmaması {{pauci-immün}} olarak adlandırılır.
-Romatoloji|668|Sjögren sendromu|Sekonder Sjögren sendromunun en sık nedeni {{romatoid artrit}}tir.
-Romatoloji|670|Sjögren sendromu|Sjögren sendromunda en sık görülen lenfoma, ekstranodal marjinal zon lenfoması yani {{MALToma}}dır.
-Romatoloji|682|Sistemik skleroz|Sistemik sklerozda en sık interstisyel akciğer hastalığı paterni {{nonspesifik interstisyel pnömoni}}dir.
-Romatoloji|691|Dev hücreli arterit|Dev hücreli arteritte en sık tutulan eksternal karotis dalı {{temporal arter}}dir.
-Romatoloji|698|Granülomatöz polianjit|Granülomatöz polianjitin tipik akciğer görüntüleme bulgusu {{nodüler ve kaviter infiltratlar}}dır.
-Romatoloji|701|IgA vasküliti|Çocukluk çağının en sık vasküliti {{IgA vasküliti}}dir.
-Romatoloji|704|Behçet hastalığı|Behçet hastalığının karakteristik HLA ilişkisi {{HLA-B51}}'dir.
-Romatoloji|704|Behçet hastalığı|Behçet'te ön kamarada yoğun iltihap birikimine {{hipopiyon}} denir.
-Romatoloji|709|Ankilozan spondilit|Ankilozan spondilitte aksiyel iskelet dışında en sık tutulan eklem {{kalça}}dır.
-Romatoloji|720|Osteoartrit|Diz osteoartritinde en sık tutulan kompartman {{medial}} kompartmandır.
-Romatoloji|720|Osteoartrit|Diz osteoartritinde medial kompartman tutulumu {{genu varum}} deformitesine yol açar.
-Romatoloji|722|Gut|Gut gelişimi için en önemli risk faktörü {{hiperürisemi}}dir.
-Romatoloji|731|Septik artrit|Cinsel olarak aktif gençlerde septik artritin en sık nedeni {{gonokokkal enfeksiyon}}dur.
-Romatoloji|731|Septik artrit|Septik artritte en sık tutulan eklem {{diz}}dir.
-Romatoloji|739|Akut romatizmal ateş|Akut romatizmal ateşte erken dönemin en sık kapak lezyonu {{mitral yetmezlik}}tir.
-Geriatri|758|Yaşlılarda sistemik hastalıklar|Yaşlılarda en sık görülen kalp yetmezliği formu {{korunmuş ejeksiyon fraksiyonlu}} kalp yetmezliğidir.
-Geriatri|758|Yaşlılarda sistemik hastalıklar|Yaşlılarda sekonder hipertansiyonun en sık nedeni {{renal arter stenozu}}dur.
-Geriatri|759|Yaşlılarda sistemik hastalıklar|Yaşlılarda en sık karşılaşılan sıvı-elektrolit bozukluğu {{hiponatremi}}dir.
-Geriatri|776|Alzheimer hastalığı|Demansın en sık nedeni {{Alzheimer hastalığı}}dır.
-Geriatri|776|Alzheimer hastalığı|Alzheimer'da ekstrasellüler senil plakların temel bileşeni {{amiloid β protein}}idir.
-Geriatri|776|Alzheimer hastalığı|Alzheimer'daki intrasellüler nörofibriler yumaklar {{hiperfosforile tau proteini}} birikiminden oluşur.
-Geriatri|776|Alzheimer hastalığı|Geç başlangıçlı Alzheimer için öne çıkan genetik risk aleli {{APOE4}}'tür.
-Geriatri|780|Vasküler demans|Vasküler demansın karakteristik klinik seyri {{basamaklı}} kötüleşmedir.
-Geriatri|792|Bası yaraları|Bası yaralarının gelişimindeki en önemli mekanik faktör {{basınç}}tır.
-Yoğun Bakım|809|Bilinç değerlendirmesi|Yoğun bakımda nörolojik durumu değerlendirmek için en sık kullanılan ölçek {{Glasgow Koma Skoru}}dur.
-Yoğun Bakım|829|Ani kardiyak ölüm|Ani kardiyak ölümün genel olarak en sık nedeni {{koroner kalp hastalığı}}dır.
-Yoğun Bakım|832|Solunum yetmezliği|Tip 2 hiperkapnik solunum yetmezliğinin temel mekanizması {{hipoventilasyon}}dur.
-Yoğun Bakım|832|Solunum yetmezliği|Tip 3 perioperatif solunum yetmezliğinin temelinde {{atelektazi}} vardır.
-Yoğun Bakım|840|Parasetamol intoksikasyonu|Parasetamolün toksik metaboliti {{NAPQI}}'dir.
-Yoğun Bakım|840|Parasetamol intoksikasyonu|Parasetamolün toksik metaboliti NAPQI normalde {{glutatyon}} ile detoksifiye edilir.
-Yoğun Bakım|841|Parasetamol intoksikasyonu|Parasetamol intoksikasyonunun antidotu {{N-asetil-sistein}}dir.
-Yoğun Bakım|841|Salisilat intoksikasyonu|Salisilat intoksikasyonunun erken dönemindeki tipik asit-baz bozukluğu {{respiratuar alkaloz}}dur.
-Yoğun Bakım|844|Trisiklik antidepresan intoksikasyonu|Trisiklik antidepresan toksisitesinde QRS genişlemesi ve ventriküler aritmiler için temel tedavi {{sodyum bikarbonat}}tır.
-Yoğun Bakım|845|Opioid intoksikasyonu|Opioid intoksikasyonunun klinik triadı bilinç değişikliği, solunum depresyonu ve {{miyozis}}tir.
-Yoğun Bakım|845|Opioid intoksikasyonu|Opioid intoksikasyonunun antidotu {{nalokson}}dur.
+Temel İmmünoloji|281|Antijen sunumu|CD4+ T lenfositler sadece {{MHC class II}}, CD8+ T lenfositler ise sadece MHC class I molekülleri ile bağlanabilirler (8xI, 4xII; sekizler kuralı).
+Temel İmmünoloji|281|Antijen sunumu|CD4+ T lenfositler sadece MHC class II, CD8+ T lenfositler ise sadece {{MHC class I}} molekülleri ile bağlanabilirler (8xI, 4xII; sekizler kuralı).
+Temel İmmünoloji|284|Timusa bağımlı antijenler|Timusa bağımlı (Tdep) antijenler: Bunlar, {{protein}} yapısındaki antijenlerdir.
+Temel İmmünoloji|286|Sitotoksik T lenfosit|CTL’lerde bulunan serin esteraz ({{granzim-B}}) enzimleri, bu perforin kanallarından içeri girerler.
+Klinik İmmünoloji|293|Konjenital aspleni|Eritrositlerin {{Howell-Jolly cisimcikleri}} açısından incelenmesi konjenital aspleninin ekarte edilmesine yardımcı olur.
+Klinik İmmünoloji|296|Bruton hastalığı|En sık infeksiyon etkenleri {{Streptococcus pnömonia ve Hemofilus influenza}}dır.
+Klinik İmmünoloji|296|Bruton hastalığı|{{Bruton Tirozin kinaz (BTK)}} geninde defekt vardır.
+Klinik İmmünoloji|297|CVID|En sık rastlanan komplikasyon: Kronik akciğer hastalığı ({{bronşiektazi}}) en sık komplikasyondur.
+Klinik İmmünoloji|297|CVID|{{Giardia, Yersinia ve Campylobacter}} ile kronik diyare ve malabsorbsiyon ilk belirti olabilir.
+Klinik İmmünoloji|300|Good sendromu|{{Timoma}} ile karakterize bir agamaglobulinemi tipidir.
+Klinik İmmünoloji|300|Hiper IgM tip 1|Aktive T hücreleri üzerindeki {{CD40 ligand (CD154)}} mutasyonu sonucu T hücreleri B hücrelerine uygun sinyal gönderemez ve B hücreleri sadece IgM yapar.
+Klinik İmmünoloji|301|T hücre yetmezliği|Gecikmiş aşırı duyarlılık testleri ({{PPD}}) negatiftir.
+Klinik İmmünoloji|302|DiGeorge sendromu|Lateral grafide ön mediastende {{timus gölgesi}} saptanamaz.
+Klinik İmmünoloji|303|Ağır kombine immün yetmezlik|{{Omenn Sendromu}}, OR kalıtılan bir SCID tipidir.
+Klinik İmmünoloji|304|Ataksi-telenjiektazi|İlk bulgu olan {{serebellar ataksi}} 9-12. aylarda ortaya çıkar (4-6 yaşına kadar gecikebilir).
+Klinik İmmünoloji|304|Ataksi-telenjiektazi|Kesin tanı {{ATM}} gen mutasyonu gösterilmesi ile konulur.
+Klinik İmmünoloji|305|Hiper IgE (Job) sendromu|{{Otozomal Dominant}} olarak katılır (en sık).
+Klinik İmmünoloji|305|Hiper IgE sendromu|{{STAT3}} proetinini kodlayan gende mutasyon vardır.
+Klinik İmmünoloji|308|Kronik granülomatöz hastalık|Geç iyileşen tekrarlayan {{stafilokoksik boyun abseleri}} en sık klinik bulgulardır.
+Klinik İmmünoloji|308|Kronik granülomatöz hastalık|Daha kesin tanı flow sitometrik olarak “Dihidrorodamin 123 flöresan testi” ({{DHR testi}}) ile konulur.
+Klinik İmmünoloji|308|Kronik granülomatöz hastalık|{{NADPH Oksidaz}} eksikliği vardır.
+Klinik İmmünoloji|309|Chediak–Higashi sendromu|{{S. aureus}} en sık infeksiyon yapan ajandır.
+Klinik İmmünoloji|309|Chediak–Higashi sendromu|Bu sendrom en sık {{EBV}} ile aktive olur.
+Klinik İmmünoloji|309|Chediak–Higashi sendromu|{{CHS1 (LYST)}} genindeki mutasyon nedeniyle oluşur.
+Klinik İmmünoloji|309|Chediak–Higashi sendromu|Nötrofillerde PAS (+) boyanan {{dev sitoplazmik granülasyon}} oluşumları ile karekterizedir.
+Klinik İmmünoloji|310|Mikobakteriyel hastalıklara Mendelian yatkınlık|{{Dissemine BCG enfeksiyonu}} tipik başvuru şekli olmakla birlikte, non-Tbc mikobakteriyel enfeksiyonlara da yatkınlık vardır.
+Klinik İmmünoloji|310|İnterferon-γ reseptör defekti|OD İnterferon-γ reseptor defektinde {{multifokal mikobakteriyel osteomiyelit}} tipik tablodur.
+Klinik İmmünoloji|310|Akkiz nötropeni|Akkiz nötropeninin en sık nedeni {{ilaçlar}}dır.
+Klinik İmmünoloji|310|Siklik nötropeni|Hastaların %60’ında OD olarak kalıtılan nötrofil elastaz ({{ELANE}}) geninde mutasyonlarla karakterizedir.
+Klinik İmmünoloji|313|C9 eksikliği|C9 eksikliğinde CH50 normalin {{yarısı}} kadardır.
+Alerji|320|Alerjik reaksiyon|Önceden sentezlenmiş olan diğer önemli mediatörler nötral proteazlardır ({{triptaz, kimaz ve karboksipeptidaz}}).
+Alerji|321|Anafilaktoid reaksiyonlar|Anafilaktoid reaksiyonlar {{IgE}} antikor/antijen kaynaklı değildir.
+Alerji|322|Bifazik anafilaksi|En sık nedeni tedaviye geç başlanması ({{epinefrinin geç yapılması}}) ve ilk gelişte reaksiyonun şiddetli olmasıdır.
+Alerji|322|Anafilaksi|Karakteristik olarak {{taşikardi}} vardır ve böylece vazodepresör reaksiyondan ayırt edilebilir.
+Alerji|324|Vazovagal senkop|Vazodepresör reaksiyonların karakteristik bulguları {{bradikardi}}, hipotansiyon, solukluk, halsizlik, bulantı, kusma ve şiddetli vakalarda bilinç kaybıdır.
+Alerji|324|Vazovagal senkop|Anafilaksiyi taklit eden vazodepresör reaksiyon (vazovagal senkop) {{Bezold-Jarish refleksi}}nin aktive olması sonucunda gözlenir.
+Alerji|324|Anafilaksi|Anafilaksi reaksiyonu sırasında ölçülen {{triptaz}} düzeyinin bazal düzeye göre %20+2 ng/ml artış göstermesi anafilaksi tanısını destekler.
+Alerji|325|Anafilaksi şiddeti|Serum platelet activating factor (PAF) seviyeleri, anafilaksi şiddeti ile koreledir ve PAF inaktivasyonu için gerekli olan yapısal {{PAF asetilhidrolaz}} seviyesi ile ters orantılıdır.
+Alerji|325|Anafilaksi|Epinefrine cevap vermeyen “vizing” varlığında hastaya inhale {{β2}}-agonist verilebilir.
+Alerji|325|Beta bloker kullanan hastada anafilaksi|Bu hastaların tedavisinde ilk ilaç olarak epinefrin kullanılmalı ama yanıt alınamadıysa {{vazopresin ve glukagon}} kullanılmalıdır.
+Alerji|326|İlaç alerjisi|Duyarsızlaştırma: IgE aracılı olan ve olmayan ilaç allerjisine bağlı anafilaksi vakalarında uygulanarak {{geçici tolerans}} sağlanabilir.
+Alerji|341|Astım|Çocuklarda ilk tercih edilecek ilaç {{inhaler kortikosteroid}} (İKS)’dir.
+Alerji|341|Astım|Kısa etkili beta-2 agonistler (Albuterol, pirbuterol, terbutalin, salbutamol, fenoterol): Akut astım atağında ve egzersiz bağımlı astım tedavisinde ilk tercih {{kısa etkili beta 2 agonistler}}dir.
+Enfeksiyon Hastalıkları|376|Leuconostoc|Katalaz-negatif, gram-pozitif koklardır ve en önemli özellikleri {{vankomisine doğal olarak dirençli}} olmalarıdır.
+Enfeksiyon Hastalıkları|377|Aminoglikozidler|En sık direnç mekanizması: {{transferaz enzimlerle}} antibiyotiğin modifiye edilmesidir.
+Enfeksiyon Hastalıkları|379|Klindamisin|En önemli yan etkisi ishaldir (%20), yarısı {{Clostridium difficile}} ‘ye bağlı ishal gelişebilir, psödomembranöz kolit gelişebilir.
+Enfeksiyon Hastalıkları|388|Pnömoni|En sık patogenez {{orofarengeal mikroaspirasyonlar}}dır, daha nadiren hematojen yolla gelişir.
+Enfeksiyon Hastalıkları|396|Stafilokok pnömonisi|En önemli toplumsal predispozan faktör {{influenza virus enfeksiyonu}}dur.
+Enfeksiyon Hastalıkları|397|Mycoplasma pneumoniae|En önemli {{‘ayakta gezen pnömoni’}} nedenidir.
+Enfeksiyon Hastalıkları|405|Akut farenjit|En sık etken {{viruslar}}dır, bakteriyel olarak A grubu streptokoklar sık etkendir.
+Enfeksiyon Hastalıkları|415|Gebelikte tüberküloz tedavisi|Gebede {{streptomisin}} kontrendikedir, diğer önerilmeyenler: amikasin, kapreomisin, kanamisin ve kinolonlar.
+Enfeksiyon Hastalıkları|422|EHEC enfeksiyonu|EHEC de antibiyotik kontrendikedir, {{HUS}} riskini artırır.
+Enfeksiyon Hastalıkları|428|Seyahat diyaresi|{{Enterotoksijenik E. coli}} en sık etkendir, en sık viral etken Norovirus, en sık parazitik etken Giardia lamblia ‘dır.
+Enfeksiyon Hastalıkları|428|Seyahat diyaresi|Enterotoksijenik E. coli en sık etkendir, en sık viral etken {{Norovirus}}, en sık parazitik etken Giardia lamblia ‘dır.
+Enfeksiyon Hastalıkları|433|Viral gastroenterit|{{Norovirus}} erişkinde en sık viral gastroenterit etkenidir, akut gastroenteritlerin %18 ‘inde etken olarak karşımıza çıkar.
+Enfeksiyon Hastalıkları|440|Piyojenik karaciğer apsesi|Bakteriler en sık {{asendan yolla bilier sistemden}} gelir, ikinci en sık kriptojeniktir, diğer: hepatik arter, portal ven, travma ve direkt yayılım.
+Enfeksiyon Hastalıkları|445|Erişkinde bakteriyel menenjit|{{S. pneumoniae}} erişkinde en sık bakteriyel etkendir.
+Enfeksiyon Hastalıkları|447|Kafa tabanı kırığı sonrası menenjit|Kafa travması ve baziller kafa kırığı sonrası (BOS kaçağı) menenjitte en sık etken {{S. pneumoniae}} ‘dır ve ampirik tedavi yukarıdaki gibidir (Seftriakson + vankomisin).
+Enfeksiyon Hastalıkları|449|Meningokok ve H. influenzae menenjiti|Haemophilus influenzae ve Neisseria meningitidis menenjitinde duyarlılık belli olana kadar tedavide ilk tercih {{seftriakson}}’dur.
+Enfeksiyon Hastalıkları|492|Primer sifiliz|Karakteristik lezyon şankr ‘dır, {{ağrısız}}dır, genital, oral veya anal bölgede olabilir.
+Enfeksiyon Hastalıkları|496|Septik artrit|En sık {{hematojen}} yolla gelen bakterilere bağlı gelişir.
+Enfeksiyon Hastalıkları|497|Gonokoksik artrit|Migratuvar artrit veya {{tenosinovit}} gelişir, en sık diz etkilenir, aksiyal iskelet de tutulabilir.
+Enfeksiyon Hastalıkları|500|Erişkinde osteomiyelit|Erişkinde en sık etken {{Staphylococcus aureus}} ‘tur.
+Enfeksiyon Hastalıkları|501|Febril nötropeni|En sık enfeksiyon kökeni {{oral ve intestinal mukoza}}dır, mukozite bağlı olarak bakterilerin translokasyonu söz konusudur.
+Enfeksiyon Hastalıkları|505|İnvaziv aspergilloz|En sık etken {{Aspergillus fumigatus}}, diğer: A flavus, A niger.
+Enfeksiyon Hastalıkları|507|İnvaziv aspergilloz|{{Vorikonazol, izavukonazol ve posakonazol}} tedavide ilk tercih ajandır.
+Enfeksiyon Hastalıkları|508|İnvaziv kandidiyaz|Tanıda {{kan kültürü}} altın standarttır, mannan ve beta glukan testleri yardımcı olabilir.
+Enfeksiyon Hastalıkları|510|Mukormikoz|Damak üzerinde {{siyah nekrotik eskar}} (yara) karakteristiktir.
+Enfeksiyon Hastalıkları|543|Leptospiroz|MAT ({{Mikroskobik Aglütinasyon Testi}}) altın standarttır ancak canlı antijen paneli ve uzmanlık gerektirir.
+Enfeksiyon Hastalıkları|547|Sıtma|Tanı için {{periferik yayma}} altın standarttır, 48 saat içerisinde 3 numune alınır.
+Enfeksiyon Hastalıkları|551|Viseral leşmanyaz|Viseral leşmanyaz tedavisi: ilk tercih {{lipozomal Amfoterisin B}} ‘dir, Beş Değerli Antimon Bileşikleri (sodyum stiboglukonat): L-AmB'nin maliyetli olduğu veya parazitin duyarlı olduğu bölgelerde (özellikle Doğu Afrika) hala yaygın kullanılır.
+Enfeksiyon Hastalıkları|553|Fasciola hepatica|İstisna olarak Fasciola hepatica‘da {{triklabendazol}} ilk tercihtir.
+Enfeksiyon Hastalıkları|556|Taenia saginata|{{Hareketli}} Halkalar: T. saginata'nın en karakteristik özelliği, proglottidlerinin (şerit halkalarının) hareketli olmasıdır.
+Enfeksiyon Hastalıkları|557|Kistik ekinokokkoz|Kistik Echinococcosis (CE): Kistler en sık {{karaciğer}}de (%50-70) ve akciğerde (%20-30) yerleşir.
+Enfeksiyon Hastalıkları|559|Trichuris trichiura|Yumurtaların iki ucunun tıkaçlı (terminal plugs) ve {{limon}} şeklinde olması Trichuris için patognomoniktir.
+Enfeksiyon Hastalıkları|560|Enterobius vermicularis|En karakteristik bulgu, özellikle geceleri artan {{perianal kaşıntı}}dır (pruritus ani).
+Enfeksiyon Hastalıkları|563|Gansiklovir|En sık {{CMV}} enfeksiyonlarının tedavisinde kullanılır, transplant hastalarında CMV profilaksisinde de kullanılır.
+Enfeksiyon Hastalıkları|565|Herpes simpleks|{{Trigeminal}} (HSV-1) ve sakral (HSV-2) ganglia en sık latent yerleşim yerleridir.
+Enfeksiyon Hastalıkları|588|Adenovirüs|Histopatolojik incelemelerde yaygın alveolar hasarın yanı sıra karakteristik {{“smudge cell”}} oluşumu saptanmıştır.
+Enfeksiyon Hastalıkları|592|Hantavirüs|HFRS (Böbrek Sendromu): Karakteristik olarak ateş, {{trombositopeni ve akut böbrek yetmezliği}} ile seyreder.
+Enfeksiyon Hastalıkları|601|Serebral toksoplazmoz|MRI'da tipik olarak {{halka imajlı (ring-enhancing)}} lezyonlar izlenir.
+Enfeksiyon Hastalıkları|610|Gebelikte HIV tedavisi|{{Didanozin ve stavudin}} kontrendikedir, ciddi laktik asidoz yaparlar.
+Enfeksiyon Hastalıkları|613|Mpox|{{Lenfadenopati}}: Mpox'u çiçek hastalığından (variola) ayıran en önemli klinik ipucudur.
+Enfeksiyon Hastalıkları|613|Mpox|Lezyonlar tipik olarak {{göbekli (umbilicated)}} ve serttir.
+Enfeksiyon Hastalıkları|613|Mpox|Tanıda Altın Standart: Lezyonlardan (sıvı veya kabuk) alınan örneklerde {{PCR}} ile viral DNA'nın gösterilmesidir.
+Enfeksiyon Hastalıkları|630|Cerrahi antibiyotik profilaksisi|Seçim: Çoğu cerrahi işlem için sefalosporinler (özellikle {{sefazolin}}) ilk tercihtir.
+Romatoloji|634|ANCA|PR3 ANCA (c-ANCA); sitoplazmadaki {{proteinaz-3}}’e karşı gelişmiştir.
+Romatoloji|634|ANCA|MPO ANCA (p-ANCA); perinükleer yerleşimli {{miyeloperoksidaz}} enzimine karşı gelişmiştir.
+Romatoloji|636|Sinoviyal sıvı incelemesi|Sinoviyal sıvı analizinin en önemli kullanım alanı {{akut monoartrit ayırıcı tanısı}}dır.
+Romatoloji|640|Romatoid artrit|Sinovite bağlı olarak gelişen sinoviyal hipertrofi, {{pannus}} dokusuna ilerler ve bu dokunun hastalığın erken döneminden itibaren kemik ve kıkırdak harabiyetine (erozyon) yol açabilmesi RA için tipiktir.
+Romatoloji|642|Romatoid artrit|En sık kapak hastalığı, {{mitral yetmezlik}}tir.
+Romatoloji|643|Romatoid artrit|En sık bulgu normokrom normositer anemidir ({{Kronik hastalık anemisi}}).
+Romatoloji|643|Romatoid artrit|En sık göz bulgusu {{keratokonjunktivitis sikka}}dır (sekonder Sjögren sendromu; göz, ağız ve diğer mukozal membranlarda kuruluk).
+Romatoloji|643|Romatoid artrit|En sık nörolojik bulgu {{tuzak nöropatileri}}dir.
+Romatoloji|644|Romatoid artrit|Nefrotik sendromlu hastalıklarda en sık bulgu ise {{amiloidoz}}dur.
+Romatoloji|647|Romatoid artrit|Ancak ilk tercih genellikle {{metotreksat}}tır.
+Romatoloji|654|Kronik kutanöz lupus|En sık formu {{diskoid lupus eritematozus}} (DLE)’tur.
+Romatoloji|668|Sjögren sendromu|Hastalığın gelişiminde rol oynayan en önemli sitokin {{interferon alfa}} (IFN α)dır.
+Romatoloji|668|Sjögren sendromu|{{Ağız kuruluğu (xerostomi)}} ve göz kuruluğu (keratokonjuntivitis sicca) en sık bulgulardır (> %90).
+Romatoloji|670|Sjögren sendromu|Primer SS’da en sık rastlanan serolojik bulgu {{hipergamaglobulinemi}}dir.
+Romatoloji|682|Sistemik skleroz|SSk ile ilişkili en sık interstisyel akciğer hastalığı paterni {{nonspesifik interstisyel pnömoni}}dir (NSIP).
+Romatoloji|687|Skleroderma renal krizi|Skleroderma renal krizi tıbbi bir acildir ve tedavisinde altın standart, {{kısa etkili ACE inhibitörleri}}nin agresif titrasyonudur; dirençli hipertansiyon varlığında kalsiyum kanal blokerleri, anjiyotensin reseptör blokerleri veya prostasiklinler tedaviye eklenebilir.
+Romatoloji|691|Dev hücreli arterit|Sıklıkla eksternal karotis arter ve dallarını tutar (en sık {{temporal arter}}).
+Romatoloji|696|Kawasaki hastalığı|Hastalığın ilk evresinden ziyade ikinci haftasından itibaren belirginleşen {{trombositoz}} yine tipik bir laboratuvar bulgusudur.
+Romatoloji|704|Behçet hastalığı|Behçet sendromunda {{endotel disfonksiyonu}} karakteristik bir bulgudur.
+Romatoloji|706|Behçet hastalığı|Göz tutulumu (Üveit): Sistemik steroid ile birlikte {{azatioprin}} (ilk tercih) veya siklosporin kullanılır.
+Romatoloji|709|Ankilozan spondilit|Sakroiliak eklemler her zaman tutulur ve hastalık, karakteristik olarak {{inflamatuar bel ağrısı}} ile başlar (bkz inflamatuar bel ağrısının özellikleri).
+Romatoloji|709|Ankilozan spondilit|En sık kırık {{alt servikal vertebra}}da ortaya çıkar.
+Romatoloji|709|Ankilozan spondilit|Aksiyel iskelet hariç en sık tutulan eklemler {{kalça}}lardır (%25-30).
+Romatoloji|709|Ankilozan spondilit|Kalkaneusta oluşan entezit ({{plantar fasiit}}) sonucu gelişen topuk ağrısı tipik bir bulgudur.
+Romatoloji|720|El osteoartriti|En sık {{DIF}} eklemler tutulur.
+Romatoloji|720|Diz osteoartriti|Sıklıkla tek bir kompartman, en sık da {{medial kompartman}} tutulur ve genu varum deformitesi gelişir.
+Romatoloji|720|Diz osteoartriti|Sıklıkla tek bir kompartman, en sık da medial kompartman tutulur ve {{genu varum}} deformitesi gelişir.
+Romatoloji|720|Patellofemoral osteoartrit|Patellofemoral OA ise tipik olarak {{merdiven inerken}} ağrıya sebep olur.
+Romatoloji|729|Kalsiyum pirofosfat depo hastalığı|En sık {{diz}} eklemleri tutulur.
+Romatoloji|730|Bazik kalsiyum fosfat kristalleri|Bazik kalsiyum fosfat (BCP) kristalleri; farklı kristal tipleri şeklinde bulunabilir, en sık rastlanan tipi {{hidroksiapatit}}tir.
+Romatoloji|731|Septik artrit|En sık etken {{Staphylococcus aureus}}’tur.
+Romatoloji|731|Septik artrit|En sık {{diz}} eklemini tutulur.
+Romatoloji|739|Akut romatizmal ateş|En sık tutulan kapak, {{mitral kapak}}tır.
+Romatoloji|747|Erişkin Still hastalığı|İleri dönemde özellikle el bileğinde {{erozyonsuz karpal ankiloz}} gelişimi çok karakteristiktir.
+Geriatri|758|Yaşlılarda sekonder hipertansiyon|Yaşlı hastalarda sekonder hipertansiyonun en sık nedeni {{renal arter stenozu}}dur (aterosklerotik renal arter darlığı).
+Geriatri|758|Yaşlılarda aritmiler|Yaşlı hastalarda en sık aritmi {{atriyal fibrilasyon}}dur.
+Geriatri|758|Yaşlılarda kapak hastalıkları|Yaşlı hastalarda invaziv tedavi gerektiren en sık kapak hastalığı {{kalsifik aort stenozu}}dur.
+Geriatri|759|Yaşlılarda elektrolit bozuklukları|Yaşlılarda en sık karşılaşılan sıvı-elektrolit bozukluğu {{hiponatremi}}dir.
+Geriatri|759|Ayaktan izlenen yaşlılarda hiponatremi|Ayaktan izlenen yaşlılarda hiponatreminin en sık neden {{uygunsuz ADH sendromu}}dur.
+Geriatri|759|Yaşlılarda hiperkalsemi|Hiperkalsemi: Ayaktan hastalarda en sık neden {{primer hiperparatiroidi}} iken, hastanede yatan hastalarda en sık neden malignite ilişkili hiperkalsemidir.
+Geriatri|759|Yaşlılarda hipotiroidi|Yaşlılarda hipotiroidinin en sık nedeni {{Haşimoto tiroiditi}}dir.
+Geriatri|759|Yaşlılarda tiroid kanseri|Yaşlılarda en sık tiroid kanseri {{papiller tiroid kanseri}}dir.
+Geriatri|759|Yaşlılarda iskemik kolit|İskemik kolit en sık {{splenik fleksura}}yı etkiler.
+Geriatri|761|Esansiyel tremor|Tedavide en sık kullanılan iki farmakolojik tedavi beta-adrenerjik blokerler ve {{primidon}}dur.
+Geriatri|761|Esansiyel tremor|ET’nin, PH’den önemli farklarından biri de {{L-DOPA}} tedavisine yanıt vermemesidir.
+Geriatri|770|Malnütrisyon|GLIM kriterleri {{3 fenotipik ve 2 etiyolojik}} kriterden oluşmaktadır.
+Geriatri|776|Alzheimer hastalığı|Senil plaklar, {{amiloid β proteini}}nin (Aβ); nörofibriler yumaklar ise hiperfosforile tau proteininin birikimiyle oluşmaktadır.
+Geriatri|776|Alzheimer hastalığı|Senil plaklar, amiloid β proteininin (Aβ); nörofibriler yumaklar ise {{hiperfosforile tau proteini}}nin birikimiyle oluşmaktadır.
+Geriatri|777|Alzheimer hastalığı|Bu amaçla en sık kullanılan test, {{Mini Mental Durum Değerlendirme Testi (MMSE)}}’dir.
+Geriatri|777|Alzheimer hastalığı|Beyin omurilik sıvısında; {{azalmış β amiloid}}, artmış tau proteini seviyeleri tanıda destekleyici, atipik ve genç prezentasyonların ayırıcı tanısında yardımcı olabilir.
+Geriatri|780|Parkinson plus sendromları|Parkinson plus (atipik parkinsonizm) sendromları ise idiyopatik formun aksine; tipik olarak {{simetrik}} başlar, istirahat tremoru belirgin değildir ve levodopaya zayıf yanıt verir veya hiç yanıt vermez.
+Geriatri|780|Multipl sistem atrofisi|Radyolojik değerlendirmede pontoserebellar liflerdeki dejenerasyona bağlı olarak {{“haç çöreği” (hot cross bun)}} MSA-C varyantı için oldukça spesifik ve patognomonik bir bulgudur.
+Geriatri|783|Deliryum|{{Akut başlangıçlı olması ve dalgalanmalarla seyretmesi}} deliryumun en önemli klinik özellikleridir.
+Geriatri|784|Deliryum|Medikal tedavide hipotansiyona sebep olma riskinin az olması, atipik antipsikotiklere göre daha az sedasyon yapması ve daha hızlı etki etmesi nedeniyle {{haloperidol}} ilk tercihtir.
+Geriatri|792|Bası yaraları|En önemli faktör {{basınç}}tır.
+Yoğun Bakım|809|Yoğun bakım|Yoğun bakımlarda nörolojik durumun değerlendirilmesinde en sık kullanılan ölçek {{GKS}}’dir.
+Yoğun Bakım|813|Yoğun bakım anemisi|{{İyatrojenik Kan Kaybı (Flebotomi)}}: Tanısal amaçlı sık kan alınması YBÜ anemisinin en sık gözden kaçan nedenidir.
+Yoğun Bakım|816|Hipovolemik şok|En sık nedeni {{hemoraji}}dir.
+Yoğun Bakım|817|Septik şok|Bu nedenle ilk tercih {{norepinefrin}}dir.
+Yoğun Bakım|825|Sepsis|Sepsisin en sık neden olduğu solunum komplikasyonu {{Akut Respiratuvar Distres Sendromu (ARDS)}}’dur.
+Yoğun Bakım|829|Ani kardiyak ölüm|Ani kardiyak ölümün totalde en sık nedeni {{koroner kalp hastalığı}}dır.
+Yoğun Bakım|831|Solunum yetmezliği|{{Polistemi ve kor pulmonale}} bulguları olması solunum yetmezliğinin kronik olduğunu gösterir.
+Yoğun Bakım|831|Hipoksemi mekanizmaları|{{Şant}} sistemik dolaşımdan dönen venöz kanın, alveoler hava ile temas etmeden arteriyel tarafa geçmesidir.
+Yoğun Bakım|832|Tip 2 solunum yetmezliği|En önemli mekanizması {{hipoventilasyon}} olup, esas problem genellikle akciğer dışındadır ve hiperkapniye hipoksemi de eşlik eder.
+Yoğun Bakım|832|Tip 3 solunum yetmezliği|Bu solunum yetmezliği formu, akciğer {{atelektazi}}sinden kaynaklanır.
+Yoğun Bakım|837|Mekanik ventilasyon|Sedatif ilaç olarak ise öncellikle non-benzodiazepin ajanlar ({{propofol veya deksmedetomidin}}) tercih edilir.
+Yoğun Bakım|838|ARDS|Başlatıcı olay, {{yaygın alveolokapiller}} (tip 1 pnömosit ve kapiller endotel) hasarıdır.
+Yoğun Bakım|839|ARDS|Plato basıncı sınırı: İnspiryum sonu plato basıncı (Pplat) {{≤ 30 cmH₂O}} olmalıdır.
+Yoğun Bakım|840|Parasetamol metabolizması|Terapötik koşullarda bu NAPQI, hepatik {{glutatyon}} (GSH) tarafından hızla detoksifiye edilir.
+Yoğun Bakım|840|Parasetamol intoksikasyonu|{{Rumack–Matthew nomogramı}}; alım zamanı bilinen, akut ve tek doz intoksikasyonlar için uygundur (kronik kullanım, tekrarlayan doz vb durumlarda kullanılması önerilmez).
+Yoğun Bakım|841|Salisilat intoksikasyonu|Nörolojik ve Metabolik Bulgular: {{Tinnitus ve işitme kaybı}} tipik erken nörolojik semptomlardır.
+Yoğun Bakım|841|Salisilat intoksikasyonu|Fakat aşırı doz alımında bu metabolizma yolları doygunluğa ulaşır, bu durumda salisilat eliminasyonu {{sıfırıncı derece kinetiğe}} (sabit hızda eliminasyon) geçer.
+Yoğun Bakım|841|Salisilat intoksikasyonu|Sistemik {{asidemi}}, salisilatın non-iyonize formunu dramatik şekilde artırarak SSS ve diğer dokulara geçişini hızlandırır ve toksisiteyi derinleştirir.
+Yoğun Bakım|843|Trisiklik antidepresan|Potasyum kanal blokajı: Gecikmiş doğrultucu potasyum akımlarını inhibe ederek repolarizasyonu uzatır; bu durum EKG’de {{QTc uzaması}} olarak yansır.
+Yoğun Bakım|844|Opioid intoksikasyonu|Zehirlenme durumlarında en önemli mortalite nedeni {{solunum depresyonu}}dur.
+Yoğun Bakım|844|Trisiklik antidepresan|{{Benzodiazepin}} (diazepam ya da lorazepam) birinci tercihtir.
+Yoğun Bakım|844|Trisiklik antidepresan|{{Fenitoin}} (kardiyotoksisiteyi ve mortaliteyi artırır) kesinlikle kontraendikedir.
+Yoğun Bakım|845|Metadon ve loperamid|Metadon ve Loperamid (Kardiyotoksisite): Uzun etkili bir ajan olan metadon ve masif dozda alınan loperamid; miyokardiyal potasyum kanallarını (hERG) bloke ederek QTc uzamasına ve {{torsades de pointes}}’e yol açabilir.
+Yoğun Bakım|845|Tramadol ve meperidin|Tramadol ve Meperidin (Nörotoksisite): Her iki ajan da {{serotonin ve noradrenalin geri alımını}} inhibe eder.

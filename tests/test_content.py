@@ -14,13 +14,12 @@ class ContentTests(unittest.TestCase):
     def test_knowledge_targets_regression(self):
         # Old code blanked the longest word. These facts must hide their answer.
         examples = [
-            ('Bleomisinin', 'akciğer fibrozisi', 29),
-            ('Demansın en sık', 'Alzheimer hastalığı', 776),
+            ('Bleomisin:', 'akciğer fibrozisi', 29),
+            ('Prolaktin düzeyi 200', 'prolaktinoma', 121),
             ('Cushing sendromunun en sık endojen', 'Cushing hastalığı', 127),
             ('en sık görülen kompleman eksikliği', 'C2', 280),
-            ('Eritrazmanın', 'Corynebacterium minutissimum', 469),
             ('p-ANCA', 'miyeloperoksidaz', 634),
-            ('Parasetamol intoksikasyonunun antidotu', 'N-asetil-sistein', 841),
+            ('Terapötik koşullarda bu NAPQI', 'glutatyon', 840),
         ]
         for prompt, answer, page in examples:
             with self.subTest(prompt=prompt):
@@ -35,16 +34,25 @@ class ContentTests(unittest.TestCase):
             with self.subTest(card=card['id']):
                 self.assertEqual(card['question'].count('________'), 1)
                 self.assertEqual(card['question'].replace('________', card['answer']), card['explanation'])
-                self.assertLess(len(card['question'].split()), 45)
+                self.assertLessEqual(len(card['question'].split()), 90)
                 self.assertTrue(card['id'].startswith('fact-'))
                 self.assertTrue(1 <= card['page'] <= 874)
         self.assertEqual(len({c['id'] for c in self.cards}), len(self.cards))
 
     def test_smaller_set_covers_each_available_lesson(self):
         self.assertEqual(len(self.data['lessons']), 9)
-        self.assertLess(len(self.cards), 804 / 2)
+        self.assertEqual(len(self.cards), 300)
         for lesson in self.data['lessons']:
             self.assertGreaterEqual(sum(len(t['cards']) for t in lesson['topics']), 5)
+
+    def test_verbatim_examples_and_no_added_book_commentary(self):
+        quotes = {c['explanation'] for c in self.cards}
+        self.assertIn('Prolaktin düzeyi 200 ng/mL’nin üstünde ise en sık neden prolaktinomadır.', quotes)
+        self.assertIn('Tanıda kan kültürü altın standarttır, mannan ve beta glukan testleri yardımcı olabilir.', quotes)
+        self.assertIn('Tanı için periferik yayma altın standarttır, 48 saat içerisinde 3 numune alınır.', quotes)
+        for card in self.cards:
+            self.assertNotIn('kitapta belirtilen', card['explanation'])
+            self.assertNotIn('kitapta altın standart olarak belirtilen', card['explanation'])
 
 if __name__ == '__main__':
     unittest.main()
