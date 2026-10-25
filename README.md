@@ -45,11 +45,33 @@ Kullanıcının isteğiyle ikinci kaynak PDF değiştirilmeden `library/dahiliye
 
 Ayrıntılı güncel sayılar: [KONU-DAGILIMI.md](KONU-DAGILIMI.md).
 
-## Endokrinoloji soru denemesi
+## Orta–üst düzey soru bankası
 
-**Sorular** sekmesi `data/questions.json` içindeki 50 özgün, dört seçenekli soruyu sunar. Kullanıcının örnek PDF’sindeki klinik vaka ve bilgi yorumlama yaklaşımı incelenerek hazırlanmıştır; örnek sınavın soruları ve olası cevap hataları kopyalanmamıştır. Dağılım: diyabet 18, tiroid 16, adrenal 7, hipofiz 5, kalsiyum/kemik 4. Bu pilot dağılım sınav yüzdesi değildir. Açıklamalar kitabın ilgili fiziksel PDF sayfalarına bağlanan özgün özetlerdir; flashcard arka yüzlerindeki birebir kaynak alıntılarından farklıdır. Klinik uzman incelemesi yapılmamıştır.
+**Sorular** sekmesi 15 dersi kapsayan 13 ders grubunda **290 özgün, dört seçenekli soru** sunar. Klinik vaka, laboratuvar yorumlama, ayırıcı tanı ve tedavi önceliği ağırlıklıdır. Orta–üst düzey hedeflenmiştir; güçlük düzeyi kullanıcı performansıyla ölçülmüş değildir. Açıklamalar kaynak kitabın ilgili PDF sayfalarına bağlanan özgün özetlerdir. Resmî sınav sorusu değildir ve klinik uzman incelemesi yapılmamıştır.
 
-Yanıt seçildikten sonra seçenekler kilitlenir ve doğru cevap, gerekçe, kaynak bağlantısı açılır. Konu, yanlış ve çözülmemiş soru filtreleri; soru numarasından geçiş ve tek soruyu yeniden çözme bulunur. Yanıtlar `tusspot-endo-quiz-v1`, konum/filtreler `tusspot-endo-quiz-place-v1` ile cihazın tarayıcısına kaydedilir. Flashcard ilerlemesi ayrı korunur. Tam deneme sıfırlama ikinci bir onay gerektirir. Kayıtlar cihazlar arasında senkronize değildir.
+| Ders grubu | Soru |
+| --- | ---: |
+| Endokrinoloji | 50 |
+| Nefroloji | 50 |
+| Gastroenteroloji + Hepatoloji | 50 (25 + 25) |
+| Onkoloji + Hematoloji | 50 (25 + 25) |
+| Kardiyoloji | 10 |
+| Göğüs Hastalıkları | 10 |
+| Enfeksiyon Hastalıkları | 10 |
+| Romatoloji | 10 |
+| Yoğun Bakım | 10 |
+| Geriatri | 10 |
+| Alerji | 10 |
+| Klinik İmmünoloji | 10 |
+| Temel İmmünoloji | 10 |
+
+Ders grubu ve konu seçimi, yanlış/çözülmemiş filtreleri, numaradan geçiş ve tek soruyu yeniden çözme desteklenir. Her grubun konumu, filtreleri ve yanıtları ayrı korunur. Sıfırlama ikinci onaydan sonra yalnız seçili grubu etkiler; flashcard kayıtları korunur. Yanıt verildikten sonra seçenekler kilitlenir; doğru cevap, açıklama ve ilgili kaynak sayfaları açılır. İlk kitabın bağlantıları doğru PDF parçasına ve fiziksel sayfasına gider; basılı kitap numarası ayrıca gösterilir.
+
+İlk 50 endokrinoloji sorusu `data/questions_endo.json` içinde kimlikleri, seçenekleri, cevapları ve açıklamaları değiştirilmeden korunur. `data/questions_additions.json` 240 yeni soruyu ve dayandıkları kart kimliklerini saklar. Bu kimlikler kaynak denetimi içindir; yeni sorular boşluk doldurma kartlarının otomatik dönüşümü değildir. `python3 scripts/build_questions.py --audit-sources` bankaları birleştirir, sayıları ve kaynak eşleşmelerini denetleyip `data/questions.json` üretir. Ardından `python3 scripts/package_app.py` tek dosyalık sürümü yeniler. PDF denetimi kaynak pasajını doğrular; soru ve çeldiriciler için klinik uzman incelemesinin yerini tutmaz.
+
+Yanıtlar `tusspot-quiz-v2`, grup/konum bilgileri `tusspot-quiz-place-v2` altında cihazın tarayıcısında tutulur. İlk kullanımda eski `tusspot-endo-quiz-v1` ve `tusspot-endo-quiz-place-v1` verileri aktarılır; yeni kayıt varsa eski veriler yeniden birleştirilmez. Böylece sıfırlanan sorular geri gelmez. Kayıtlar cihazlar arasında eşitlenmez.
+
+Tarayıcı regresyonu: HTTP sunucusu açıkken `node tests/check_question_banks.cjs` (Playwright ve Chromium gerekir). Test ders sayılarını, eski kayıtların aktarımını, filtreleri, cevap kilidini, grup bazında konum/sıfırlamayı, kaynak bağlantılarını ve mobil tek dosyalık sürümü denetler.
 
 ## İlk kitabın tamamı ve sayfa denetimi
 
@@ -69,7 +91,7 @@ Yeni kartların `source` alanı doğru parçayı, `page` alanı o parçanın fiz
 
 Öncelik servis ve poliklinikte önemli klinik kararlaradır: nefrolojide ABH, KBH, sıvı-elektrolit ve asit-baz bozuklukları, proteinüri ve diyaliz; gastroenterolojide reflü, disfaji, kanama, ülser, ishal/kabızlık, IBS, İBH, malabsorpsiyon ve pankreatobiliyer hastalıklar; hepatolojide viral hepatitler, yağlı karaciğer, test yorumlama ve siroz komplikasyonları. Kardiyolojide sık karşılaşılan kalp yetmezliği, AKS, hipertansiyon ve önemli aritmiler korunur. Dağılım ölçülmüş yatış veya başvuru sıklığı, prevalans ya da doğrulanmış TUS/YDUS yüzdesi değildir.
 
-Konu Dağılımı sekmesi her kitap için sayıyı ayrı hesaplar ve ilk kitabın derslerinde klinik odağı açıklar. Endokrinoloji soru denemesi ayrı olarak 50 çoktan seçmeli soru içerir; 1.110 sayısı yalnızca flashcardları ifade eder.
+Konu Dağılımı sekmesi her kitap için sayıyı ayrı hesaplar ve ilk kitabın derslerinde klinik odağı açıklar. Soru bankası ayrı olarak 290 çoktan seçmeli soru içerir; 1.110 sayısı yalnızca flashcardları ifade eder.
 
 
 `data/editorial_hemato_onco.tsv` son 110 kartın kaynak cümlelerini, gizlenen bilgi hedeflerini ve sorularını saklar. `scripts/hemato_onco_cards.py`, temel 1.000 karttan sonra çalışarak hematoloji ve onkolojiyi ayrı ayrı 100 karta tamamlar; diğer dersler ve önceki 1.000 kartın kimlikleri/içeriği korunur. Her yeni alıntı kendi PDF sayfasıyla otomatik karşılaştırılır. Yeni toplam 1.110 karttır. Kaynak metin denetimi klinik uzman incelemesi değildir.

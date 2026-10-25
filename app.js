@@ -17,7 +17,7 @@ function flip(){if(!cards.length)return;flipped=!flipped;renderCard()}
 function move(delta){index=Math.max(0,Math.min(cards.length-1,index+delta));flipped=false;renderCard()}
 function mark(kind){const c=cards[index];if(!c)return;const other=kind==='known'?'again':'known';saved[other]=saved[other].filter(id=>id!==c.id);if(!saved[kind].includes(c.id))saved[kind].push(c.id);persist();stats();if(mode==='again'&&kind==='known'){filterCards();return}if(index<cards.length-1)move(1);else renderCard()}
 $('home').onclick=()=>{$('questionsView').hidden=true;document.querySelectorAll('.nav').forEach(b=>b.classList.remove('active'));$('home').classList.add('active');$('library').hidden=false;$('study').hidden=true;$('pdfView').hidden=true;$('distributionView').hidden=true;stats()};$('back').onclick=$('home').onclick;$('favorites').onclick=()=>collection('favorites');$('review').onclick=()=>collection('again');$('search').oninput=renderLessons;$('topics').onchange=filterCards;$('flashcard').onclick=flip;$('flip').onclick=flip;$('next').onclick=()=>move(1);$('prev').onclick=()=>move(-1);$('know').onclick=()=>mark('known');$('again').onclick=()=>mark('again');$('favorite').onclick=()=>{const c=cards[index];if(!c)return;saved.favorites=saved.favorites.includes(c.id)?saved.favorites.filter(x=>x!==c.id):[...saved.favorites,c.id];persist();if(mode==='favorites')filterCards();else renderCard()};document.addEventListener('keydown',e=>{if($('study').hidden||['INPUT','SELECT','BUTTON','TEXTAREA'].includes(document.activeElement.tagName))return;if(e.code==='Space'){e.preventDefault();flip()}if(e.key==='ArrowRight')move(1);if(e.key==='ArrowLeft')move(-1)});
-fetch('data/cards.json?v=hemato-onco-1110-v2', {cache:'no-store'}).then(r=>{if(!r.ok)throw Error();return r.json()}).then(d=>{data=d;configurePdfSources(d.sources);stats();renderLessons();renderDistribution()}).catch(()=>{$('error').hidden=false;$('error').textContent='Kartlar yüklenemedi. Uygulamayı sunucu üzerinden açıp yeniden dene.'});
+fetch('data/cards.json?v=multi-bank-290-v1', {cache:'no-store'}).then(r=>{if(!r.ok)throw Error();return r.json()}).then(d=>{data=d;configurePdfSources(d.sources);stats();renderLessons();renderDistribution()}).catch(()=>{$('error').hidden=false;$('error').textContent='Kartlar yüklenemedi. Uygulamayı sunucu üzerinden açıp yeniden dene.'});
 
 const sourceBooks={second:{label:'İkinci kitap · 874 sayfa',path:'library/dahiliye.pdf',pages:874},'first-part-1':{label:'İlk kitap · 1. parça · 140 sayfa',path:'library/dahiliye-ilk-parca1.pdf',pages:140}};
 function configurePdfSources(sources){
@@ -76,33 +76,80 @@ $('distribution').onclick=()=>{$('questionsView').hidden=true;
  document.querySelectorAll('.nav').forEach(b=>b.classList.remove('active'));$('distribution').classList.add('active');window.scrollTo(0,0);
 };
 
-// The quiz uses separate storage; flashcard progress is preserved.
-let quizData=null, quizIndex=0, quizAnswers={};
-try{const stored=JSON.parse(localStorage.getItem('tusspot-endo-quiz-v1'));if(stored&&typeof stored==='object'&&!Array.isArray(stored))for(const [id,a] of Object.entries(stored))if(Number.isInteger(a)&&a>=0&&a<4)quizAnswers[id]=a;}catch{}
-function saveQuizPlace(){try{localStorage.setItem('tusspot-endo-quiz-place-v1',JSON.stringify({index:quizIndex,topic:$('quizTopic').value,filter:$('quizFilter').value}))}catch{}}
-function saveQuiz(){try{localStorage.setItem('tusspot-endo-quiz-v1',JSON.stringify(quizAnswers))}catch{}}
-function quizList(){return quizData.questions.filter(q=>($('quizTopic').value==='all'||q.topic===$('quizTopic').value)&&($('quizFilter').value==='all'||($('quizFilter').value==='wrong'?q.id in quizAnswers&&quizAnswers[q.id]!==q.correct:!(q.id in quizAnswers))))}
+// Each bank keeps its position and answers; legacy endocrine records are migrated once.
+let quizData=null, quizIndex=0, quizBank='endo', quizAnswers={}, quizPlaces={};
+try {
+ const stored=localStorage.getItem('tusspot-quiz-v2');
+ const parsed=JSON.parse(stored===null?localStorage.getItem('tusspot-endo-quiz-v1'):stored);
+ if(parsed&&typeof parsed==='object'&&!Array.isArray(parsed))for(const [id,a] of Object.entries(parsed))if(Number.isInteger(a)&&a>=0&&a<4)quizAnswers[id]=a;
+} catch {}
+try {
+ const stored=localStorage.getItem('tusspot-quiz-place-v2');
+ if(stored){const state=JSON.parse(stored);if(typeof state.bank==='string')quizBank=state.bank;if(state.places&&typeof state.places==='object')quizPlaces=state.places;}
+ else {const old=JSON.parse(localStorage.getItem('tusspot-endo-quiz-place-v1'));if(old)quizPlaces.endo=old;}
+} catch {}
+function saveQuiz(){try{localStorage.setItem('tusspot-quiz-v2',JSON.stringify(quizAnswers))}catch{}}
+function saveQuizPlace(){
+ quizPlaces[quizBank]={index:quizIndex,topic:$('quizTopic').value,filter:$('quizFilter').value};
+ try{localStorage.setItem('tusspot-quiz-place-v2',JSON.stringify({bank:quizBank,places:quizPlaces}))}catch{}
+}
+function bankQuestions(){return quizData.questions.filter(q=>(q.bank||'endo')===quizBank)}
+function quizList(){return bankQuestions().filter(q=>($('quizTopic').value==='all'||q.topic===$('quizTopic').value)&&($('quizFilter').value==='all'||($('quizFilter').value==='wrong'?q.id in quizAnswers&&quizAnswers[q.id]!==q.correct:!(q.id in quizAnswers))))}
+function selectQuizBank(){
+ const bank=quizData.banks.find(b=>b.id===quizBank)||quizData.banks[0];quizBank=bank.id;$('quizBank').value=quizBank;
+ const questions=bankQuestions();
+ $('quizTitle').textContent=bank.title+' soruları';
+ $('quizSummary').textContent=questions.length+' soru · 4 seçenek · Orta–üst düzey';
+ $('quizMapTitle').textContent='Soruya git · 1–'+questions.length;
+ $('quizTopic').replaceChildren();
+ ['all',...new Set(questions.map(q=>q.topic))].forEach(t=>{const o=document.createElement('option');o.value=t;o.textContent=t==='all'?'Tüm konular':t;$('quizTopic').append(o)});
+ const place=quizPlaces[quizBank]||{};
+ $('quizTopic').value=[...$('quizTopic').options].some(o=>o.value===place.topic)?place.topic:'all';
+ $('quizFilter').value=['all','wrong','unanswered'].includes(place.filter)?place.filter:'all';
+ quizIndex=Number.isInteger(place.index)&&place.index>=0?place.index:0;
+ $('quizResetPrompt').hidden=true;renderQuiz();
+}
 function renderQuiz(){
- const questions=quizData.questions,list=quizList();quizIndex=Math.max(0,Math.min(quizIndex,list.length-1));const q=list[quizIndex];saveQuizPlace();
+ const questions=bankQuestions(),list=quizList();quizIndex=Math.max(0,Math.min(quizIndex,list.length-1));const q=list[quizIndex];saveQuizPlace();
  const answered=questions.filter(q=>q.id in quizAnswers),correct=answered.filter(q=>quizAnswers[q.id]===q.correct).length;
  $('quizStats').replaceChildren();[[answered.length,'çözülen'],[correct,'doğru'],[answered.length-correct,'yanlış'],[questions.length-answered.length,'kalan']].forEach(([value,label])=>{const el=document.createElement('div'),n=document.createElement('strong'),t=document.createElement('span');n.textContent=value;t.textContent=label;el.append(n,t);$('quizStats').append(el)});
- $('quizCard').hidden=!q;$('quizEmpty').hidden=!!q;$('quizPosition').textContent=q?`Soru ${questions.indexOf(q)+1} / 50 · Bu listede ${quizIndex+1} / ${list.length}`:'0 soru';
+ $('quizCard').hidden=!q;$('quizEmpty').hidden=!!q;$('quizPosition').textContent=q?`Soru ${questions.indexOf(q)+1} / ${questions.length} · Bu listede ${quizIndex+1} / ${list.length}`:'0 soru';
  $('quizPrev').disabled=!q||quizIndex===0;$('quizNext').disabled=!q||quizIndex===list.length-1;
  $('quizMap').replaceChildren();questions.forEach((item,i)=>{const b=document.createElement('button');b.textContent=i+1;b.className=item.id in quizAnswers?(quizAnswers[item.id]===item.correct?'correct':'incorrect'):'';if(item===q)b.setAttribute('aria-current','step');b.setAttribute('aria-label',`${i+1}. soru · ${item.id in quizAnswers?(quizAnswers[item.id]===item.correct?'doğru':'yanlış'):'çözülmedi'}`);b.onclick=()=>{$('quizTopic').value='all';$('quizFilter').value='all';quizIndex=i;renderQuiz();$('quizPrompt').focus()};$('quizMap').append(b)});
  if(!q)return;
- $('quizTopicLabel').textContent=q.topic;$('quizPrompt').textContent=q.question;$('quizOptions').replaceChildren();
+ $('quizTopicLabel').textContent=(q.lesson||'Endokrinoloji')+' · '+q.topic;$('quizPrompt').textContent=q.question;$('quizOptions').replaceChildren();
  const answeredCurrent=q.id in quizAnswers;
  q.options.forEach((option,i)=>{const b=document.createElement('button');b.className='quiz-option';b.textContent='ABCD'[i]+') '+option;b.disabled=answeredCurrent;
- if(answeredCurrent){if(i===q.correct){b.classList.add('correct');b.textContent+=' ✓ Doğru cevap'}else if(i===quizAnswers[q.id]){b.classList.add('incorrect');b.textContent+=' ✕ Seçimin'}}
- b.onclick=()=>{quizAnswers[q.id]=i;saveQuiz();/* Keep feedback visible even when the active filter would remove this item. */if($('quizFilter').value!=='all'){$('quizFilter').value='all';quizIndex=quizList().indexOf(q)}renderQuiz()};$('quizOptions').append(b)});
+  if(answeredCurrent){if(i===q.correct){b.classList.add('correct');b.textContent+=' ✓ Doğru cevap'}else if(i===quizAnswers[q.id]){b.classList.add('incorrect');b.textContent+=' ✕ Seçimin'}}
+  b.onclick=()=>{quizAnswers[q.id]=i;saveQuiz();if($('quizFilter').value!=='all'){$('quizFilter').value='all';quizIndex=quizList().indexOf(q)}renderQuiz()};$('quizOptions').append(b)});
  $('quizFeedback').hidden=!answeredCurrent;$('quizFeedback').replaceChildren();
- if(answeredCurrent){const result=document.createElement('strong');result.textContent=quizAnswers[q.id]===q.correct?'Doğru!':'Yanlış. Doğru cevap: '+ 'ABCD'[q.correct];const exp=document.createElement('p');exp.textContent=q.explanation;$('quizFeedback').append(result,exp);const retry=document.createElement('button');retry.className='back';retry.textContent='↻ Bu soruyu yeniden çöz';retry.onclick=()=>{delete quizAnswers[q.id];saveQuiz();$('quizFilter').value='all';quizIndex=quizList().indexOf(q);renderQuiz()};$('quizFeedback').append(retry);q.pages.forEach(page=>{const b=document.createElement('button');b.className='back';b.textContent='Kaynak PDF · sayfa '+page+' ↗';b.onclick=()=>openPdf(page);$('quizFeedback').append(b)})}
+ if(answeredCurrent){
+  const result=document.createElement('strong');result.textContent=quizAnswers[q.id]===q.correct?'Doğru!':'Yanlış. Doğru cevap: '+ 'ABCD'[q.correct];
+  const exp=document.createElement('p');exp.textContent=q.explanation;$('quizFeedback').append(result,exp);
+  const retry=document.createElement('button');retry.className='back';retry.textContent='↻ Bu soruyu yeniden çöz';retry.onclick=()=>{delete quizAnswers[q.id];saveQuiz();$('quizFilter').value='all';quizIndex=quizList().indexOf(q);renderQuiz()};$('quizFeedback').append(retry);
+  const citations=q.citations||q.pages.map(page=>({page,source:'second'}));
+  citations.forEach(c=>{const b=document.createElement('button');b.className='back';
+   const source=sourceBooks[c.source];
+   b.textContent=(c.source==='second'?'İkinci kitap':'İlk kitap · '+source.part+'. parça')+' · '+(c.book_page?'kitap '+c.book_page+' / PDF '+c.page:'PDF sayfa '+c.page)+' ↗';
+   b.onclick=()=>openPdf(c.page,c.source);$('quizFeedback').append(b);
+  });
+ }
 }
 $('questions').onclick=async()=>{
  ['library','study','pdfView','distributionView'].forEach(id=>$(id).hidden=true);$('questionsView').hidden=false;document.querySelectorAll('.nav').forEach(b=>b.classList.remove('active'));$('questions').classList.add('active');window.scrollTo(0,0);
- if(!quizData){$('quizPosition').textContent='Sorular yükleniyor…';try{quizData=await fetch('data/questions.json?v=endo-quiz-v1',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error();return r.json()});$('quizNote').textContent=quizData.note;$('quizTopic').replaceChildren();['all',...new Set(quizData.questions.map(q=>q.topic))].forEach(t=>{const o=document.createElement('option');o.value=t;o.textContent=t==='all'?'Tüm konular':t;$('quizTopic').append(o)});try{const place=JSON.parse(localStorage.getItem('tusspot-endo-quiz-place-v1'));if(place){if([...$('quizTopic').options].some(o=>o.value===place.topic))$('quizTopic').value=place.topic;if(['all','wrong','unanswered'].includes(place.filter))$('quizFilter').value=place.filter;if(Number.isInteger(place.index)&&place.index>=0)quizIndex=place.index}}catch{}}catch{$('quizPosition').textContent='Sorular yüklenemedi. Sorular sekmesine yeniden dokunarak dene.';return}}
+ if(!quizData){
+  $('quizPosition').textContent='Sorular yükleniyor…';
+  try{
+   quizData=await fetch('data/questions.json?v=multi-bank-290-v1',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error();return r.json()});
+   configurePdfSources(quizData.sources);$('quizNote').textContent=quizData.note;
+   $('quizBank').replaceChildren();quizData.banks.forEach(bank=>{const o=document.createElement('option');o.value=bank.id;o.textContent=bank.title+' · '+bank.count+' soru';$('quizBank').append(o)});
+   selectQuizBank();saveQuiz();return;
+  }catch{quizData=null;$('quizPosition').textContent='Sorular yüklenemedi. Sorular sekmesine yeniden dokunarak dene.';return;}
+ }
  renderQuiz();
 };
+$('quizBank').onchange=()=>{if(!quizData)return;quizBank=$('quizBank').value;selectQuizBank()};
 $('quizTopic').onchange=$('quizFilter').onchange=()=>{if(!quizData)return;quizIndex=0;renderQuiz()};
 $('quizPrev').onclick=()=>{quizIndex--;renderQuiz();$('quizPrompt').focus()};$('quizNext').onclick=()=>{quizIndex++;renderQuiz();$('quizPrompt').focus()};
-$('quizReset').onclick=()=>{$('quizResetPrompt').hidden=false};$('quizResetCancel').onclick=()=>{$('quizResetPrompt').hidden=true};$('quizResetConfirm').onclick=()=>{quizAnswers={};saveQuiz();quizIndex=0;$('quizResetPrompt').hidden=true;if(quizData)renderQuiz()};
+$('quizReset').onclick=()=>{if(quizData)$('quizResetPrompt').hidden=false};$('quizResetCancel').onclick=()=>{$('quizResetPrompt').hidden=true};
+$('quizResetConfirm').onclick=()=>{if(!quizData)return;for(const q of bankQuestions())delete quizAnswers[q.id];saveQuiz();quizIndex=0;$('quizResetPrompt').hidden=true;renderQuiz()};
