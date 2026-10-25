@@ -13,7 +13,7 @@ python3 -m http.server 3000 --bind 0.0.0.0
 
 Kart çevirme, ders/konu arama, konu seçimi, favoriler ve tekrar listesi desteklenir. İlerleme aynı tarayıcının yerel depolamasında tutulur; hesaplar veya cihazlar arasında eşitlenmez. Tarayıcı verileri silinirse ilerleme kaybolur.
 
-**PDF Kitap** sekmesi her iki kitabı uygulama içinde açar; yeni sekmede açma seçeneği de vardır. Kartın kaynak bağlantısı yerel PDF.js okuyucusuna dosya yolunu ve PDF içindeki fiziksel sayfa sırasını iletir. Okuyucu seçilen sayfayı doğrudan çizer; aynı dosyada başka sayfaya geçiş de yeniden çizilir. Böylece tarayıcının yerleşik PDF görüntüleyicisinin `#page` desteğine bağlı kalınmaz. İlk kitapta basılı kitap sayfası ile parça içindeki sayfa ayrı gösterilir. PDF.js 5.4.624 ve Apache-2.0 lisansı `vendor/pdfjs/` altında saklanır; CDN gerekmez. Uygulama, okuyucu açılmadan PDF'yi indirmez.
+**PDF Kitap** sekmesi her iki kitabı uygulama içinde açar; yeni sekmede açma seçeneği de vardır. Kartın kaynak bağlantısı yerel PDF.js okuyucusuna dosya yolunu ve PDF içindeki fiziksel sayfa sırasını iletir. Okuyucu seçilen sayfayı doğrudan çizer; aynı dosyada başka sayfaya geçiş de yeniden çizilir. Böylece tarayıcının yerleşik PDF görüntüleyicisinin `#page` desteğine bağlı kalınmaz. İlk kitapta basılı kitap sayfası ile parça içindeki sayfa ayrı gösterilir. Eski mobil tarayıcılara uyumlu PDF.js 5.4.624 legacy derlemesi ve Apache-2.0 lisansı `vendor/pdfjs/` altında saklanır; CDN gerekmez. Uygulama, okuyucu açılmadan PDF'yi indirmez.
 
 ## İçerik
 
@@ -73,3 +73,5 @@ Konu Dağılımı sekmesi her kitap için sayıyı ayrı hesaplar ve ilk kitabı
 
 
 `data/editorial_hemato_onco.tsv` son 110 kartın kaynak cümlelerini, gizlenen bilgi hedeflerini ve sorularını saklar. `scripts/hemato_onco_cards.py`, temel 1.000 karttan sonra çalışarak hematoloji ve onkolojiyi ayrı ayrı 100 karta tamamlar; diğer dersler ve önceki 1.000 kartın kimlikleri/içeriği korunur. Her yeni alıntı kendi PDF sayfasıyla otomatik karşılaştırılır. Yeni toplam 1.110 karttır. Kaynak metin denetimi klinik uzman incelemesi değildir.
+
+PDF mobil uyumluluk kontrolü: HTTP sunucusu açıkken `node tests/check_pdf_mobile.cjs` (Playwright ve Chromium gerekir; `CHROMIUM_PATH` ve `TUSSPOT_BASE_URL` ile yollar değiştirilebilir). Test, eski tarayıcılarda bulunmayan `Promise.withResolvers` ve `URL.parse` özelliklerini kapatarak iki kitaptan sayfa yükleme ve aynı dosyada sayfa değiştirmeyi denetler.

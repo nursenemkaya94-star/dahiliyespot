@@ -17,7 +17,7 @@ function flip(){if(!cards.length)return;flipped=!flipped;renderCard()}
 function move(delta){index=Math.max(0,Math.min(cards.length-1,index+delta));flipped=false;renderCard()}
 function mark(kind){const c=cards[index];if(!c)return;const other=kind==='known'?'again':'known';saved[other]=saved[other].filter(id=>id!==c.id);if(!saved[kind].includes(c.id))saved[kind].push(c.id);persist();stats();if(mode==='again'&&kind==='known'){filterCards();return}if(index<cards.length-1)move(1);else renderCard()}
 $('home').onclick=()=>{$('questionsView').hidden=true;document.querySelectorAll('.nav').forEach(b=>b.classList.remove('active'));$('home').classList.add('active');$('library').hidden=false;$('study').hidden=true;$('pdfView').hidden=true;$('distributionView').hidden=true;stats()};$('back').onclick=$('home').onclick;$('favorites').onclick=()=>collection('favorites');$('review').onclick=()=>collection('again');$('search').oninput=renderLessons;$('topics').onchange=filterCards;$('flashcard').onclick=flip;$('flip').onclick=flip;$('next').onclick=()=>move(1);$('prev').onclick=()=>move(-1);$('know').onclick=()=>mark('known');$('again').onclick=()=>mark('again');$('favorite').onclick=()=>{const c=cards[index];if(!c)return;saved.favorites=saved.favorites.includes(c.id)?saved.favorites.filter(x=>x!==c.id):[...saved.favorites,c.id];persist();if(mode==='favorites')filterCards();else renderCard()};document.addEventListener('keydown',e=>{if($('study').hidden||['INPUT','SELECT','BUTTON','TEXTAREA'].includes(document.activeElement.tagName))return;if(e.code==='Space'){e.preventDefault();flip()}if(e.key==='ArrowRight')move(1);if(e.key==='ArrowLeft')move(-1)});
-fetch('data/cards.json?v=hemato-onco-1110-v1', {cache:'no-store'}).then(r=>{if(!r.ok)throw Error();return r.json()}).then(d=>{data=d;configurePdfSources(d.sources);stats();renderLessons();renderDistribution()}).catch(()=>{$('error').hidden=false;$('error').textContent='Kartlar yüklenemedi. Uygulamayı sunucu üzerinden açıp yeniden dene.'});
+fetch('data/cards.json?v=hemato-onco-1110-v2', {cache:'no-store'}).then(r=>{if(!r.ok)throw Error();return r.json()}).then(d=>{data=d;configurePdfSources(d.sources);stats();renderLessons();renderDistribution()}).catch(()=>{$('error').hidden=false;$('error').textContent='Kartlar yüklenemedi. Uygulamayı sunucu üzerinden açıp yeniden dene.'});
 
 const sourceBooks={second:{label:'İkinci kitap · 874 sayfa',path:'library/dahiliye.pdf',pages:874},'first-part-1':{label:'İlk kitap · 1. parça · 140 sayfa',path:'library/dahiliye-ilk-parca1.pdf',pages:140}};
 function configurePdfSources(sources){
@@ -33,7 +33,7 @@ function openPdf(pageNumber=1,sourceId='second'){
  const n=Number(pageNumber);
  if(!Number.isInteger(n)||n<1||n>source.pages){$('pdfStatus').textContent='1–'+source.pages+' arasında bir sayfa seç.';return;}
  currentPdfSource=sourceId;$('pdfBook').value=sourceId;$('pdfBookLabel').textContent=source.label;$('pdfPage').max=source.pages;
- const url='pdf-viewer.html?file='+encodeURIComponent(source.path)+'#page='+n;
+ const url='pdf-viewer.html?v=mobile-compat-v2&file='+encodeURIComponent(source.path)+'#page='+n;
  $('questionsView').hidden=true;$('library').hidden=true;$('study').hidden=true;$('distributionView').hidden=true;$('pdfView').hidden=false;
  document.querySelectorAll('.nav').forEach(b=>b.classList.remove('active'));$('pdf').classList.add('active');
  $('pdfPage').value=n;$('pdfStatus').textContent='';$('pdfFrame').src=url;$('pdfOpen').href=url;window.scrollTo(0,0);

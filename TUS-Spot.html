@@ -48,7 +48,7 @@ function openPdf(pageNumber=1,sourceId='second'){
  const n=Number(pageNumber);
  if(!Number.isInteger(n)||n<1||n>source.pages){$('pdfStatus').textContent='1–'+source.pages+' arasında bir sayfa seç.';return;}
  currentPdfSource=sourceId;$('pdfBook').value=sourceId;$('pdfBookLabel').textContent=source.label;$('pdfPage').max=source.pages;
- const url='pdf-viewer.html?file='+encodeURIComponent(source.path)+'#page='+n;
+ const url='pdf-viewer.html?v=mobile-compat-v2&file='+encodeURIComponent(source.path)+'#page='+n;
  $('questionsView').hidden=true;$('library').hidden=true;$('study').hidden=true;$('distributionView').hidden=true;$('pdfView').hidden=false;
  document.querySelectorAll('.nav').forEach(b=>b.classList.remove('active'));$('pdf').classList.add('active');
  $('pdfPage').value=n;$('pdfStatus').textContent='';$('pdfFrame').src=url;$('pdfOpen').href=url;window.scrollTo(0,0);

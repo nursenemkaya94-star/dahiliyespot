@@ -1,6 +1,6 @@
-import {getDocument, GlobalWorkerOptions} from './vendor/pdfjs/pdf.mjs';
+import {getDocument, GlobalWorkerOptions} from './vendor/pdfjs/pdf.mjs?v=mobile-compat-v2';
 
-GlobalWorkerOptions.workerSrc = new URL('./vendor/pdfjs/pdf.worker.mjs', import.meta.url).href;
+GlobalWorkerOptions.workerSrc = new URL('./vendor/pdfjs/pdf.worker.mjs?v=mobile-compat-v2', import.meta.url).href;
 const $ = id => document.getElementById(id);
 const params = new URLSearchParams(location.search);
 const file = params.get('file') || '';
@@ -66,6 +66,11 @@ try {
   standardFontDataUrl: './vendor/pdfjs/standard_fonts/', wasmUrl: './vendor/pdfjs/wasm/'}).promise;
  await renderPage();
 } catch (error) {
- $('status').textContent = 'PDF yüklenemedi. İnternet bağlantını kontrol edip yeniden dene.';
+ $('pageLabel').textContent = 'PDF açılamadı';
+ $('status').textContent = 'PDF yüklenemedi. Aşağıdan yeniden deneyebilir veya PDF indir bağlantısını kullanabilirsin.';
+ const retry = document.createElement('button');
+ retry.textContent = 'Yeniden dene';
+ retry.onclick = () => location.reload();
+ $('status').append(document.createElement('br'), retry);
  console.error(error);
 }
