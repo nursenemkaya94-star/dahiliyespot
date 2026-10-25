@@ -1,0 +1,220 @@
+{
+  "basis": "clinical_editorial_draft",
+  "exam_research_status": "network_access_blocked",
+  "note": "Geçici klinik çalışma planı. İnternet kaynaklarındaki TUS/YDUS dağılımları henüz doğrulanmadı. Sayılar uygulamadaki gerçek kart sayılarıdır; sınav yüzdeleri veya klinik prevalans ölçümleri değildir.",
+  "lessons": [
+    {
+      "name": "Endokrinoloji",
+      "topics": [
+        {
+          "name": "Diyabet",
+          "target": 60
+        },
+        {
+          "name": "Tiroid hastalıkları",
+          "target": 60
+        },
+        {
+          "name": "Adrenal hastalıklar",
+          "target": 10
+        },
+        {
+          "name": "Hipofiz hastalıkları",
+          "target": 8
+        },
+        {
+          "name": "Kalsiyum ve kemik metabolizması",
+          "target": 11
+        },
+        {
+          "name": "Gonadal bozukluklar",
+          "target": 1
+        }
+      ]
+    },
+    {
+      "name": "Enfeksiyon Hastalıkları",
+      "topics": [
+        {
+          "name": "Antibiyotikler ve direnç",
+          "target": 15
+        },
+        {
+          "name": "Pnömoni ve solunum yolu enfeksiyonları",
+          "target": 15
+        },
+        {
+          "name": "Üriner sistem enfeksiyonları",
+          "target": 10
+        },
+        {
+          "name": "Gastrointestinal enfeksiyonlar",
+          "target": 10
+        },
+        {
+          "name": "Santral sinir sistemi enfeksiyonları",
+          "target": 8
+        },
+        {
+          "name": "Deri ve yumuşak doku enfeksiyonları",
+          "target": 7
+        },
+        {
+          "name": "Kemik ve eklem enfeksiyonları",
+          "target": 5
+        },
+        {
+          "name": "Fungal enfeksiyonlar",
+          "target": 8
+        },
+        {
+          "name": "Tüberküloz",
+          "target": 4
+        },
+        {
+          "name": "Viral enfeksiyonlar",
+          "target": 3
+        },
+        {
+          "name": "Paraziter enfeksiyonlar",
+          "target": 3
+        },
+        {
+          "name": "HIV ve fırsatçı enfeksiyonlar",
+          "target": 2
+        }
+      ]
+    },
+    {
+      "name": "Romatoloji",
+      "topics": [
+        {
+          "name": "Romatoid artrit",
+          "target": 15
+        },
+        {
+          "name": "Sistemik lupus eritematozus",
+          "target": 12
+        },
+        {
+          "name": "Spondiloartritler",
+          "target": 10
+        },
+        {
+          "name": "Osteoartrit",
+          "target": 8
+        },
+        {
+          "name": "Kristal artritleri",
+          "target": 10
+        },
+        {
+          "name": "Vaskülitler",
+          "target": 10
+        },
+        {
+          "name": "Sjögren ve sistemik skleroz",
+          "target": 8
+        },
+        {
+          "name": "FMF ve Still hastalığı",
+          "target": 2
+        }
+      ]
+    },
+    {
+      "name": "Yoğun Bakım",
+      "topics": [
+        {
+          "name": "Sepsis ve şok",
+          "target": 25
+        },
+        {
+          "name": "Solunum yetmezliği, ARDS ve ventilasyon",
+          "target": 20
+        },
+        {
+          "name": "İntoksikasyonlar",
+          "target": 15
+        },
+        {
+          "name": "Yoğun bakım desteği ve değerlendirme",
+          "target": 10
+        }
+      ]
+    },
+    {
+      "name": "Onkoloji",
+      "topics": [
+        {
+          "name": "Sık kanserler ve tanı",
+          "target": 25
+        },
+        {
+          "name": "Onkolojik aciller",
+          "target": 15
+        },
+        {
+          "name": "Antikanser tedaviler ve yan etkiler",
+          "target": 10
+        },
+        {
+          "name": "Kanser genetiği",
+          "target": 5
+        }
+      ]
+    },
+    {
+      "name": "Geriatri",
+      "topics": [
+        {
+          "name": "Yaşlılarda sistemik hastalıklar",
+          "target": 8
+        },
+        {
+          "name": "Demans ve bilişsel bozukluklar",
+          "target": 8
+        },
+        {
+          "name": "Deliryum",
+          "target": 6
+        },
+        {
+          "name": "Kırılganlık, beslenme ve bası yaraları",
+          "target": 8
+        }
+      ]
+    },
+    {
+      "name": "Alerji",
+      "topics": [
+        {
+          "name": "Anafilaksi ve ayırıcı tanı",
+          "target": 10
+        },
+        {
+          "name": "Astım",
+          "target": 5
+        }
+      ]
+    },
+    {
+      "name": "Klinik İmmünoloji",
+      "topics": [
+        {
+          "name": "Sık ve ayırt edici immün yetmezlik bulguları",
+          "target": 10
+        }
+      ]
+    },
+    {
+      "name": "Temel İmmünoloji",
+      "topics": [
+        {
+          "name": "Temel klinik immünoloji bilgileri",
+          "target": 5
+        }
+      ]
+    }
+  ]
+}

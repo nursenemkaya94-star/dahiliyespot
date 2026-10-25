@@ -17,7 +17,7 @@ Kart çevirme, ders/konu arama, konu seçimi, favoriler ve tekrar listesi destek
 
 ## İçerik
 
-İkinci yüklenen 874 sayfalık PDF'nin 9 dahiliye dersinden **300 bilgi odaklı kart** seçilmiştir. Kitabın kalın yazıları, spot kutuları ve `en sık / en önemli` vurguları esas alınmıştır. `data/editorial_cards.tsv` beş sütun içerir: ders, PDF sayfası, konu, değiştirilmemiş kaynak cümlesi ({{cevap}} işaretiyle), bağımsız olarak anlaşılabilen soru. 300 sorunun her biri gözden geçirilmiş ve bağlamı cümle içine yazılmıştır; ayrı başlık eklenmez. “Bu sendrom”, “bu hastalar” ve “ilk tercih” gibi tek başına belirsiz alıntılarda hangi hastalık, ilaç, hasta grubu veya tedavi hedefinin sorulduğu belirtilir. Cevap tarafında önce gizlenen bilgi, ardından kaynak sayfadan aynen alınan cümle gösterilir. Kaynaktaki imla ve sözcükler değiştirilmez; yalnızca PDF satır boşlukları birleştirilir. Kaynak cümlesi ve bilgi hedefi değişmediğinden kart kimlikleri sabittir; bu soru düzenlemesi mevcut favori ve öğrenme kayıtlarını korur.
+İkinci yüklenen 874 sayfalık PDF'nin 9 dahiliye dersinden **500 bilgi odaklı kart / 42 konu** seçilmiştir. Kitabın kalın yazıları, spot kutuları ve `en sık / en önemli` vurguları esas alınmıştır. `data/editorial_cards.tsv` beş sütun içerir: ders, PDF sayfası, konu, değiştirilmemiş kaynak cümlesi ({{cevap}} işaretiyle), bağımsız olarak anlaşılabilen soru. 500 sorunun her biri gözden geçirilmiş ve bağlamı cümle içine yazılmıştır; ayrı başlık eklenmez. “Bu sendrom”, “bu hastalar” ve “ilk tercih” gibi tek başına belirsiz alıntılarda hangi hastalık, ilaç, hasta grubu veya tedavi hedefinin sorulduğu belirtilir. Cevap tarafında önce gizlenen bilgi, ardından kaynak sayfadan aynen alınan cümle gösterilir. Kaynaktaki imla ve sözcükler değiştirilmez; yalnızca PDF satır boşlukları birleştirilir. Kaynak cümlesi ve bilgi hedefi değişmediğinden kart kimlikleri sabittir; bu soru düzenlemesi mevcut favori ve öğrenme kayıtlarını korur.
 
 Uzman onaylı değildir; tüm önemli bilgileri kapsadığı iddia edilmez. Karttaki sayfa PDF'nin fiziksel sayfa sırasıdır. İlk PDF 32 MiB aktarım sınırı nedeniyle işlenemedi. Tüm tıp dersleri henüz mevcut değildir. Eski kartların öğrenme durumu yeni ve farklı kartlara aktarılmaz; önceki kayıtlar tarayıcıda korunur, sayaçlarda yalnızca mevcut kartlar sayılır.
 
@@ -36,3 +36,11 @@ python3 scripts/build_cards.py /path/to/source.pdf
 Kontroller: `python3 -m unittest discover -s tests` ve `node --check app.js`. Tek dosyalık sürüm için içerik değişikliğinden sonra `python3 scripts/package_app.py` çalıştırın.
 
 Kullanıcının isteğiyle ikinci kaynak PDF değiştirilmeden `library/dahiliye.pdf` olarak eklenmiştir. İlk PDF aktarım sınırı nedeniyle mevcut değildir. Tıbbi içerik uzman incelemesi gerektirir. Google Fonts yalnızca görünüm içindir.
+
+## Konu dağılımı ve araştırma durumu
+
+`data/study_plan.json` klinik öncelikli geçici çalışma planını içerir. Diyabet, tiroid, pnömoni, üriner enfeksiyon, romatoid artrit, lupus, sepsis ve şok gibi konuların payı artırılmış; nadir genetik sendromlar azaltılmıştır. Bu rakamlar bilimsel prevalans ölçümü veya doğrulanmış TUS/YDUS sınav yüzdeleri değildir. Sınav kaynakları araştırması, dış ağ bağlantılarının 403 erişim engeli alması nedeniyle tamamlanmamıştır. Ortam ağ ayarlarına Google, Bing, TUSDATA, TUSEM ve TUSWORLD için izin taslağı kaydedilmiştir; taslak çalışan ortamda kendiliğinden etkinleşmez. Erişim etkinleşince kaynaklar okunmalı, dönem ve sınav türü ayrı kaydedilmeli, analiz doğrultusunda plan yeniden değerlendirilmelidir.
+
+**Konu Dağılımı** sekmesi kart sayılarını doğrudan yüklenen içerikten hesaplar; her konu için kart sayısı, uygulamadaki toplam içindeki payı ve konuya geçiş gösterir. Sınav analizi doğrulanana kadar bu durum sayfada açıkça belirtilir. Kaynak araştırması yapılmış gibi bağlantı veya istatistik eklenmemiştir.
+
+Ayrıntılı güncel sayılar: [KONU-DAGILIMI.md](KONU-DAGILIMI.md).

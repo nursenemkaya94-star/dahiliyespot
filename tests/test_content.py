@@ -40,9 +40,9 @@ class ContentTests(unittest.TestCase):
                 self.assertTrue(1 <= card['page'] <= 874)
         self.assertEqual(len({c['id'] for c in self.cards}), len(self.cards))
 
-    def test_smaller_set_covers_each_available_lesson(self):
+    def test_500_cards_cover_each_available_lesson(self):
         self.assertEqual(len(self.data['lessons']), 9)
-        self.assertEqual(len(self.cards), 300)
+        self.assertEqual(len(self.cards), 500)
         for lesson in self.data['lessons']:
             self.assertGreaterEqual(sum(len(t['cards']) for t in lesson['topics']), 5)
 
@@ -71,12 +71,28 @@ class ContentTests(unittest.TestCase):
                 self.assertTrue(cards[0]['question'].startswith(context))
                 self.assertEqual(cards[0]['answer'], answer)
 
-    def test_source_headings_define_correct_disease_in_question(self):
-        elane = next(c for c in self.cards if c['answer'] == 'ELANE')
-        self.assertIn('Kostmann', elane['question'])
-        self.assertNotIn('Siklik', elane['question'])
-        histology = next(c for c in self.cards if c['answer'] == '“smudge cell”')
-        self.assertIn('hMPV', histology['question'])
+    def test_clinical_allocation_matches_actual_cards_and_labels_evidence(self):
+        counts = {}
+        for lesson in self.data['lessons']:
+            for topic in lesson['topics']:
+                counts[lesson['name'], topic['name']] = len(topic['cards'])
+        self.assertEqual(counts['Endokrinoloji', 'Diyabet'], 60)
+        self.assertEqual(counts['Endokrinoloji', 'Tiroid hastalıkları'], 60)
+        self.assertEqual(counts['Endokrinoloji', 'Gonadal bozukluklar'], 1)
+        self.assertEqual(counts['Yoğun Bakım', 'Sepsis ve şok'], 25)
+        self.assertEqual(counts['Romatoloji', 'Romatoid artrit'], 15)
+        self.assertEqual(counts['Enfeksiyon Hastalıkları', 'Pnömoni ve solunum yolu enfeksiyonları'], 15)
+        for lesson in self.data['study_plan']['lessons']:
+            for topic in lesson['topics']:
+                self.assertEqual(counts[lesson['name'], topic['name']], topic['target'])
+        self.assertEqual(sum(counts.values()), 500)
+        self.assertEqual(self.data['study_plan']['exam_research_status'], 'network_access_blocked')
+
+    def test_everyday_diabetes_diagnostic_and_emergency_targets_exist(self):
+        diabetes = next(t for l in self.data['lessons'] if l['name'] == 'Endokrinoloji' for t in l['topics'] if t['name'] == 'Diyabet')
+        answers = {c['answer'] for c in diabetes['cards']}
+        for target in ['≥ 126 mg/dl', '≥ % 6,5', 'öglisemik diyabetik ketoasidoz', 'finerenon', 'Vitamin B12 eksikliği']:
+            self.assertIn(target, answers)
 
 if __name__ == '__main__':
     unittest.main()

@@ -19,7 +19,34 @@ STARTS = [1, 108, 233, 292, 317, 361, 632, 752, 809, 875]
 def normalize(text):
     return re.sub(r'\s+', '', text)
 
+def clinical_order(topic, card):
+    """Put bedside diagnosis/treatment before molecular detail within common topics."""
+    page = card['page']
+    if topic == 'Diyabet':
+        if page == 180:
+            diagnostics = {'≥ 126 mg/dl': 0, '≥ % 6,5': 1, '≥ 200 mg/dl': 2}
+            return (0, diagnostics.get(card['answer'], 5))
+        if '<7.0%' == card['answer']:
+            return (0, 4)
+        if 188 <= page <= 190:
+            return (1, page)
+        if 181 <= page <= 187:
+            return (2, page)
+        if 191 <= page <= 198:
+            return (3, page)
+        return (4, page)
+    if topic == 'Tiroid hastalıkları':
+        if 140 <= page <= 147:
+            return (0, page)
+        if 148 <= page <= 152:
+            return (1, page)
+        if page in (138, 139):
+            return (2, page)
+        return (3, page)
+    return (0, page)
+
 def build(pdf=None):
+    plan = json.loads((ROOT / 'data/study_plan.json').read_text())
     pages = None
     if pdf:
         pages = subprocess.check_output(['pdftotext', '-raw', str(pdf), '-']).decode('utf-8').split('\f')
@@ -61,11 +88,26 @@ def build(pdf=None):
             topics.append(group)
         group['cards'].append(card)
     assert all(l['topics'] for l in lessons), 'Every included lesson needs cards'
+    ordered = []
+    for item in plan['lessons']:
+        lesson = next(l for l in lessons if l['name'] == item['name'])
+        ordered_topics = []
+        for intended in item['topics']:
+            topic = next(t for t in lesson['topics'] if t['name'] == intended['name'])
+            assert len(topic['cards']) == intended['target'], f'Wrong topic allocation: {item["name"]}/{intended["name"]}'
+            topic['cards'].sort(key=lambda c: clinical_order(topic['name'], c))
+            ordered_topics.append(topic)
+        assert len(ordered_topics) == len(lesson['topics']), 'Unplanned topic'
+        lesson['topics'] = ordered_topics
+        ordered.append(lesson)
+    assert len(ordered) == len(lessons), 'Unplanned lesson'
+    assert len(seen) == 500, 'The reviewed study plan requires 500 cards'
     result = {
-        'version': 'context-300-v4',
+        'version': 'clinical-500-v5',
         'source': 'Klinisyen Yan Dal Dahiliye Konu Kitabı · 2. PDF',
-        'status': '300 bilgi kartında hastalık, ilaç veya durum sorunun cümlesinde belirtilir. Cevabın altında kaynak cümlesi değiştirilmeden korunur. Uzman incelemesi yapılmadı; kitabın tüm önemli konularını kapsama iddiası yoktur.',
-        'lessons': lessons,
+        'status': 'Klinik önceliklerle hazırlanmış 500 kartlık geçici çalışma seti. TUS/YDUS konu dağılımları ağ erişimi engeli nedeniyle henüz doğrulanmadı. Kaynak cümleleri cevapların altında korunur. Uzman incelemesi yapılmadı.',
+        'study_plan': plan,
+        'lessons': ordered,
     }
     (ROOT / 'data/cards.json').write_text(json.dumps(result, ensure_ascii=False), encoding='utf-8')
     print(f'{len(lessons)} ders, {sum(len(l["topics"]) for l in lessons)} konu, {len(seen)} bilgi odaklı kart; source audit: {bool(pages)}')
