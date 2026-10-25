@@ -17,8 +17,8 @@ class FirstPartTests(unittest.TestCase):
     def test_new_scope_and_clinical_priority(self):
         self.assertEqual(len(self.data['lessons']), 15)
         all_cards = [c for l in self.data['lessons'] for t in l['topics'] for c in t['cards']]
-        self.assertEqual(len(all_cards), 1000)
-        self.assertEqual(len({c['id'] for c in all_cards}), 1000)
+        self.assertEqual(len(all_cards), 1110)
+        self.assertEqual(len({c['id'] for c in all_cards}), 1110)
         self.assertEqual(len(self.new), 60)
         counts = {l['name']: sum(len(t['cards']) for t in l['topics']) for l in self.data['lessons']}
         self.assertEqual(counts['Kardiyoloji'], 50)

@@ -35,7 +35,7 @@ class FirstVolumeTests(unittest.TestCase):
         self.assertEqual(len(set(fingerprints)),658)
 
     def test_every_new_card_uses_correct_pdf_and_verbatim_quote(self):
-        self.assertEqual(len(self.cards),440)
+        self.assertEqual(len(self.cards),505)
         pages={}
         for c in self.cards:
             src=self.data['sources'][c['source']]

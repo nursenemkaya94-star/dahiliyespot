@@ -1,12 +1,12 @@
-# Konu dağılımı — 1.000 kart
+# Konu dağılımı — 1.110 kart
 
-İlk kitap: **500 kart** · İkinci kitap: **500 kart**.
+İlk kitap: **565 kart** · İkinci kitap: **545 kart**.
 
 Servis yatışı ve poliklinik pratiğinde önemli sorunları önceleyen editoryal çalışma dağılımı. Doğrulanmış yatış/poliklinik sıklığı, prevalans veya TUS/YDUS yüzdesi değildir.
 
 İlk kitabın 1–658. sayfaları eksiksizdir. Kartlar seçilmiş bilgilerdir; her kitap cümlesinin kartlaştırıldığı anlamına gelmez.
 
-# İlk kitap — 500 kart
+# İlk kitap — 565 kart
 
 ## Nefroloji — 170 kart
 
@@ -81,18 +81,18 @@ KOAH, astım, pulmoner emboli, plevra sorunları ve temel solunum değerlendirme
 | Plevra hastalıkları | 5 |
 | Uyku apnesi | 3 |
 
-## Hematoloji — 35 kart
+## Hematoloji — 100 kart
 
 Sık anemiler, hemoliz, önemli hematolojik maligniteler ve kanama-tromboz acilleri.
 
 | Konu | Kart |
 | --- | ---: |
-| Anemiler | 9 |
-| Hemoliz ve hemoglobinopatiler | 7 |
-| Hematolojik maligniteler | 8 |
-| Kanama, tromboz ve hematolojik aciller | 11 |
+| Anemiler | 29 |
+| Hemoliz ve hemoglobinopatiler | 22 |
+| Hematolojik maligniteler | 28 |
+| Kanama, tromboz ve hematolojik aciller | 21 |
 
-# İkinci kitap — 500 kart
+# İkinci kitap — 545 kart
 
 ## Endokrinoloji — 150 kart
 
@@ -144,13 +144,13 @@ Sık anemiler, hemoliz, önemli hematolojik maligniteler ve kanama-tromboz acill
 | İntoksikasyonlar | 15 |
 | Yoğun bakım desteği ve değerlendirme | 10 |
 
-## Onkoloji — 55 kart
+## Onkoloji — 100 kart
 
 | Konu | Kart |
 | --- | ---: |
-| Sık kanserler ve tanı | 25 |
-| Onkolojik aciller | 15 |
-| Antikanser tedaviler ve yan etkiler | 10 |
+| Sık kanserler ve tanı | 45 |
+| Onkolojik aciller | 20 |
+| Antikanser tedaviler ve yan etkiler | 30 |
 | Kanser genetiği | 5 |
 
 ## Geriatri — 30 kart

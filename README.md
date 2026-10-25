@@ -2,7 +2,7 @@
 
 Türkçe, telefona uyumlu ders ve konu bazlı bilgi kartları. Python 3 dışında çalışma bağımlılığı yoktur.
 
-`TUS-Spot.html` kartları içinde barındıran tek dosyalık sürümdür. PDF okuyucu için `library/` dizinindeki kaynak PDF dosyaları gerekir. Yeniden oluşturmak için `python3 scripts/package_app.py` çalıştırın.
+`TUS-Spot.html` kartları içinde barındıran tek dosyalık sürümdür. PDF okuyucu için `library/`, `vendor/pdfjs/`, `pdf-viewer.html` ve `pdf-viewer.js` dosyaları gerekir; PDF görüntüleme HTTP üzerinden yapılır. Yeniden oluşturmak için `python3 scripts/package_app.py` çalıştırın.
 
 ## Çalıştırma
 
@@ -13,7 +13,7 @@ python3 -m http.server 3000 --bind 0.0.0.0
 
 Kart çevirme, ders/konu arama, konu seçimi, favoriler ve tekrar listesi desteklenir. İlerleme aynı tarayıcının yerel depolamasında tutulur; hesaplar veya cihazlar arasında eşitlenmez. Tarayıcı verileri silinirse ilerleme kaybolur.
 
-**PDF Kitap** sekmesi her iki kitabı uygulama içinde açar; yeni sekmede açma seçeneği de vardır. Kartın kaynak sayfasına tıklanınca okuyucuya `#page=N` ile gidilir. Sayfa bağlantısını uygulama tarayıcının PDF görüntüleyicisine iletir; bu parçayı yorumlama desteği tarayıcıya bağlıdır. Uygulama, okuyucu açılmadan PDF'yi indirmez.
+**PDF Kitap** sekmesi her iki kitabı uygulama içinde açar; yeni sekmede açma seçeneği de vardır. Kartın kaynak bağlantısı yerel PDF.js okuyucusuna dosya yolunu ve PDF içindeki fiziksel sayfa sırasını iletir. Okuyucu seçilen sayfayı doğrudan çizer; aynı dosyada başka sayfaya geçiş de yeniden çizilir. Böylece tarayıcının yerleşik PDF görüntüleyicisinin `#page` desteğine bağlı kalınmaz. İlk kitapta basılı kitap sayfası ile parça içindeki sayfa ayrı gösterilir. PDF.js 5.4.624 ve Apache-2.0 lisansı `vendor/pdfjs/` altında saklanır; CDN gerekmez. Uygulama, okuyucu açılmadan PDF'yi indirmez.
 
 ## İçerik
 
@@ -33,7 +33,7 @@ Aynı kaynak PDF verilirse yalnızca cevap değil, **tamamlanmış cümlenin bü
 python3 scripts/build_cards.py /path/to/source.pdf
 ```
 
-Kontroller: `python3 -m unittest discover -s tests` ve `node --check app.js`. Tek dosyalık sürüm için içerik değişikliğinden sonra `python3 scripts/package_app.py` çalıştırın.
+Kontroller: `python3 -m unittest discover -s tests`, `node --test tests/test_pdf_navigation.cjs`, `node --check app.js` ve `node --check pdf-viewer.js`. Tek dosyalık sürüm için içerik değişikliğinden sonra `python3 scripts/package_app.py` çalıştırın.
 
 Kullanıcının isteğiyle ikinci kaynak PDF değiştirilmeden `library/dahiliye.pdf` olarak eklenmiştir. İlk kitap beş kaynak parçasıyla eksiksiz eklenmiştir. Tıbbi içerik uzman incelemesi gerektirir. Google Fonts yalnızca görünüm içindir.
 
@@ -57,16 +57,19 @@ Son yüklenen 11 dosyanın tamamı alındı. Dosya adlarına güvenilmeden içer
 
 `data/first_volume_files.json` yüklenen dosyaların içerikten doğrulanmış başlangıç/bitiş sayfalarını kaydeder. `library/dahiliye-ilk-parca1.pdf` … `parca5.pdf` kaynak aralıkları sırasıyla **1–140, 141–280, 281–420, 421–560, 561–658**. PDF sekmesi her parçayı ayrı açarak gereksiz büyük tek dosya indirilmesini önler. Sayfa kutusu parçanın içindeki fiziksel sırayı kullanır; kartta basılı kitap sayfası ve parça sayfası birlikte gösterilir. İlk 140 sayfadan önce eklenen kartlarda kitap ve parça sayfası aynıdır.
 
-İlk kitap için toplam **500 kart**: Nefroloji 170, Gastroenteroloji 100, Hepatoloji 100, Kardiyoloji 50, Göğüs Hastalıkları 45 ve Hematoloji 35. İkinci kitap da 500 kart içerir; toplam **15 ders / 1.000 flashcard** vardır. Klinik ağırlıklandırma güncellemesinde 280 yeni kart eklenmiş, kardiyolojiden 30 kart aktif setten arşivlenmiş ve diğer 720 kartın kimlikleri, soruları ve kaynak bilgileri aynen korunmuştur. Arşivlenen kartların tarayıcı kayıtları silinmez; aktif sayaç ve koleksiyonlarda mevcut kartlar sayılır. Önemli konular seçilmiştir; PDF sayfalarının tam olması, tüm bilgilerin kartlaştırıldığı anlamına gelmez. Ağırlık klinik önceliklere dayalıdır; doğrulanmış sınav dağılımı değildir.
+İlk kitap için toplam **565 kart**: Nefroloji 170, Gastroenteroloji 100, Hepatoloji 100, Kardiyoloji 50, Göğüs Hastalıkları 45 ve Hematoloji 100. İkinci kitap 545 kart içerir; Onkoloji 100 karttır. Toplam **15 ders / 1.110 flashcard** vardır. Klinik ağırlıklandırma güncellemesinde 280 yeni kart eklenmiş, kardiyolojiden 30 kart aktif setten arşivlenmiş ve diğer 720 kartın kimlikleri, soruları ve kaynak bilgileri aynen korunmuştur. Arşivlenen kartların tarayıcı kayıtları silinmez; aktif sayaç ve koleksiyonlarda mevcut kartlar sayılır. Önemli konular seçilmiştir; PDF sayfalarının tam olması, tüm bilgilerin kartlaştırıldığı anlamına gelmez. Ağırlık klinik önceliklere dayalıdır; doğrulanmış sınav dağılımı değildir.
 
 `data/editorial_first_part.tsv` ilk 90 kartı, `data/editorial_first_rest.tsv` sonraki 160 kartı saklar. `data/first_volume_plan.json` ilk kitabın ders/konu hedeflerini içerir. `scripts/build_cards.py` ikinci kitabın 500 kartını, `scripts/first_part_cards.py` ilk 90 kartı ve `scripts/first_volume_cards.py` kalan 160 kartı üretir. İlk kitabın bütün kaynak alıntıları her derlemede beş yerel PDF ile denetlenir. İkinci kitabı da denetlemek için `python3 scripts/build_cards.py library/dahiliye.pdf` kullanılır.
 
 Yeni kartların `source` alanı doğru parçayı, `page` alanı o parçanın fiziksel sayfasını, `book_page` alanı basılı ilk kitap sayfasını belirtir. Önceki kartların kaynak varsayımları ve kimlikleri korunur. `data/study_plan.json` ikinci kitabın 500 kartlık planını korur; üretilen `cards.json` birleşik planı ve PDF kaynak haritasını içerir.
 
-## İki kitapta 500’er kartlık klinik plan
+## Temel klinik plan ve hematoloji-onkoloji genişletmesi
 
-`data/clinical_1000_plan.json` son ders/konu hedeflerini ve arşivlenen 30 kardiyoloji kartının kimliklerini içerir. `data/editorial_clinical_1000.tsv` 280 yeni bilgi hedefini, özgün kaynak alıntısını ve bağımsız bağlamı olan soruyu saklar. `scripts/clinical_1000_cards.py`, önceki 750 kartın üretimi sonrası 30 kardiyoloji kartını aktif setten çıkarıp 280 kartı ekler. Önceki TSV ve plan dosyaları kaynak/kimlik sürekliliği için korunur; son geçerli birleşik dağılım `cards.json` ve `clinical_1000_plan.json` içindedir. Derleme her kitap için tam 500 kartı ve tüm konu sayılarını doğrular.
+`data/clinical_1000_plan.json` son ders/konu hedeflerini ve arşivlenen 30 kardiyoloji kartının kimliklerini içerir. `data/editorial_clinical_1000.tsv` 280 yeni bilgi hedefini, özgün kaynak alıntısını ve bağımsız bağlamı olan soruyu saklar. `scripts/clinical_1000_cards.py`, önceki 750 kartın üretimi sonrası 30 kardiyoloji kartını aktif setten çıkarıp 280 kartı ekler. Önceki TSV ve plan dosyaları kaynak/kimlik sürekliliği için korunur; temel dağılım `clinical_1000_plan.json`, son birleşik dağılım `cards.json` ve `KONU-DAGILIMI.md` içindedir. Temel derleme her kitap için 500 kartı doğrular; ardından hematolojiye 65 ve onkolojiye 45 kaynak denetimli kart eklenerek son kitap sayıları 565 ve 545 olur.
 
 Öncelik servis ve poliklinikte önemli klinik kararlaradır: nefrolojide ABH, KBH, sıvı-elektrolit ve asit-baz bozuklukları, proteinüri ve diyaliz; gastroenterolojide reflü, disfaji, kanama, ülser, ishal/kabızlık, IBS, İBH, malabsorpsiyon ve pankreatobiliyer hastalıklar; hepatolojide viral hepatitler, yağlı karaciğer, test yorumlama ve siroz komplikasyonları. Kardiyolojide sık karşılaşılan kalp yetmezliği, AKS, hipertansiyon ve önemli aritmiler korunur. Dağılım ölçülmüş yatış veya başvuru sıklığı, prevalans ya da doğrulanmış TUS/YDUS yüzdesi değildir.
 
-Konu Dağılımı sekmesi her kitap için sayıyı ayrı hesaplar ve ilk kitabın derslerinde klinik odağı açıklar. Endokrinoloji soru denemesi ayrı olarak 50 çoktan seçmeli soru içerir; 1.000 sayısı yalnızca flashcardları ifade eder.
+Konu Dağılımı sekmesi her kitap için sayıyı ayrı hesaplar ve ilk kitabın derslerinde klinik odağı açıklar. Endokrinoloji soru denemesi ayrı olarak 50 çoktan seçmeli soru içerir; 1.110 sayısı yalnızca flashcardları ifade eder.
+
+
+`data/editorial_hemato_onco.tsv` son 110 kartın kaynak cümlelerini, gizlenen bilgi hedeflerini ve sorularını saklar. `scripts/hemato_onco_cards.py`, temel 1.000 karttan sonra çalışarak hematoloji ve onkolojiyi ayrı ayrı 100 karta tamamlar; diğer dersler ve önceki 1.000 kartın kimlikleri/içeriği korunur. Her yeni alıntı kendi PDF sayfasıyla otomatik karşılaştırılır. Yeni toplam 1.110 karttır. Kaynak metin denetimi klinik uzman incelemesi değildir.

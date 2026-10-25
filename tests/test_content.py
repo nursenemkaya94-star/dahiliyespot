@@ -9,7 +9,7 @@ class ContentTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.full_data = json.loads((ROOT / 'data/cards.json').read_text())
-        # Keep regressions for the original 500-card collection independently.
+        # Keep regressions for the second-volume collection independently.
         cls.data = dict(cls.full_data)
         cls.data['lessons'] = [l for l in cls.full_data['lessons'] if not l.get('source')]
         cls.data['study_plan'] = dict(cls.full_data['study_plan'])
@@ -45,9 +45,9 @@ class ContentTests(unittest.TestCase):
                 self.assertTrue(1 <= card['page'] <= 874)
         self.assertEqual(len({c['id'] for c in self.cards}), len(self.cards))
 
-    def test_500_cards_cover_each_available_lesson(self):
+    def test_second_volume_cards_cover_each_available_lesson(self):
         self.assertEqual(len(self.data['lessons']), 9)
-        self.assertEqual(len(self.cards), 500)
+        self.assertEqual(len(self.cards), 545)
         for lesson in self.data['lessons']:
             self.assertGreaterEqual(sum(len(t['cards']) for t in lesson['topics']), 5)
 
@@ -90,7 +90,7 @@ class ContentTests(unittest.TestCase):
         for lesson in self.data['study_plan']['lessons']:
             for topic in lesson['topics']:
                 self.assertEqual(counts[lesson['name'], topic['name']], topic['target'])
-        self.assertEqual(sum(counts.values()), 500)
+        self.assertEqual(sum(counts.values()), 545)
         self.assertEqual(self.data['study_plan']['exam_research_status'], 'network_access_blocked')
 
     def test_everyday_diabetes_diagnostic_and_emergency_targets_exist(self):
