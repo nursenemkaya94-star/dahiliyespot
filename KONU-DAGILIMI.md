@@ -1,182 +1,184 @@
-# Konu dağılımı — 1.110 kart
+# Konu dağılımı — 1.510 kart
 
-İlk kitap: **565 kart** · İkinci kitap: **545 kart**.
+İlk kitap: **746 kart** · İkinci kitap: **764 kart**.
 
-Servis yatışı ve poliklinik pratiğinde önemli sorunları önceleyen editoryal çalışma dağılımı. Doğrulanmış yatış/poliklinik sıklığı, prevalans veya TUS/YDUS yüzdesi değildir.
+Kalın yazılı kaynak pasajlarından seçilen 400 ek bilgi hedefi dahil güncel dağılım. Bu sayılar doğrulanmış sınav yüzdesi veya klinik görülme sıklığı değildir.
 
-İlk kitabın 1–658. sayfaları eksiksizdir. Kartlar seçilmiş bilgilerdir; her kitap cümlesinin kartlaştırıldığı anlamına gelmez.
+Cevap açılınca kaynak paragrafı doğrudan görünür; PDF bağlantısı isteğe bağlıdır.
 
-# İlk kitap — 565 kart
-
-## Nefroloji — 170 kart
-
-Akut ve kronik böbrek hasarı, sıvı-elektrolit ve asit-baz bozuklukları, proteinüri ve diyaliz sorunları önceliklidir.
+## Nefroloji — 196 kart
 
 | Konu | Kart |
 | --- | ---: |
 | Sıvı ve elektrolit bozuklukları | 38 |
-| Asit-baz bozuklukları | 10 |
-| Akut böbrek hasarı | 25 |
-| Kronik böbrek hastalığı ve diyaliz | 35 |
-| Glomerüler hastalıklar | 30 |
-| Tübülointerstisyel ve vasküler hastalıklar | 11 |
-| Taş hastalığı ve polikistik böbrek | 10 |
+| Asit-baz bozuklukları | 12 |
+| Akut böbrek hasarı | 28 |
+| Kronik böbrek hastalığı ve diyaliz | 36 |
+| Glomerüler hastalıklar | 43 |
+| Tübülointerstisyel ve vasküler hastalıklar | 13 |
+| Taş hastalığı ve polikistik böbrek | 15 |
 | İdrar incelemesi ve proteinüri | 11 |
 
-## Gastroenteroloji — 100 kart
-
-Kanama, reflü ve disfaji, ülser, ishal-kabızlık, IBS, malabsorpsiyon, İBH, pankreatit ve safra yolu acilleri önceliklidir.
+## Gastroenteroloji — 125 kart
 
 | Konu | Kart |
 | --- | ---: |
-| Özofagus ve reflü hastalıkları | 16 |
-| Peptik ülser ve H. pylori | 12 |
-| Malabsorpsiyon ve çölyak | 11 |
-| İnflamatuvar bağırsak hastalıkları | 15 |
-| Gastrointestinal kanamalar | 10 |
-| Pankreas ve safra yolu hastalıkları | 21 |
-| İshal, kabızlık ve fonksiyonel bozukluklar | 15 |
+| Özofagus ve reflü hastalıkları | 18 |
+| Peptik ülser ve H. pylori | 19 |
+| Malabsorpsiyon ve çölyak | 13 |
+| İnflamatuvar bağırsak hastalıkları | 19 |
+| Gastrointestinal kanamalar | 11 |
+| Pankreas ve safra yolu hastalıkları | 26 |
+| İshal, kabızlık ve fonksiyonel bozukluklar | 19 |
 
-## Hepatoloji — 100 kart
-
-Viral hepatit izlemi, yağlı karaciğer, karaciğer testlerinin yorumu, siroz, asit, SBP, HRS, varis kanaması ve ensefalopati önceliklidir.
+## Hepatoloji — 125 kart
 
 | Konu | Kart |
 | --- | ---: |
-| Karaciğer testleri ve viral hepatitler | 28 |
-| Siroz ve portal hipertansiyon | 15 |
+| Karaciğer testleri ve viral hepatitler | 36 |
+| Siroz ve portal hipertansiyon | 19 |
 | Asit, peritonit ve hepatorenal sendrom | 23 |
-| Hepatik ensefalopati | 7 |
-| Yağlı karaciğer, alkol ve ilaç hasarı | 14 |
-| Metabolik ve otoimmün karaciğer hastalıkları | 10 |
-| Karaciğer enfeksiyonları ve kitleleri | 3 |
+| Hepatik ensefalopati | 9 |
+| Yağlı karaciğer, alkol ve ilaç hasarı | 17 |
+| Metabolik ve otoimmün karaciğer hastalıkları | 14 |
+| Karaciğer enfeksiyonları ve kitleleri | 7 |
 
-## Kardiyoloji — 50 kart
-
-Kalp yetmezliği, akut koroner sendrom, hipertansiyon ve önemli ritim sorunları korunmuş; ayrıntıların ağırlığı azaltılmıştır.
+## Kardiyoloji — 90 kart
 
 | Konu | Kart |
 | --- | ---: |
-| Kalp yetmezliği | 14 |
-| Koroner arter hastalığı ve akut koroner sendrom | 12 |
-| Hipertansiyon | 7 |
-| Aritmiler ve ileti bozuklukları | 8 |
-| Kapak hastalıkları | 5 |
-| Perikardit ve tamponad | 2 |
-| Enfektif endokardit | 1 |
+| Kalp yetmezliği | 24 |
+| Koroner arter hastalığı ve akut koroner sendrom | 14 |
+| Hipertansiyon | 18 |
+| Aritmiler ve ileti bozuklukları | 9 |
+| Kapak hastalıkları | 7 |
+| Perikardit ve tamponad | 7 |
+| Enfektif endokardit | 10 |
 | Aort hastalıkları | 1 |
 
-## Göğüs Hastalıkları — 45 kart
-
-KOAH, astım, pulmoner emboli, plevra sorunları ve temel solunum değerlendirmesi.
+## Göğüs Hastalıkları — 80 kart
 
 | Konu | Kart |
 | --- | ---: |
-| Solunum muayenesi ve ayırıcı tanı | 6 |
-| Solunum fonksiyon testleri | 4 |
-| KOAH | 10 |
+| Solunum muayenesi ve ayırıcı tanı | 13 |
+| Solunum fonksiyon testleri | 7 |
+| KOAH | 16 |
 | Astım | 7 |
-| Pulmoner emboli | 7 |
-| Bronşiektazi ve interstisyel hastalıklar | 3 |
-| Plevra hastalıkları | 5 |
+| Pulmoner emboli | 15 |
+| Bronşiektazi ve interstisyel hastalıklar | 11 |
+| Plevra hastalıkları | 8 |
 | Uyku apnesi | 3 |
 
-## Hematoloji — 100 kart
-
-Sık anemiler, hemoliz, önemli hematolojik maligniteler ve kanama-tromboz acilleri.
+## Hematoloji — 130 kart
 
 | Konu | Kart |
 | --- | ---: |
-| Anemiler | 29 |
-| Hemoliz ve hemoglobinopatiler | 22 |
-| Hematolojik maligniteler | 28 |
-| Kanama, tromboz ve hematolojik aciller | 21 |
+| Anemiler | 32 |
+| Hemoliz ve hemoglobinopatiler | 27 |
+| Hematolojik maligniteler | 44 |
+| Kanama, tromboz ve hematolojik aciller | 27 |
 
-# İkinci kitap — 545 kart
-
-## Endokrinoloji — 150 kart
+## Endokrinoloji — 181 kart
 
 | Konu | Kart |
 | --- | ---: |
-| Diyabet | 60 |
-| Tiroid hastalıkları | 60 |
-| Adrenal hastalıklar | 10 |
-| Hipofiz hastalıkları | 8 |
-| Kalsiyum ve kemik metabolizması | 11 |
-| Gonadal bozukluklar | 1 |
+| Diyabet | 66 |
+| Tiroid hastalıkları | 66 |
+| Adrenal hastalıklar | 17 |
+| Hipofiz hastalıkları | 13 |
+| Kalsiyum ve kemik metabolizması | 16 |
+| Gonadal bozukluklar | 3 |
 
-## Enfeksiyon Hastalıkları — 90 kart
+## Enfeksiyon Hastalıkları — 125 kart
 
 | Konu | Kart |
 | --- | ---: |
-| Antibiyotikler ve direnç | 15 |
-| Pnömoni ve solunum yolu enfeksiyonları | 15 |
-| Üriner sistem enfeksiyonları | 10 |
-| Gastrointestinal enfeksiyonlar | 10 |
-| Santral sinir sistemi enfeksiyonları | 8 |
-| Deri ve yumuşak doku enfeksiyonları | 7 |
-| Kemik ve eklem enfeksiyonları | 5 |
-| Fungal enfeksiyonlar | 8 |
+| Antibiyotikler ve direnç | 21 |
+| Pnömoni ve solunum yolu enfeksiyonları | 16 |
+| Üriner sistem enfeksiyonları | 12 |
+| Gastrointestinal enfeksiyonlar | 14 |
+| Santral sinir sistemi enfeksiyonları | 9 |
+| Deri ve yumuşak doku enfeksiyonları | 10 |
+| Kemik ve eklem enfeksiyonları | 8 |
+| Fungal enfeksiyonlar | 10 |
 | Tüberküloz | 4 |
-| Viral enfeksiyonlar | 3 |
-| Paraziter enfeksiyonlar | 3 |
-| HIV ve fırsatçı enfeksiyonlar | 2 |
+| Viral enfeksiyonlar | 4 |
+| Paraziter enfeksiyonlar | 12 |
+| HIV ve fırsatçı enfeksiyonlar | 5 |
 
-## Romatoloji — 75 kart
-
-| Konu | Kart |
-| --- | ---: |
-| Romatoid artrit | 15 |
-| Sistemik lupus eritematozus | 12 |
-| Spondiloartritler | 10 |
-| Osteoartrit | 8 |
-| Kristal artritleri | 10 |
-| Vaskülitler | 10 |
-| Sjögren ve sistemik skleroz | 8 |
-| FMF ve Still hastalığı | 2 |
-
-## Yoğun Bakım — 70 kart
+## Romatoloji — 110 kart
 
 | Konu | Kart |
 | --- | ---: |
-| Sepsis ve şok | 25 |
-| Solunum yetmezliği, ARDS ve ventilasyon | 20 |
-| İntoksikasyonlar | 15 |
-| Yoğun bakım desteği ve değerlendirme | 10 |
+| Romatoid artrit | 20 |
+| Sistemik lupus eritematozus | 19 |
+| Spondiloartritler | 11 |
+| Osteoartrit | 9 |
+| Kristal artritleri | 15 |
+| Vaskülitler | 20 |
+| Sjögren ve sistemik skleroz | 11 |
+| FMF ve Still hastalığı | 5 |
 
-## Onkoloji — 100 kart
-
-| Konu | Kart |
-| --- | ---: |
-| Sık kanserler ve tanı | 45 |
-| Onkolojik aciller | 20 |
-| Antikanser tedaviler ve yan etkiler | 30 |
-| Kanser genetiği | 5 |
-
-## Geriatri — 30 kart
+## Yoğun Bakım — 100 kart
 
 | Konu | Kart |
 | --- | ---: |
-| Yaşlılarda sistemik hastalıklar | 8 |
-| Demans ve bilişsel bozukluklar | 8 |
-| Deliryum | 6 |
-| Kırılganlık, beslenme ve bası yaraları | 8 |
+| Sepsis ve şok | 30 |
+| Solunum yetmezliği, ARDS ve ventilasyon | 21 |
+| İntoksikasyonlar | 37 |
+| Yoğun bakım desteği ve değerlendirme | 12 |
 
-## Alerji — 15 kart
-
-| Konu | Kart |
-| --- | ---: |
-| Anafilaksi ve ayırıcı tanı | 10 |
-| Astım | 5 |
-
-## Klinik İmmünoloji — 10 kart
+## Onkoloji — 125 kart
 
 | Konu | Kart |
 | --- | ---: |
-| Sık ve ayırt edici immün yetmezlik bulguları | 10 |
+| Sık kanserler ve tanı | 55 |
+| Onkolojik aciller | 25 |
+| Antikanser tedaviler ve yan etkiler | 39 |
+| Kanser genetiği | 6 |
 
-## Temel İmmünoloji — 5 kart
+## Geriatri — 50 kart
 
 | Konu | Kart |
 | --- | ---: |
-| Temel klinik immünoloji bilgileri | 5 |
+| Yaşlılarda sistemik hastalıklar | 16 |
+| Demans ve bilişsel bozukluklar | 12 |
+| Deliryum | 7 |
+| Kırılganlık, beslenme ve bası yaraları | 15 |
+
+## Alerji — 30 kart
+
+| Konu | Kart |
+| --- | ---: |
+| Anafilaksi ve ayırıcı tanı | 18 |
+| Astım | 12 |
+
+## Klinik İmmünoloji — 25 kart
+
+| Konu | Kart |
+| --- | ---: |
+| Sık ve ayırt edici immün yetmezlik bulguları | 25 |
+
+## Temel İmmünoloji — 18 kart
+
+| Konu | Kart |
+| --- | ---: |
+| Temel klinik immünoloji bilgileri | 18 |
+
+## Soru bankası — 500 soru
+
+| Ders grubu | Soru |
+| --- | ---: |
+| Endokrinoloji | 75 |
+| Nefroloji | 75 |
+| Gastroenteroloji ve Hepatoloji | 80 |
+| Onkoloji ve Hematoloji | 80 |
+| Kardiyoloji | 30 |
+| Göğüs Hastalıkları | 25 |
+| Enfeksiyon Hastalıkları | 30 |
+| Romatoloji | 30 |
+| Yoğun Bakım | 25 |
+| Geriatri | 15 |
+| Alerji | 10 |
+| Klinik İmmünoloji | 15 |
+| Temel İmmünoloji | 10 |

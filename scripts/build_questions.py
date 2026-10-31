@@ -8,18 +8,18 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 BANKS = [
-    ('endo', 'Endokrinoloji', ['Endokrinoloji'], 50),
-    ('neph', 'Nefroloji', ['Nefroloji'], 50),
-    ('gastro-hep', 'Gastroenteroloji ve Hepatoloji', ['Gastroenteroloji', 'Hepatoloji'], 50),
-    ('onco-hem', 'Onkoloji ve Hematoloji', ['Onkoloji', 'Hematoloji'], 50),
-    ('cardio', 'Kardiyoloji', ['Kardiyoloji'], 10),
-    ('pulmo', 'Göğüs Hastalıkları', ['Göğüs Hastalıkları'], 10),
-    ('infect', 'Enfeksiyon Hastalıkları', ['Enfeksiyon Hastalıkları'], 10),
-    ('rheum', 'Romatoloji', ['Romatoloji'], 10),
-    ('icu', 'Yoğun Bakım', ['Yoğun Bakım'], 10),
-    ('geri', 'Geriatri', ['Geriatri'], 10),
+    ('endo', 'Endokrinoloji', ['Endokrinoloji'], 75),
+    ('neph', 'Nefroloji', ['Nefroloji'], 75),
+    ('gastro-hep', 'Gastroenteroloji ve Hepatoloji', ['Gastroenteroloji', 'Hepatoloji'], 80),
+    ('onco-hem', 'Onkoloji ve Hematoloji', ['Onkoloji', 'Hematoloji'], 80),
+    ('cardio', 'Kardiyoloji', ['Kardiyoloji'], 30),
+    ('pulmo', 'Göğüs Hastalıkları', ['Göğüs Hastalıkları'], 25),
+    ('infect', 'Enfeksiyon Hastalıkları', ['Enfeksiyon Hastalıkları'], 30),
+    ('rheum', 'Romatoloji', ['Romatoloji'], 30),
+    ('icu', 'Yoğun Bakım', ['Yoğun Bakım'], 25),
+    ('geri', 'Geriatri', ['Geriatri'], 15),
     ('allergy', 'Alerji', ['Alerji'], 10),
-    ('clin-imm', 'Klinik İmmünoloji', ['Klinik İmmünoloji'], 10),
+    ('clin-imm', 'Klinik İmmünoloji', ['Klinik İmmünoloji'], 15),
     ('basic-imm', 'Temel İmmünoloji', ['Temel İmmünoloji'], 10),
 ]
 
@@ -30,7 +30,9 @@ def build(audit=False):
     endo = json.loads((ROOT / 'data/questions_endo.json').read_text())['questions']
     additions = json.loads((ROOT / 'data/questions_additions.json').read_text())['questions']
     assert len(endo) == 50 and len(additions) == 240
-    questions = endo + additions
+    expansion = json.loads((ROOT / 'data/questions_expansion_210.json').read_text())['questions']
+    assert len(expansion) == 210
+    questions = endo + additions + expansion
     assert len({q['id'] for q in questions}) == len(questions)
     assert len({q['question'] for q in questions}) == len(questions)
     texts = {}
@@ -39,7 +41,7 @@ def build(audit=False):
         assert len(q['options']) == len(set(q['options'])) == 4, q['id']
         assert q['correct'] in range(4) and len(q['explanation']) > 100, q['id']
         assert q['question'].endswith('?') and '________' not in q['question'], q['id']
-        if q.get('bank', 'endo') == 'endo':
+        if not q.get('evidence_card_ids'):
             assert all(108 <= page <= 232 for page in q['pages'])
             continue
         citations = []
@@ -67,16 +69,18 @@ def build(audit=False):
         assert counts[bank] == target, (bank, counts[bank])
         assert {q.get('lesson', 'Endokrinoloji') for q in subset} == set(lessons)
         if len(lessons) == 2:
-            assert Counter(q['lesson'] for q in subset) == {l: 25 for l in lessons}
+            assert Counter(q['lesson'] for q in subset) == {l: target // 2 for l in lessons}
         correct_counts = Counter(q['correct'] for q in subset)
         assert len(correct_counts) == 4 and max(correct_counts.values()) - min(correct_counts.values()) <= 1
         banks.append({'id': bank, 'title': title, 'lessons': lessons, 'count': target})
     assert set(counts) == {b['id'] for b in banks}
     result = {
-        'version': 'multi-bank-290-v1', 'lesson': 'Dahiliye', 'level': 'Orta–üst',
-        'note': '290 özgün çalışma sorusu · 15 ders / 13 ders grubu. Klinik vaka, ayırıcı tanı, laboratuvar yorumlama ve tedavi önceliği ağırlıklı; orta–üst düzey hedeflenmiştir. Açıklamalar kaynak kitaba dayalı özgün özetlerdir. Resmî sınav sorusu değildir; klinik uzman incelemesi yapılmadı. Her ders grubunun ilerlemesi ayrı tutulur.',
+        'version': 'daily-1510-500-v1', 'lesson': 'Dahiliye', 'level': 'Orta–üst',
+        'note': '500 özgün çalışma sorusu · 15 ders / 13 ders grubu. Klinik vaka, ayırıcı tanı, laboratuvar yorumlama ve tedavi önceliği ağırlıklı; orta–üst düzey hedeflenmiştir. Açıklamalar kaynak kitaba dayalı özgün özetlerdir. Resmî sınav sorusu değildir; klinik uzman incelemesi yapılmadı. Her ders grubunun ilerlemesi ayrı tutulur.',
         'sources': cards_data['sources'], 'banks': banks, 'questions': questions,
     }
+    from source_excerpts import attach_question_excerpts
+    result = attach_question_excerpts(result, cards_data)
     (ROOT / 'data/questions.json').write_text(json.dumps(result, ensure_ascii=False) + '\n')
     print(f'{len(questions)} questions in {len(banks)} banks; PDF evidence audit: {audit}')
 

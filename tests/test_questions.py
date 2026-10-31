@@ -9,7 +9,7 @@ class QuestionTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.data = json.loads((ROOT / 'data/questions.json').read_text())
-        cls.questions = [q for q in cls.data['questions'] if q.get('bank', 'endo') == 'endo']
+        cls.questions = cls.data['questions'][:50]
 
     def test_pilot_size_allocation_and_unique_questions(self):
         self.assertEqual(len(self.questions), 50)

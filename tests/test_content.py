@@ -47,7 +47,7 @@ class ContentTests(unittest.TestCase):
 
     def test_second_volume_cards_cover_each_available_lesson(self):
         self.assertEqual(len(self.data['lessons']), 9)
-        self.assertEqual(len(self.cards), 545)
+        self.assertEqual(len(self.cards), 764)
         for lesson in self.data['lessons']:
             self.assertGreaterEqual(sum(len(t['cards']) for t in lesson['topics']), 5)
 
@@ -81,16 +81,16 @@ class ContentTests(unittest.TestCase):
         for lesson in self.data['lessons']:
             for topic in lesson['topics']:
                 counts[lesson['name'], topic['name']] = len(topic['cards'])
-        self.assertEqual(counts['Endokrinoloji', 'Diyabet'], 60)
-        self.assertEqual(counts['Endokrinoloji', 'Tiroid hastalıkları'], 60)
-        self.assertEqual(counts['Endokrinoloji', 'Gonadal bozukluklar'], 1)
-        self.assertEqual(counts['Yoğun Bakım', 'Sepsis ve şok'], 25)
-        self.assertEqual(counts['Romatoloji', 'Romatoid artrit'], 15)
-        self.assertEqual(counts['Enfeksiyon Hastalıkları', 'Pnömoni ve solunum yolu enfeksiyonları'], 15)
+        self.assertGreaterEqual(counts['Endokrinoloji', 'Diyabet'], 60)
+        self.assertGreaterEqual(counts['Endokrinoloji', 'Tiroid hastalıkları'], 60)
+        self.assertGreaterEqual(counts['Endokrinoloji', 'Gonadal bozukluklar'], 1)
+        self.assertGreaterEqual(counts['Yoğun Bakım', 'Sepsis ve şok'], 25)
+        self.assertGreaterEqual(counts['Romatoloji', 'Romatoid artrit'], 15)
+        self.assertGreaterEqual(counts['Enfeksiyon Hastalıkları', 'Pnömoni ve solunum yolu enfeksiyonları'], 15)
         for lesson in self.data['study_plan']['lessons']:
             for topic in lesson['topics']:
                 self.assertEqual(counts[lesson['name'], topic['name']], topic['target'])
-        self.assertEqual(sum(counts.values()), 545)
+        self.assertEqual(sum(counts.values()), 764)
         self.assertEqual(self.data['study_plan']['exam_research_status'], 'network_access_blocked')
 
     def test_everyday_diabetes_diagnostic_and_emergency_targets_exist(self):

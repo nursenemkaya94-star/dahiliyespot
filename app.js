@@ -7,17 +7,17 @@ function allCards(){return data.lessons.flatMap(l=>l.topics.flatMap(t=>t.cards.m
 function stats(){const total=allCards().length;$('lessonCount').textContent=data.lessons.length;$('cardCount').textContent=total;const validIds=new Set(allCards().map(c=>c.id));const known=new Set(saved.known.filter(id=>validIds.has(id))).size;$('knownCount').textContent=known;$('progress').textContent='%'+Math.round(known/Math.max(total,1)*100)}
 const icons=['✧','⌁','⬡','◈','❋','✣','⟡','❀','♡'];const colors=['#e6eddc','#f9ead8','#e8e4f1','#e4edf3','#f6e5df','#deede7','#f4ead9','#eae6ee','#e2ecf0'];
 function renderLessons(){const query=$('search').value.toLocaleLowerCase('tr');$('lessons').replaceChildren();data.lessons.forEach((l,i)=>{if(![l.name,...l.topics.map(t=>t.name)].join(' ').toLocaleLowerCase('tr').includes(query))return;const b=document.createElement('button');b.className='lesson';b.style.setProperty('--tint',colors[i%colors.length]);b.style.setProperty('--accent','#66785b');const top=document.createElement('div');top.className='lesson-top';const icon=document.createElement('span');icon.className='icon';icon.textContent=icons[i%icons.length];const num=document.createElement('span');num.className='lesson-number';num.textContent='DERS '+String(i+1).padStart(2,'0');top.append(icon,num);const h=document.createElement('h3');h.textContent=l.name;const bottom=document.createElement('div');bottom.className='lesson-bottom';const p=document.createElement('p');p.textContent=l.topics.length+' konu · '+l.topics.reduce((n,t)=>n+t.cards.length,0)+' kart'+(l.coverage?' · İlk bölüm':'');const arrow=document.createElement('span');arrow.textContent='↗';bottom.append(p,arrow);b.append(top,h,bottom);b.onclick=()=>openLesson(l);$('lessons').append(b)});if(!$('lessons').children.length)$('lessons').textContent='Bu aramada ders veya konu bulunamadı.'}
-function showStudy(){ $('questionsView').hidden=true; $('distributionView').hidden=true;$('pdfView').hidden=true;$('library').hidden=true;$('study').hidden=false;window.scrollTo(0,0)}
+function showStudy(){hideDaily(); $('questionsView').hidden=true; $('distributionView').hidden=true;$('pdfView').hidden=true;$('library').hidden=true;$('study').hidden=false;window.scrollTo(0,0)}
 function setOptions(options){$('topics').replaceChildren();options.forEach(([value,label])=>{const o=document.createElement('option');o.value=value;o.textContent=label;$('topics').append(o)})}
 function openLesson(l){document.querySelectorAll('.nav').forEach(b=>b.classList.remove('active'));$('home').classList.add('active');lesson=l;mode='lesson';$('studyLesson').textContent='DAHİLİYE / '+l.name.toLocaleUpperCase('tr');$('studyTitle').textContent=l.name;$('studyCoverage').textContent=l.coverage||'';$('studyCoverage').hidden=!l.coverage;setOptions([['all','Tüm konular'],...l.topics.map((t,i)=>[String(i),t.name])]);showStudy();filterCards()}
 function filterCards(){if(mode==='lesson'){const t=$('topics').value;const topics=t==='all'?lesson.topics:[lesson.topics[Number(t)]];cards=topics.flatMap(t=>t.cards.map(c=>({...c,topic:t.name,lesson:lesson.name})))}else cards=allCards().filter(c=>saved[mode].includes(c.id));index=0;flipped=false;renderCard()}
 function collection(kind){$('studyCoverage').hidden=true;mode=kind;lesson=null;document.querySelectorAll('.nav').forEach(b=>b.classList.remove('active'));$(kind==='again'?'review':'favorites').classList.add('active');$('studyLesson').textContent='KİŞİSEL KOLEKSİYONUN';$('studyTitle').textContent=kind==='again'?'Tekrar edeceklerim':'Favori kartlarım';setOptions([['all','Tüm dersler']]);showStudy();filterCards()}
-function renderCard(){const c=cards[index];$('empty').hidden=!!c;$('cardArea').hidden=!c;$('position').textContent=c?`${index+1} / ${cards.length}`:'0 kart';$('studyProgress').style.width=c?`${(index+1)/cards.length*100}%`:'0%';if(!c)return;$('cardText').textContent=flipped?c.answer:c.question;$('cardExplanation').hidden=!flipped;$('cardExplanation').textContent=flipped?(c.explanation||''):'';$('cardKicker').textContent=flipped?'CEVAP':'HATIRLAMA ZAMANI';$('flashcard').classList.toggle('answer',flipped);$('flashcard').setAttribute('aria-label',flipped?'Kartın sorusunu göster':'Kartın cevabını göster');$('flipHint').textContent=flipped?'Soruyu görmek için karta dokun ↶':'Cevabı görmek için karta dokun ↗';$('flip').textContent=flipped?'Soruyu göster':'Cevabı göster';$('favorite').textContent=saved.favorites.includes(c.id)?'♥ Favorilerde':'♡ Favorilere ekle';$('source').textContent=c.lesson+' · '+(c.source?'İlk kitap / '+sourceBooks[c.source].part+'. parça':'İkinci kitap')+' · '+(c.book_page?'Kitap sayfa '+c.book_page+' / Parça sayfa '+c.page:'PDF sayfa '+c.page)+' ↗';$('source').onclick=()=>openPdf(c.page,c.source||'second');$('prev').disabled=index===0;$('next').disabled=index===cards.length-1;$('know').textContent=saved.known.includes(c.id)?'✓ Öğrenildi':'✓ Biliyorum';$('again').textContent=saved.again.includes(c.id)?'↻ Tekrar listesinde':'↻ Tekrar et'}
+function renderCard(){const c=cards[index];$('empty').hidden=!!c;$('cardArea').hidden=!c;$('position').textContent=c?`${index+1} / ${cards.length}`:'0 kart';$('studyProgress').style.width=c?`${(index+1)/cards.length*100}%`:'0%';if(!c)return;$('cardText').textContent=flipped?c.answer:c.question;$('cardExplanation').hidden=!flipped;$('cardExplanation').textContent=flipped?(c.source_excerpt||c.explanation||''):'';$('cardKicker').textContent=flipped?'CEVAP':'HATIRLAMA ZAMANI';$('flashcard').classList.toggle('answer',flipped);$('flashcard').setAttribute('aria-label',flipped?'Kartın sorusunu göster':'Kartın cevabını göster');$('flipHint').textContent=flipped?'Soruyu görmek için karta dokun ↶':'Cevabı görmek için karta dokun ↗';$('flip').textContent=flipped?'Soruyu göster':'Cevabı göster';$('favorite').textContent=saved.favorites.includes(c.id)?'♥ Favorilerde':'♡ Favorilere ekle';$('source').textContent=c.lesson+' · '+(c.source?'İlk kitap / '+sourceBooks[c.source].part+'. parça':'İkinci kitap')+' · '+(c.book_page?'Kitap sayfa '+c.book_page+' / Parça sayfa '+c.page:'PDF sayfa '+c.page)+' ↗';$('source').onclick=()=>openPdf(c.page,c.source||'second');$('prev').disabled=index===0;$('next').disabled=index===cards.length-1;$('know').textContent=saved.known.includes(c.id)?'✓ Öğrenildi':'✓ Biliyorum';$('again').textContent=saved.again.includes(c.id)?'↻ Tekrar listesinde':'↻ Tekrar et'}
 function flip(){if(!cards.length)return;flipped=!flipped;renderCard()}
 function move(delta){index=Math.max(0,Math.min(cards.length-1,index+delta));flipped=false;renderCard()}
 function mark(kind){const c=cards[index];if(!c)return;const other=kind==='known'?'again':'known';saved[other]=saved[other].filter(id=>id!==c.id);if(!saved[kind].includes(c.id))saved[kind].push(c.id);persist();stats();if(mode==='again'&&kind==='known'){filterCards();return}if(index<cards.length-1)move(1);else renderCard()}
-$('home').onclick=()=>{$('questionsView').hidden=true;document.querySelectorAll('.nav').forEach(b=>b.classList.remove('active'));$('home').classList.add('active');$('library').hidden=false;$('study').hidden=true;$('pdfView').hidden=true;$('distributionView').hidden=true;stats()};$('back').onclick=$('home').onclick;$('favorites').onclick=()=>collection('favorites');$('review').onclick=()=>collection('again');$('search').oninput=renderLessons;$('topics').onchange=filterCards;$('flashcard').onclick=flip;$('flip').onclick=flip;$('next').onclick=()=>move(1);$('prev').onclick=()=>move(-1);$('know').onclick=()=>mark('known');$('again').onclick=()=>mark('again');$('favorite').onclick=()=>{const c=cards[index];if(!c)return;saved.favorites=saved.favorites.includes(c.id)?saved.favorites.filter(x=>x!==c.id):[...saved.favorites,c.id];persist();if(mode==='favorites')filterCards();else renderCard()};document.addEventListener('keydown',e=>{if($('study').hidden||['INPUT','SELECT','BUTTON','TEXTAREA'].includes(document.activeElement.tagName))return;if(e.code==='Space'){e.preventDefault();flip()}if(e.key==='ArrowRight')move(1);if(e.key==='ArrowLeft')move(-1)});
-fetch('data/cards.json?v=multi-bank-290-v1', {cache:'no-store'}).then(r=>{if(!r.ok)throw Error();return r.json()}).then(d=>{data=d;configurePdfSources(d.sources);stats();renderLessons();renderDistribution()}).catch(()=>{$('error').hidden=false;$('error').textContent='Kartlar yüklenemedi. Uygulamayı sunucu üzerinden açıp yeniden dene.'});
+$('home').onclick=()=>{hideDaily();renderDailyHome();$('questionsView').hidden=true;document.querySelectorAll('.nav').forEach(b=>b.classList.remove('active'));$('home').classList.add('active');$('library').hidden=false;$('study').hidden=true;$('pdfView').hidden=true;$('distributionView').hidden=true;stats()};$('back').onclick=$('home').onclick;$('favorites').onclick=()=>collection('favorites');$('review').onclick=()=>collection('again');$('search').oninput=renderLessons;$('topics').onchange=filterCards;$('flashcard').onclick=flip;$('flip').onclick=flip;$('next').onclick=()=>move(1);$('prev').onclick=()=>move(-1);$('know').onclick=()=>mark('known');$('again').onclick=()=>mark('again');$('favorite').onclick=()=>{const c=cards[index];if(!c)return;saved.favorites=saved.favorites.includes(c.id)?saved.favorites.filter(x=>x!==c.id):[...saved.favorites,c.id];persist();if(mode==='favorites')filterCards();else renderCard()};document.addEventListener('keydown',e=>{if($('study').hidden||['INPUT','SELECT','BUTTON','TEXTAREA'].includes(document.activeElement.tagName))return;if(e.code==='Space'){e.preventDefault();flip()}if(e.key==='ArrowRight')move(1);if(e.key==='ArrowLeft')move(-1)});
+fetch('data/cards.json?v=daily-1510-500-v1', {cache:'no-store'}).then(r=>{if(!r.ok)throw Error();return r.json()}).then(d=>{data=d;configurePdfSources(d.sources);stats();renderLessons();renderDistribution();renderDailyHome()}).catch(()=>{$('error').hidden=false;$('error').textContent='Kartlar yüklenemedi. Uygulamayı sunucu üzerinden açıp yeniden dene.'});
 
 const sourceBooks={second:{label:'İkinci kitap · 874 sayfa',path:'library/dahiliye.pdf',pages:874},'first-part-1':{label:'İlk kitap · 1. parça · 140 sayfa',path:'library/dahiliye-ilk-parca1.pdf',pages:140}};
 function configurePdfSources(sources){
@@ -29,6 +29,7 @@ function configurePdfSources(sources){
 }
 let currentPdfSource='second';
 function openPdf(pageNumber=1,sourceId='second'){
+ hideDaily();
  const source=sourceBooks[sourceId];if(!source)return;
  const n=Number(pageNumber);
  if(!Number.isInteger(n)||n<1||n>source.pages){$('pdfStatus').textContent='1–'+source.pages+' arasında bir sayfa seç.';return;}
@@ -70,7 +71,7 @@ function renderDistribution(){
   });table.append(body);section.append(table);$('distributionTables').append(section);
  });
 }
-$('distribution').onclick=()=>{$('questionsView').hidden=true;
+$('distribution').onclick=()=>{hideDaily();$('questionsView').hidden=true;
  if(!data)return;
  $('library').hidden=true;$('study').hidden=true;$('pdfView').hidden=true;$('distributionView').hidden=false;
  document.querySelectorAll('.nav').forEach(b=>b.classList.remove('active'));$('distribution').classList.add('active');window.scrollTo(0,0);
@@ -126,6 +127,7 @@ function renderQuiz(){
  if(answeredCurrent){
   const result=document.createElement('strong');result.textContent=quizAnswers[q.id]===q.correct?'Doğru!':'Yanlış. Doğru cevap: '+ 'ABCD'[q.correct];
   const exp=document.createElement('p');exp.textContent=q.explanation;$('quizFeedback').append(result,exp);
+  for(const excerpt of q.source_excerpts||[]){const box=document.createElement('blockquote');box.className='source-excerpt';const label=document.createElement('strong');label.textContent='Kaynak paragrafı · '+(excerpt.source==='second'?'İkinci kitap':'İlk kitap')+' · '+(excerpt.book_page?'kitap sayfa '+excerpt.book_page:'PDF sayfa '+excerpt.page);const text=document.createElement('p');text.textContent=excerpt.text;box.append(label,text);$('quizFeedback').append(box)}
   const retry=document.createElement('button');retry.className='back';retry.textContent='↻ Bu soruyu yeniden çöz';retry.onclick=()=>{delete quizAnswers[q.id];saveQuiz();$('quizFilter').value='all';quizIndex=quizList().indexOf(q);renderQuiz()};$('quizFeedback').append(retry);
   const citations=q.citations||q.pages.map(page=>({page,source:'second'}));
   citations.forEach(c=>{const b=document.createElement('button');b.className='back';
@@ -135,12 +137,12 @@ function renderQuiz(){
   });
  }
 }
-$('questions').onclick=async()=>{
+$('questions').onclick=async()=>{hideDaily();
  ['library','study','pdfView','distributionView'].forEach(id=>$(id).hidden=true);$('questionsView').hidden=false;document.querySelectorAll('.nav').forEach(b=>b.classList.remove('active'));$('questions').classList.add('active');window.scrollTo(0,0);
  if(!quizData){
   $('quizPosition').textContent='Sorular yükleniyor…';
   try{
-   quizData=await fetch('data/questions.json?v=multi-bank-290-v1',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error();return r.json()});
+   quizData=await fetch('data/questions.json?v=daily-1510-500-v1',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error();return r.json()});
    configurePdfSources(quizData.sources);$('quizNote').textContent=quizData.note;
    $('quizBank').replaceChildren();quizData.banks.forEach(bank=>{const o=document.createElement('option');o.value=bank.id;o.textContent=bank.title+' · '+bank.count+' soru';$('quizBank').append(o)});
    selectQuizBank();saveQuiz();return;
@@ -153,3 +155,69 @@ $('quizTopic').onchange=$('quizFilter').onchange=()=>{if(!quizData)return;quizIn
 $('quizPrev').onclick=()=>{quizIndex--;renderQuiz();$('quizPrompt').focus()};$('quizNext').onclick=()=>{quizIndex++;renderQuiz();$('quizPrompt').focus()};
 $('quizReset').onclick=()=>{if(quizData)$('quizResetPrompt').hidden=false};$('quizResetCancel').onclick=()=>{$('quizResetPrompt').hidden=true};
 $('quizResetConfirm').onclick=()=>{if(!quizData)return;for(const q of bankQuestions())delete quizAnswers[q.id];saveQuiz();quizIndex=0;$('quizResetPrompt').hidden=true;renderQuiz()};
+
+// Daily cards are fixed for a local calendar date; first self-assessment is retained.
+const DAILY_KEY='tusspot-daily-v1';
+let dailyHistory={},dailyDateShown=null,dailyIndex=0,dailyFlipped=false,dailySaveFailed=false;
+try{const value=JSON.parse(localStorage.getItem(DAILY_KEY));if(value&&typeof value==='object'&&!Array.isArray(value))for(const [day,record] of Object.entries(value)){
+ if(/^\d{4}-\d{2}-\d{2}$/.test(day)&&record&&Array.isArray(record.ids)&&record.ids.length===20&&new Set(record.ids).size===20&&record.ids.every(id=>typeof id==='string')&&record.answers&&typeof record.answers==='object'&&!Array.isArray(record.answers)){
+  const answers={};for(const [id,a]of Object.entries(record.answers))if(record.ids.includes(id)&&a&&typeof a.known==='boolean')answers[id]={known:a.known,at:typeof a.at==='string'?a.at:''};
+  dailyHistory[day]={...record,answers};
+ }
+}}catch{}
+function localDay(date=new Date()){return [date.getFullYear(),String(date.getMonth()+1).padStart(2,'0'),String(date.getDate()).padStart(2,'0')].join('-')}
+function dayLabel(day){const [y,m,d]=day.split('-').map(Number);return new Date(y,m-1,d).toLocaleDateString('tr-TR',{day:'numeric',month:'long',year:'numeric'})}
+function dailySeed(text){let h=2166136261;for(const char of text){h^=char.charCodeAt(0);h=Math.imul(h,16777619)}return h>>>0}
+function dailyShuffle(values,seed){const out=[...values];let x=seed||1;for(let i=out.length-1;i>0;i--){x^=x<<13;x^=x>>>17;x^=x<<5;const j=(x>>>0)%(i+1);[out[i],out[j]]=[out[j],out[i]]}return out}
+function chooseDailyCards(day){
+ const groups=data.lessons.map(l=>({id:l.id,cards:l.topics.flatMap(t=>t.cards).sort((a,b)=>a.id.localeCompare(b.id))})).filter(l=>l.cards.length).sort((a,b)=>a.id.localeCompare(b.id));
+ const ordered=dailyShuffle(groups,dailySeed(day));const chosen=[];
+ // Round-robin gives every available lesson a place before filling the remaining slots.
+ for(let round=0;chosen.length<20;round++){
+  let added=false;
+  for(const group of ordered){const pool=dailyShuffle(group.cards,dailySeed(day+'|'+group.id));if(pool[round]){chosen.push(pool[round].id);added=true;if(chosen.length===20)break}}
+  if(!added)break;
+ }
+ return dailyShuffle(chosen,dailySeed(day+'|order'));
+}
+function saveDaily(){try{localStorage.setItem(DAILY_KEY,JSON.stringify(dailyHistory));dailySaveFailed=false}catch{dailySaveFailed=true}$('dailyStorageStatus').textContent=dailySaveFailed?'Bu tarayıcı kayda izin vermedi; sonuçlar kalıcı kaydedilemedi.':'Kayıtlar bu cihazın tarayıcısında saklanır. Yedek indirerek koruyabilirsin.'}
+function dailyResult(record){const values=record.ids.map(id=>record.answers[id]).filter(Boolean);return{done:values.length,known:values.filter(a=>a.known).length,again:values.filter(a=>!a.known).length}}
+function todayDaily(create=false){const day=localDay();if(!dailyHistory[day]&&create){dailyHistory[day]={ids:chooseDailyCards(day),answers:{},startedAt:new Date().toISOString(),completedAt:null};saveDaily()}return dailyHistory[day]}
+function renderDailyHome(){
+ if(!data)return;const day=localDay(),record=todayDaily(),result=record?dailyResult(record):{done:0,known:0,again:0};
+ $('dailyDate').textContent=dayLabel(day);$('dailyHomeProgress').textContent=result.done===20?`Tamamlandı · ${result.known}/20 bildim · %${result.known*5}`:`${result.done}/20 kart tamamlandı · 15 dersten karışık tekrar`;
+ $('dailyStart').disabled=false;$('dailyStart').textContent=result.done===20?'Bugünün sonucunu gör':result.done?'Challenge’a devam et':'Günlük Challenge’a başla';
+ $('dailyHistoryBody').replaceChildren();const days=Object.keys(dailyHistory).sort().reverse();
+ $('dailyHistoryEmpty').hidden=days.length>0;
+ for(const date of days){const r=dailyResult(dailyHistory[date]),row=document.createElement('tr');for(const text of [dayLabel(date),`${r.done}/20`,String(r.known),String(r.again),r.done===20?`%${r.known*5}`:'Devam ediyor']){const td=document.createElement('td');td.textContent=text;row.append(td)}$('dailyHistoryBody').append(row)}
+ const completed=days.filter(d=>dailyResult(dailyHistory[d]).done===20);const sum=completed.reduce((n,d)=>n+dailyResult(dailyHistory[d]).known,0);
+ $('dailyHistorySummary').textContent=completed.length?`${completed.length} gün tamamlandı · Ortalama %${Math.round(sum/(completed.length*20)*100)}`:'Sonuçların gün gün burada birikecek.';
+ $('dailyStorageStatus').textContent=dailySaveFailed?'Bu tarayıcı kayda izin vermedi; sonuçlar kalıcı kaydedilemedi.':'Kayıtlar bu cihazın tarayıcısında saklanır. Yedek indirerek koruyabilirsin.';
+}
+function hideDaily(){$('dailyView').hidden=true}
+function openDaily(){if(!data)return;dailyDateShown=localDay();const record=todayDaily(true);dailyIndex=record.ids.findIndex(id=>!record.answers[id]);if(dailyIndex<0)dailyIndex=0;dailyFlipped=false;
+ ['library','study','pdfView','questionsView','distributionView'].forEach(id=>$(id).hidden=true);$('dailyView').hidden=false;document.querySelectorAll('.nav').forEach(b=>b.classList.remove('active'));renderDailyCard();window.scrollTo(0,0)}
+function refreshDailyDay(){if(dailyDateShown!==localDay()){openDaily();$('dailyLive').textContent='Yeni gün başladı; bugünün 20 kartı açıldı. Önceki kayıtların korundu.';return true}return false}
+function renderDailyCard(){
+ const record=dailyHistory[dailyDateShown];if(!record)return;const result=dailyResult(record);const all=allCards(),card=all.find(c=>c.id===record.ids[dailyIndex]);
+ $('dailyViewDate').textContent=dayLabel(dailyDateShown);$('dailyScore').textContent=`${result.done}/20 tamamlandı · ${result.known} bildim · ${result.again} tekrar`;
+ $('dailyComplete').hidden=result.done!==20;$('dailyComplete').textContent=result.done===20?`Bugünün Challenge’ı tamamlandı: ${result.known}/20 · %${result.known*5}. İlk değerlendirmelerin günlüğe kaydedildi.`:'';
+ $('dailyPosition').textContent=`Kart ${dailyIndex+1} / 20`;
+ if(!card){$('dailyQuestion').textContent='Bu kart güncel sette bulunamadı. Diğer kartlara geçebilirsin.';$('dailyAnswer').hidden=true;['dailyReveal','dailyKnown','dailyAgain','dailySource'].forEach(id=>$(id).disabled=true);return}
+ const answered=record.answers[card.id];$('dailyLesson').textContent=card.lesson+' · '+card.topic;$('dailyQuestion').textContent=card.question;
+ $('dailyAnswer').hidden=!dailyFlipped&&!answered;$('dailyAnswerText').textContent=card.answer;$('dailyExplanation').textContent=card.source_excerpt||card.explanation;
+ $('dailyReveal').hidden=dailyFlipped||!!answered;$('dailyKnown').disabled=!dailyFlipped||!!answered;$('dailyAgain').disabled=!dailyFlipped||!!answered;
+ $('dailyAssessment').textContent=answered?(answered.known?'Bu kartı bildim olarak kaydettin.':'Bu kartı tekrar olarak kaydettin.'):'Cevabı aç, sonra hatırlayıp hatırlamadığını kendin değerlendir.';
+ $('dailySource').disabled=false;$('dailySource').onclick=()=>openPdf(card.page,card.source||'second');
+ $('dailyPrev').disabled=dailyIndex===0;$('dailyNext').disabled=dailyIndex===19;
+ renderDailyHome();
+}
+function assessDaily(known){if(refreshDailyDay())return;const record=dailyHistory[dailyDateShown],id=record.ids[dailyIndex];if(!dailyFlipped||record.answers[id])return;
+ record.answers[id]={known,at:new Date().toISOString()};if(dailyResult(record).done===20&&!record.completedAt)record.completedAt=new Date().toISOString();saveDaily();
+ const next=record.ids.findIndex((id,i)=>i>dailyIndex&&!record.answers[id]);const remaining=record.ids.findIndex(id=>!record.answers[id]);if(next>=0)dailyIndex=next;else if(remaining>=0)dailyIndex=remaining;dailyFlipped=false;renderDailyCard();
+}
+$('dailyStart').onclick=openDaily;$('dailyBack').onclick=()=>{$('home').click()};
+$('dailyReveal').onclick=()=>{if(refreshDailyDay())return;dailyFlipped=true;renderDailyCard()};$('dailyKnown').onclick=()=>assessDaily(true);$('dailyAgain').onclick=()=>assessDaily(false);
+$('dailyPrev').onclick=()=>{if(refreshDailyDay())return;dailyIndex=Math.max(0,dailyIndex-1);dailyFlipped=false;renderDailyCard()};$('dailyNext').onclick=()=>{if(refreshDailyDay())return;dailyIndex=Math.min(19,dailyIndex+1);dailyFlipped=false;renderDailyCard()};
+$('dailyExport').onclick=()=>{const blob=new Blob([JSON.stringify({version:1,exportedAt:new Date().toISOString(),days:dailyHistory},null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='tusspot-challenge-'+localDay()+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};
+window.addEventListener('focus',()=>{if(!data)return;if(!$('dailyView').hidden)refreshDailyDay();renderDailyHome()});

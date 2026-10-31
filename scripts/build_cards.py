@@ -117,6 +117,8 @@ def build(pdf=None):
     result = apply_clinical_plan(result)
     from hemato_onco_cards import append_hemato_onco
     result = append_hemato_onco(result)
+    from expand_cards import expand_cards
+    result = expand_cards(result)
     (ROOT / 'data/cards.json').write_text(json.dumps(result, ensure_ascii=False), encoding='utf-8')
     print(f'{len(result["lessons"])} ders, {sum(len(t["cards"]) for l in result["lessons"] for t in l["topics"])} kart; ikinci kitap denetimi: {bool(pages)}; ilk kitabın tüm parçaları denetlendi')
 

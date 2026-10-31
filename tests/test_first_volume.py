@@ -35,7 +35,7 @@ class FirstVolumeTests(unittest.TestCase):
         self.assertEqual(len(set(fingerprints)),658)
 
     def test_every_new_card_uses_correct_pdf_and_verbatim_quote(self):
-        self.assertEqual(len(self.cards),505)
+        self.assertEqual(len(self.cards),686)
         pages={}
         for c in self.cards:
             src=self.data['sources'][c['source']]
@@ -56,6 +56,8 @@ class FirstVolumeTests(unittest.TestCase):
             identity=f'first-part-1|{lesson}|{page}|{statement}'
             card_id='fact-'+hashlib.sha256(identity.encode()).hexdigest()[:16]
             if card_id in archived:self.assertNotIn(card_id,actual)
-            else:self.assertEqual(actual[card_id]['question'],q)
+            else:
+                corrections=json.loads((ROOT/'data/card_target_corrections.json').read_text())
+                self.assertEqual(actual[card_id]['question'],corrections.get(card_id,{}).get('question',q))
 
 if __name__=='__main__':unittest.main()

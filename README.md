@@ -47,22 +47,22 @@ Ayrıntılı güncel sayılar: [KONU-DAGILIMI.md](KONU-DAGILIMI.md).
 
 ## Orta–üst düzey soru bankası
 
-**Sorular** sekmesi 15 dersi kapsayan 13 ders grubunda **290 özgün, dört seçenekli soru** sunar. Klinik vaka, laboratuvar yorumlama, ayırıcı tanı ve tedavi önceliği ağırlıklıdır. Orta–üst düzey hedeflenmiştir; güçlük düzeyi kullanıcı performansıyla ölçülmüş değildir. Açıklamalar kaynak kitabın ilgili PDF sayfalarına bağlanan özgün özetlerdir. Resmî sınav sorusu değildir ve klinik uzman incelemesi yapılmamıştır.
+**Sorular** sekmesi 15 dersi kapsayan 13 ders grubunda **500 özgün, dört seçenekli soru** sunar. Klinik vaka, laboratuvar yorumlama, ayırıcı tanı ve tedavi önceliği ağırlıklıdır. Orta–üst düzey hedeflenmiştir; güçlük düzeyi kullanıcı performansıyla ölçülmüş değildir. Açıklamalar kaynak kitabın ilgili PDF sayfalarına bağlanan özgün özetlerdir. Resmî sınav sorusu değildir ve klinik uzman incelemesi yapılmamıştır.
 
 | Ders grubu | Soru |
 | --- | ---: |
-| Endokrinoloji | 50 |
-| Nefroloji | 50 |
-| Gastroenteroloji + Hepatoloji | 50 (25 + 25) |
-| Onkoloji + Hematoloji | 50 (25 + 25) |
-| Kardiyoloji | 10 |
-| Göğüs Hastalıkları | 10 |
-| Enfeksiyon Hastalıkları | 10 |
-| Romatoloji | 10 |
-| Yoğun Bakım | 10 |
-| Geriatri | 10 |
+| Endokrinoloji | 75 |
+| Nefroloji | 75 |
+| Gastroenteroloji ve Hepatoloji | 80 |
+| Onkoloji ve Hematoloji | 80 |
+| Kardiyoloji | 30 |
+| Göğüs Hastalıkları | 25 |
+| Enfeksiyon Hastalıkları | 30 |
+| Romatoloji | 30 |
+| Yoğun Bakım | 25 |
+| Geriatri | 15 |
 | Alerji | 10 |
-| Klinik İmmünoloji | 10 |
+| Klinik İmmünoloji | 15 |
 | Temel İmmünoloji | 10 |
 
 Ders grubu ve konu seçimi, yanlış/çözülmemiş filtreleri, numaradan geçiş ve tek soruyu yeniden çözme desteklenir. Her grubun konumu, filtreleri ve yanıtları ayrı korunur. Sıfırlama ikinci onaydan sonra yalnız seçili grubu etkiler; flashcard kayıtları korunur. Yanıt verildikten sonra seçenekler kilitlenir; doğru cevap, açıklama ve ilgili kaynak sayfaları açılır. İlk kitabın bağlantıları doğru PDF parçasına ve fiziksel sayfasına gider; basılı kitap numarası ayrıca gösterilir.
@@ -79,7 +79,7 @@ Son yüklenen 11 dosyanın tamamı alındı. Dosya adlarına güvenilmeden içer
 
 `data/first_volume_files.json` yüklenen dosyaların içerikten doğrulanmış başlangıç/bitiş sayfalarını kaydeder. `library/dahiliye-ilk-parca1.pdf` … `parca5.pdf` kaynak aralıkları sırasıyla **1–140, 141–280, 281–420, 421–560, 561–658**. PDF sekmesi her parçayı ayrı açarak gereksiz büyük tek dosya indirilmesini önler. Sayfa kutusu parçanın içindeki fiziksel sırayı kullanır; kartta basılı kitap sayfası ve parça sayfası birlikte gösterilir. İlk 140 sayfadan önce eklenen kartlarda kitap ve parça sayfası aynıdır.
 
-İlk kitap için toplam **565 kart**: Nefroloji 170, Gastroenteroloji 100, Hepatoloji 100, Kardiyoloji 50, Göğüs Hastalıkları 45 ve Hematoloji 100. İkinci kitap 545 kart içerir; Onkoloji 100 karttır. Toplam **15 ders / 1.110 flashcard** vardır. Klinik ağırlıklandırma güncellemesinde 280 yeni kart eklenmiş, kardiyolojiden 30 kart aktif setten arşivlenmiş ve diğer 720 kartın kimlikleri, soruları ve kaynak bilgileri aynen korunmuştur. Arşivlenen kartların tarayıcı kayıtları silinmez; aktif sayaç ve koleksiyonlarda mevcut kartlar sayılır. Önemli konular seçilmiştir; PDF sayfalarının tam olması, tüm bilgilerin kartlaştırıldığı anlamına gelmez. Ağırlık klinik önceliklere dayalıdır; doğrulanmış sınav dağılımı değildir.
+İlk kitap toplam **746 kart**, ikinci kitap **764 kart** içerir. Güncel ders ve konu sayıları `KONU-DAGILIMI.md` içinde üretilen dağılımla birlikte tutulur. Toplam **15 ders / 1.510 flashcard** vardır. Klinik ağırlıklandırma güncellemesinde 280 yeni kart eklenmiş, kardiyolojiden 30 kart aktif setten arşivlenmiş ve diğer 720 kartın kimlikleri, soruları ve kaynak bilgileri aynen korunmuştur. Arşivlenen kartların tarayıcı kayıtları silinmez; aktif sayaç ve koleksiyonlarda mevcut kartlar sayılır. Önemli konular seçilmiştir; PDF sayfalarının tam olması, tüm bilgilerin kartlaştırıldığı anlamına gelmez. Ağırlık klinik önceliklere dayalıdır; doğrulanmış sınav dağılımı değildir.
 
 `data/editorial_first_part.tsv` ilk 90 kartı, `data/editorial_first_rest.tsv` sonraki 160 kartı saklar. `data/first_volume_plan.json` ilk kitabın ders/konu hedeflerini içerir. `scripts/build_cards.py` ikinci kitabın 500 kartını, `scripts/first_part_cards.py` ilk 90 kartı ve `scripts/first_volume_cards.py` kalan 160 kartı üretir. İlk kitabın bütün kaynak alıntıları her derlemede beş yerel PDF ile denetlenir. İkinci kitabı da denetlemek için `python3 scripts/build_cards.py library/dahiliye.pdf` kullanılır.
 
@@ -91,9 +91,30 @@ Yeni kartların `source` alanı doğru parçayı, `page` alanı o parçanın fiz
 
 Öncelik servis ve poliklinikte önemli klinik kararlaradır: nefrolojide ABH, KBH, sıvı-elektrolit ve asit-baz bozuklukları, proteinüri ve diyaliz; gastroenterolojide reflü, disfaji, kanama, ülser, ishal/kabızlık, IBS, İBH, malabsorpsiyon ve pankreatobiliyer hastalıklar; hepatolojide viral hepatitler, yağlı karaciğer, test yorumlama ve siroz komplikasyonları. Kardiyolojide sık karşılaşılan kalp yetmezliği, AKS, hipertansiyon ve önemli aritmiler korunur. Dağılım ölçülmüş yatış veya başvuru sıklığı, prevalans ya da doğrulanmış TUS/YDUS yüzdesi değildir.
 
-Konu Dağılımı sekmesi her kitap için sayıyı ayrı hesaplar ve ilk kitabın derslerinde klinik odağı açıklar. Soru bankası ayrı olarak 290 çoktan seçmeli soru içerir; 1.110 sayısı yalnızca flashcardları ifade eder.
+Konu Dağılımı sekmesi her kitap için sayıyı ayrı hesaplar ve ilk kitabın derslerinde klinik odağı açıklar. Soru bankası ayrı olarak 500 çoktan seçmeli soru içerir; 1.510 sayısı yalnızca flashcardları ifade eder.
 
 
 `data/editorial_hemato_onco.tsv` son 110 kartın kaynak cümlelerini, gizlenen bilgi hedeflerini ve sorularını saklar. `scripts/hemato_onco_cards.py`, temel 1.000 karttan sonra çalışarak hematoloji ve onkolojiyi ayrı ayrı 100 karta tamamlar; diğer dersler ve önceki 1.000 kartın kimlikleri/içeriği korunur. Her yeni alıntı kendi PDF sayfasıyla otomatik karşılaştırılır. Yeni toplam 1.110 karttır. Kaynak metin denetimi klinik uzman incelemesi değildir.
 
 PDF mobil uyumluluk kontrolü: HTTP sunucusu açıkken `node tests/check_pdf_mobile.cjs` (Playwright ve Chromium gerekir; `CHROMIUM_PATH` ve `TUSSPOT_BASE_URL` ile yollar değiştirilebilir). Test, eski tarayıcılarda bulunmayan `Promise.withResolvers` ve `URL.parse` özelliklerini kapatarak iki kitaptan sayfa yükleme ve aynı dosyada sayfa değiştirmeyi denetler.
+
+
+## 400 ek kart, 210 ek soru ve Günlük Challenge
+
+Güncel toplam **1.510 flashcard / 500 dört seçenekli soru**. `data/editorial_expansion_400.json` kaynak pasajlarını, tek bilgi hedeflerini ve PDF font kanıtlarını saklar. Font denetimi cevap parçasının doğrudan kalın olduğu durumlarla kalın vurgulu bağlamdan alınan hedefleri ayrı işaretler. Başlık ya da en uzun sözcük otomatik cevap seçilmez; sorular bağımsız bağlamla düzenlenmiştir. `data/card_target_corrections.json` eski setten 18 uzun boşluğu daha dar bilgi hedeflerine çevirir; kimlikler ve kaynak alıntıları korunur. `scripts/expand_cards.py` bu son aşamayı uygular.
+
+`data/questions_expansion_210.json` 210 ek klinik yorumlama sorusunu içerir. Önceki 290 sorunun kimlikleri, seçenekleri, doğru cevapları ve açıklamaları değiştirilmez. Derleme sırası:
+
+```sh
+python3 scripts/build_cards.py library/dahiliye.pdf
+python3 scripts/build_questions.py --audit-sources
+python3 scripts/package_app.py
+```
+
+`scripts/source_excerpts.py` her kart ve soru için ilgili PDF paragrafını yerel veri dosyasına ekler. Bu pasajlar cevap açılınca küçük yazıyla doğrudan görünür; cevap göstermek için PDF indirilmez. PDF bağlantısı tam sayfayı görmek isteyenler için korunur. Kaynak metni ve font denetimi klinik uzman incelemesi değildir.
+
+Ana sayfadaki **Günlük Challenge**, tarayıcının yerel takvim tarihine göre 20 karışık flashcard sunar. Her ders ilk turda temsil edilir; kalan yerler dengeli turla doldurulur. Aynı günün kart kimlikleri başlatıldığında sabitlenir; sayfa yenileme ve sonraki veri güncellemeleri seçimleri yeniden üretmez. Cevabı açtıktan sonra kullanıcı **Bildim / Tekrar etmeliyim** ile kendini değerlendirir. İlk değerlendirme korunur; geriye giderek puan değiştirilemez. Gün tamamlanınca doğru hatırlama sayısı, tekrar sayısı ve yüzde; tamamlanmamış günlerde ilerleme tarih bazında görüntülenir. Gece yarısından sonra yeni güne geçilir; önceki gün silinmez. Bu bir öz değerlendirmedir, otomatik cevap doğrulama değildir.
+
+Challenge kayıtları `tusspot-daily-v1` altında aynı cihaz ve tarayıcıda saklanır; giriş veya sunucu veritabanı yoktur, cihazlar arasında eşitlenmez. Tarayıcı verileri temizlenirse yerel kayıt kaybolur. **Günlüğün yedeğini indir** düğmesi tarihli JSON dosyası üretir. Yazma engellenirse kaydın kalıcı olmadığı arayüzde belirtilir.
+
+Kontroller: `python3 -m unittest discover -s tests -v`, `node --test tests/test_pdf_navigation.cjs`, `node --check app.js`. PDF font kanıtını yeniden denetlemek için `python3 scripts/audit_emphasis.py` (PyMuPDF/fitz gerekir). Tarayıcı akışı için sunucu açıkken `node tests/check_daily.cjs` ve `node tests/check_question_banks.cjs` (Playwright + Chromium). Challenge testi aynı gün devam etme, 20 kartta 15 ders temsili, çift puanlamayı engelleme, tarihli geçmiş/yedek, gün/gece yarısı geçişi, mobil görünüm ve cevap açarken hiç PDF istenmemesini kapsar.

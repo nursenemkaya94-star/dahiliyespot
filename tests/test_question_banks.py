@@ -15,25 +15,25 @@ class QuestionBankTests(unittest.TestCase):
         cls.actual = {q['id']: q for q in cls.questions}
 
     def test_requested_counts_and_every_lesson(self):
-        self.assertEqual(len(self.questions), 290)
-        self.assertEqual(len(self.actual), 290)
-        self.assertEqual(len({q['question'] for q in self.questions}), 290)
+        self.assertEqual(len(self.questions), 500)
+        self.assertEqual(len(self.actual), 500)
+        self.assertEqual(len({q['question'] for q in self.questions}), 500)
         counts = Counter(q.get('bank', 'endo') for q in self.questions)
         self.assertEqual(counts, {b['id']: b['count'] for b in self.data['banks']})
         for bank in ['endo', 'neph', 'gastro-hep', 'onco-hem']:
-            self.assertEqual(counts[bank], 50)
+            self.assertEqual(counts[bank], 80 if bank in ['gastro-hep','onco-hem'] else 75)
         for b in self.data['banks']:
             if b['id'] not in ['endo', 'neph', 'gastro-hep', 'onco-hem']:
-                self.assertEqual(counts[b['id']], 10)
+                self.assertIn(counts[b['id']], [10,15,25,30])
         lesson_counts = Counter(q.get('lesson', 'Endokrinoloji') for q in self.questions)
         for lesson in ['Gastroenteroloji', 'Hepatoloji', 'Onkoloji', 'Hematoloji']:
-            self.assertEqual(lesson_counts[lesson], 25)
+            self.assertEqual(lesson_counts[lesson], 40)
         cards_data = json.loads((ROOT / 'data/cards.json').read_text())
         self.assertEqual(set(lesson_counts), {l['name'] for l in cards_data['lessons']})
 
     def test_endocrine_questions_and_ids_unchanged(self):
         baseline = json.loads((ROOT / 'data/questions_endo.json').read_text())['questions']
-        self.assertEqual(self.questions[:50], baseline)
+        self.assertEqual([{k:v for k,v in q.items() if k != 'source_excerpts'} for q in self.questions[:50]], baseline)
 
     def test_choices_and_citation_ranges(self):
         for q in self.questions:

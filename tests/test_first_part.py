@@ -17,12 +17,12 @@ class FirstPartTests(unittest.TestCase):
     def test_new_scope_and_clinical_priority(self):
         self.assertEqual(len(self.data['lessons']), 15)
         all_cards = [c for l in self.data['lessons'] for t in l['topics'] for c in t['cards']]
-        self.assertEqual(len(all_cards), 1110)
-        self.assertEqual(len({c['id'] for c in all_cards}), 1110)
-        self.assertEqual(len(self.new), 60)
+        self.assertEqual(len(all_cards), 1510)
+        self.assertEqual(len({c['id'] for c in all_cards}), 1510)
+        self.assertEqual(len(self.new), 110)
         counts = {l['name']: sum(len(t['cards']) for t in l['topics']) for l in self.data['lessons']}
-        self.assertEqual(counts['Kardiyoloji'], 50)
-        self.assertEqual(counts['Göğüs Hastalıkları'], 45)
+        self.assertEqual(counts['Kardiyoloji'], 90)
+        self.assertEqual(counts['Göğüs Hastalıkları'], 80)
         pulm = next(l for l in self.data['lessons'] if l['name']=='Göğüs Hastalıkları')
         self.assertNotIn('coverage', pulm)
         self.assertEqual(self.data['study_plan']['first_volume_status']['blocked_parts'], [])
@@ -38,7 +38,8 @@ class FirstPartTests(unittest.TestCase):
             identity=f'{name}|{page}|{statement}'
             card_id='fact-'+hashlib.sha256(identity.encode()).hexdigest()[:16]
             self.assertIn(card_id,existing)
-            self.assertEqual(existing[card_id]['question'],prompt)
+            corrections=json.loads((ROOT/'data/card_target_corrections.json').read_text())
+            self.assertEqual(existing[card_id]['question'],corrections.get(card_id,{}).get('question',prompt))
             self.assertEqual(existing[card_id]['explanation'],statement.replace('{{','').replace('}}',''))
 
     def test_every_new_quote_matches_its_own_pdf(self):

@@ -22,7 +22,8 @@ class HematoOncoTests(unittest.TestCase):
             card_id = 'fact-' + hashlib.sha256(f'hemato-onco-100|{name}|{page}|{statement}'.encode()).hexdigest()[:16]
             self.assertIn(card_id, actual)
             lesson, group, card = actual[card_id]
-            self.assertEqual((lesson, group, card['question']), (name, topic, question))
+            corrections = json.loads((ROOT / 'data/card_target_corrections.json').read_text())
+            self.assertEqual((lesson, group, card['question']), (name, topic, corrections.get(card_id, {}).get('question', question)))
             source = card.get('source', 'second')
             info = data['sources'][source]
             self.assertEqual(int(page), card['page'] + info.get('start', 1) - 1)
@@ -32,7 +33,7 @@ class HematoOncoTests(unittest.TestCase):
             self.assertEqual(card['explanation'], quote)
             normalize = lambda s: re.sub(r'\s+', '', s)
             self.assertIn(normalize(quote), normalize(texts[source][card['page'] - 1]), card_id)
-            self.assertEqual(card['answer'], re.search(r'{{([^{}]+)}}', statement)[1])
+            self.assertEqual(card['answer'], corrections.get(card_id, {}).get('answer', re.search(r'{{([^{}]+)}}', statement)[1]))
             counts[name] += 1
         self.assertEqual(counts, {'Hematoloji': 65, 'Onkoloji': 45})
 

@@ -14,7 +14,7 @@ function application() {
   return elements.get(id);
  };
  const context = vm.createContext({document: {getElementById: get, querySelectorAll: () => [], addEventListener() {}},
-  localStorage: {getItem: () => null}, window: {scrollTo() {}},
+  localStorage: {getItem: () => null}, window: {scrollTo() {}, addEventListener() {}},
   fetch: () => new Promise(() => {})});
  vm.runInContext(fs.readFileSync(path.join(root, 'app.js'), 'utf8'), context);
  const data = JSON.parse(fs.readFileSync(path.join(root, 'data/cards.json'), 'utf8'));
@@ -37,7 +37,7 @@ test('every card opens its cited PDF and physical page through the application v
   assert.equal(get('pdfOpen').href, get('pdfFrame').src);
   count++;
  }
- assert.equal(count, 1110);
+ assert.equal(count, 1510);
 });
 
 test('same-file page navigation changes the viewer fragment and rejects invalid pages', () => {

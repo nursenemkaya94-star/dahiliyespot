@@ -11,12 +11,12 @@ class ClinicalPlanTests(unittest.TestCase):
         cls.cards=[c for l in cls.data['lessons'] for t in l['topics'] for c in t['cards']]
 
     def test_exact_book_balance_and_clinical_weights(self):
-        self.assertEqual(len(self.cards),1110)
-        self.assertEqual(len({c['id'] for c in self.cards}),1110)
+        self.assertEqual(len(self.cards),1510)
+        self.assertEqual(len({c['id'] for c in self.cards}),1510)
         books=Counter('first' if c.get('source') else 'second' for c in self.cards)
-        self.assertEqual(dict(books),{'first':565,'second':545})
+        self.assertEqual(dict(books),{'first':746,'second':764})
         counts={l['name']:sum(len(t['cards']) for t in l['topics']) for l in self.data['lessons']}
-        for lesson,total in {'Nefroloji':170,'Gastroenteroloji':100,'Hepatoloji':100,'Kardiyoloji':50,'Göğüs Hastalıkları':45,'Hematoloji':100,'Onkoloji':100}.items():
+        for lesson,total in {'Nefroloji':196,'Gastroenteroloji':125,'Hepatoloji':125,'Kardiyoloji':90,'Göğüs Hastalıkları':80,'Hematoloji':130,'Onkoloji':125}.items():
             self.assertEqual(counts[lesson],total)
         self.assertEqual(self.data['lessons'][0]['name'],'Nefroloji')
         self.assertIn('Doğrulanmış yatış/poliklinik sıklığı',self.data['study_plan']['clinical_note'])
